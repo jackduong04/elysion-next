@@ -1,26 +1,96 @@
-@import "tailwindcss";
+@import 'tailwindcss';
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
+@layer base {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --elysion-cream: #f6f1e7;
+    --elysion-sand: #e4d8c2;
+    --elysion-olive: #8a9268;
+    --elysion-forest: #3c4839;
+    --elysion-ink: #2c2b27;
+    --elysion-rust: #b66c4d;
+    --elysion-gold: #d2b072;
+  }
+
+  body {
+    background: var(--elysion-cream);
+    color: var(--elysion-ink);
+    font-family: var(--font-body);
+  }
+
+  h1,
+  h2,
+  h3 {
+    font-family: var(--font-display);
+    letter-spacing: -0.02em;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@layer utilities {
+  .bg-elysion-cream {
+    background-color: var(--elysion-cream);
+  }
+
+  .bg-elysion-sand {
+    background-color: var(--elysion-sand);
+  }
+
+  .bg-elysion-forest {
+    background-color: var(--elysion-forest);
+  }
+
+  .bg-elysion-olive {
+    background-color: var(--elysion-olive);
+  }
+
+  .text-elysion-cream {
+    color: var(--elysion-cream);
+  }
+
+  .text-elysion-ink {
+    color: var(--elysion-ink);
+  }
+
+  .text-elysion-forest {
+    color: var(--elysion-forest);
+  }
+
+  .text-elysion-olive {
+    color: var(--elysion-olive);
+  }
+
+  .text-elysion-rust {
+    color: var(--elysion-rust);
+  }
+
+  .text-elysion-gold {
+    color: var(--elysion-gold);
+  }
+
+  .border-elysion-sand {
+    border-color: var(--elysion-sand);
+  }
+
+  .border-elysion-olive {
+    border-color: var(--elysion-olive);
+  }
+
+  .shadow-soft {
+    box-shadow: 0 18px 40px -30px rgba(35, 35, 30, 0.6);
+  }
+
+  .texture-grain {
+    background-image:
+      radial-gradient(rgba(44, 43, 39, 0.08) 1px, transparent 1px),
+      linear-gradient(120deg, rgba(214, 196, 160, 0.4), rgba(246, 241, 231, 0.9));
+    background-size: 4px 4px, 100% 100%;
+  }
+
+  .hero-overlay {
+    background: linear-gradient(
+      120deg,
+      rgba(44, 43, 39, 0.62),
+      rgba(60, 72, 57, 0.5) 45%,
+      rgba(246, 241, 231, 0.15)
+    );
+  }
 }
