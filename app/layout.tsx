@@ -42,7 +42,7 @@ export default function RootLayout({
                 ].map((item) => (
                   <li key={item.href}>
                     <a
-                      className="transition duration-300 hover:text-elysion-rust focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[color:var(--elysion-olive)]"
+                      className="transition duration-300 hover:text-elysion-rust focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-(--elysion-olive)"
                       href={item.href}
                     >
                       {item.label}
