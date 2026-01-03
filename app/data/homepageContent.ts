@@ -7,7 +7,7 @@ export const homepageContent = {
       label: 'Explore our services',
       href: '#services',
     },
-    background: '/images/elysion-hero.jpg',
+    background: '/images/hedge-in-sky.png',
   },
   services: [
     {

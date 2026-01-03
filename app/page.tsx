@@ -1,6 +1,4 @@
 import { homepageContent } from './data/homepageContent';
-
-// Assets
 import Image from 'next/image';
 
 export default function Home() {
@@ -10,7 +8,7 @@ export default function Home() {
     <main className="bg-elysion-cream text-elysion-ink">
       <section
         id="hero"
-        className="relative min-h-[calc(100vh-80px)] scroll-mt-24 overflow-hidden"
+        className="relative min-h-screen scroll-mt-24 overflow-hidden"
       >
         <div
           className="absolute inset-0 bg-cover bg-center"
@@ -18,10 +16,10 @@ export default function Home() {
           aria-hidden="true"
         />
         <div className="absolute inset-0 hero-overlay" aria-hidden="true" />
-        <div
+        {/* <div
           className="absolute inset-0 texture-grain opacity-60"
           aria-hidden="true"
-        />
+        /> */}
 
         <div className="relative z-10 mx-auto flex min-h-[70vh] max-w-6xl flex-col justify-center px-6 py-24">
           <p className="text-lg font-semibold uppercase tracking-[0.35em] text-elysion-gold">
@@ -37,7 +35,7 @@ export default function Home() {
             <a
               className={`
                 inline-flex items-center gap-3 rounded-full bg-elysion-forest px-6 py-3 text-sm font-semibold
-                uppercase tracking-[0.25em] text-elysion-cream shadow-soft transition duration-300
+                uppercase tracking-[0.25em] text-elysion-cream shadow-xl transition duration-300
                 hover:-translate-y-0.5 hover:bg-elysion-olive focus-visible:outline-2
                 focus-visible:outline-offset-4 focus-visible:outline-(--elysion-gold)
               `}
@@ -74,7 +72,7 @@ export default function Home() {
             {services.map((service) => (
               <article
                 key={service.name}
-                className={`group flex h-full flex-col justify-between rounded-2xl border border-elysion-sand bg-elysion-sand p-6 shadow-soft transition duration-300 hover:-translate-y-1 hover:shadow-lg focus-within:-translate-y-1 cursor-pointer`}
+                className={`group flex h-full flex-col justify-between rounded-2xl border border-elysion-sand bg-elysion-sand p-6 shadow-xl transition duration-300 hover:-translate-y-1 hover:shadow-lg focus-within:-translate-y-1 cursor-pointer`}
               >
                 <div>
                   <p className="text-xs font-medium uppercase tracking-[0.3em] text-elysion-olive">
@@ -125,7 +123,7 @@ export default function Home() {
                 key={testimonial.author}
                 className={`
                   flex h-full flex-col justify-between rounded-2xl border border-elysion-olive bg-[rgba(246,241,231,0.08)]
-                  p-6 text-elysion-cream shadow-soft transition duration-500 hover:-translate-y-1
+                  p-6 text-elysion-cream shadow-xl transition duration-500 hover:-translate-y-1
                 `}
               >
                 <p className="text-sm leading-relaxed">{testimonial.quote}</p>
@@ -159,7 +157,7 @@ export default function Home() {
             {highlights.map((highlight) => (
               <article
                 key={highlight.title}
-                className={`flex h-full flex-col justify-between rounded-2xl border border-elysion-sand bg-elysion-cream p-6 shadow-soft transition duration-300 hover:-translate-y-1 cursor-pointer`}
+                className={`flex h-full flex-col justify-between rounded-2xl border border-elysion-sand bg-elysion-cream p-6 shadow-xl transition duration-300 hover:-translate-y-1 cursor-pointer`}
               >
                 <div>
                   <p className="text-xs uppercase tracking-[0.3em] text-elysion-rust">

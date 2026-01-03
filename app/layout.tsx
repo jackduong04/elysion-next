@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { Playfair_Display, Work_Sans } from 'next/font/google';
 import './globals.css';
+import { Navbar } from './components/navbar/Navbar';
 
 const displayFont = Playfair_Display({
   variable: '--font-display',
@@ -13,7 +14,7 @@ const bodyFont = Work_Sans({
 });
 
 export const metadata: Metadata = {
-  title: 'Elysion Gardens',
+  title: 'Elysion',
   description: 'Nostalgic landscape design and modern outdoor living.',
 };
 
@@ -27,32 +28,7 @@ export default function RootLayout({
       <body
         className={`${displayFont.variable} ${bodyFont.variable} antialiased`}
       >
-        <header className="sticky top-0 z-50 border-b border-elysion-sand bg-[rgba(246,241,231,0.92)] backdrop-blur">
-          <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
-            <div className="text-lg font-semibold uppercase tracking-[0.2em] text-elysion-forest">
-              Elysion
-            </div>
-            <nav aria-label="Primary">
-              <ul className="flex flex-wrap items-center gap-6 text-sm font-medium uppercase tracking-[0.18em] text-elysion-forest">
-                {[
-                  { href: '#hero', label: 'Story' },
-                  { href: '#services', label: 'Services' },
-                  { href: '#reviews', label: 'Reviews' },
-                  { href: '#highlights', label: 'Process' },
-                ].map((item) => (
-                  <li key={item.href}>
-                    <a
-                      className="transition duration-300 hover:text-elysion-rust focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-(--elysion-olive)"
-                      href={item.href}
-                    >
-                      {item.label}
-                    </a>
-                  </li>
-                ))}
-              </ul>
-            </nav>
-          </div>
-        </header>
+        <Navbar />
         {children}
       </body>
     </html>
