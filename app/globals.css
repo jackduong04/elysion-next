@@ -23,7 +23,7 @@
   }
 }
 
-@layer utilities {
+@layer components {
   .texture-grain {
     background-image:
       radial-gradient(rgba(44, 43, 39, 0.08) 1px, transparent 1px),

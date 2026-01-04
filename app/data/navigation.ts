@@ -5,66 +5,33 @@ export const navigationConfig: NavItem[] = [
   {
     id: 'landscaping',
     label: 'Landscaping',
-    href: '',
     children: [
-      { id: 'design', label: 'Design', href: '/landscaping/design' },
-      { id: 'decking', label: 'Decking', href: '/landscaping/decking' },
+      { id: 'carpentry', label: 'Carpentry', href: '/landscaping/carpentry' },
       {
-        id: 'fencing',
-        label: 'Fencing & Gates',
-        href: '/landscaping/fencing-gates',
-      },
-      {
-        id: 'excavation',
-        label: 'Excavation & Concrete',
-        href: '/landscaping/excavation-concrete',
-      },
-      {
-        id: 'retaining-walls',
-        label: 'Retaining Walls',
-        href: '/landscaping/retaining-walls',
-      },
-      {
-        id: 'garden-beds',
-        label: 'Garden Beds',
-        href: '/landscaping/garden-beds',
-      },
-      {
-        id: 'drainage',
-        label: 'Drainage & Irrigation',
-        href: '/landscaping/drainage-irrigation',
+        id: 'foundation',
+        label: 'Foundation',
+        href: '/landscaping/foundation',
       },
     ],
   },
   {
     id: 'gardening',
     label: 'Gardening',
-    href: '',
     children: [
       {
-        id: 'lawn-mowing',
-        label: 'Lawn Mowing',
-        href: '/gardening/lawn-mowing',
+        id: 'soft-scaping',
+        label: 'Soft-scaping',
+        href: '/gardening/soft-scaping',
       },
       {
         id: 'maintenance',
-        label: 'Garden Maintenance',
+        label: 'Maintenance',
         href: '/gardening/maintenance',
       },
-      {
-        id: 'hedge-trimming',
-        label: 'Hedge Trimming',
-        href: '/gardening/hedge-trimming',
-      },
-      {
-        id: 'clearouts',
-        label: 'Seasonal Clearouts',
-        href: '/gardening/seasonal-clearouts',
-      },
-      { id: 'planting', label: 'Planting', href: '/gardening/planting' },
     ],
   },
   { id: 'commercial', label: 'Commercial', href: '/commercial' },
+  { id: 'design', label: 'Design', href: '/design' },
   {
     id: 'exterior-cleaning',
     label: 'Exterior Cleaning',
@@ -72,5 +39,4 @@ export const navigationConfig: NavItem[] = [
   },
   { id: 'about', label: 'About', href: '/about' },
   { id: 'contact', label: 'Contact', href: '/contact' },
-  { id: 'blogs', label: 'Blogs', href: '/blogs' },
 ];
