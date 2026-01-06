@@ -121,19 +121,19 @@ export function NavBar() {
         <Link
           href="/"
           className={`
-            flex items-center gap-3 rounded-full focus-visible:outline-2
+            flex items-center gap-5 focus-visible:outline-2
             focus-visible:outline-offset-4 focus-visible:outline-(--elysion-gold)
           `}
         >
           <Image
             src="/vectors/elysion_logo_light.svg"
             alt="Elysion Logo"
-            width={32}
-            height={32}
+            width={34}
+            height={34}
           />
-          {/* <span className="text-lg font-semibold uppercase tracking-[0.3em] invisible">
+          <span className="text-lg text-white font-semibold uppercase tracking-[0.3em]">
             Elysion
-          </span> */}
+          </span>
         </Link>
 
         <nav
