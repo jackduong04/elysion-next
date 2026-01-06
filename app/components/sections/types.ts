@@ -9,18 +9,17 @@ export type HeroContent = {
   background: string;
 };
 
-export type ServiceItem = {
-  name: string;
-  description: string;
-  ctaLabel: string;
-  icon?: string;
+export type ToggleItem = {
+  id: string;
+  label: string;
 };
 
 export type ServicesSectionContent = {
   eyebrow: string;
   title: string;
   description: string;
-  services: ServiceItem[];
+  buttons: ToggleItem[];
+  defaultId: string;
 };
 
 export type HighlightItem = {

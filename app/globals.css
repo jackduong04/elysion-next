@@ -1,13 +1,13 @@
 @import 'tailwindcss';
 
 @theme {
-  --color-elysion-cream: #f6f1e7;
-  --color-elysion-sand: #e4d8c2;
-  --color-elysion-olive: #8a9268;
-  --color-elysion-forest: #3c4839;
+  --color-elysion-cream: #f4efe4;
+  --color-elysion-sand: #e1d5bf;
+  --color-elysion-olive: #6f7a55;
+  --color-elysion-forest: #113017;
   --color-elysion-ink: #2c2b27;
-  --color-elysion-rust: #b66c4d;
-  --color-elysion-gold: #d2b072;
+  --color-elysion-rust: #a86449;
+  --color-elysion-gold: #c6ab6e;
 }
 
 @layer base {

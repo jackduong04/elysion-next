@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import { Playfair_Display, Work_Sans } from 'next/font/google';
 import './globals.css';
-import { Navbar } from './components/navbar/Navbar';
+import { NavBar } from './components/navbar/NavBar';
 
 const displayFont = Playfair_Display({
   variable: '--font-display',
@@ -28,7 +28,7 @@ export default function RootLayout({
       <body
         className={`${displayFont.variable} ${bodyFont.variable} antialiased`}
       >
-        <Navbar />
+        <NavBar />
         {children}
       </body>
     </html>

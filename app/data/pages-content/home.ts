@@ -33,36 +33,13 @@ export const homepageContent: HomepageContent = {
     title: 'Cultivated offerings for every season.',
     description:
       'Each service blends old-world materiality with contemporary clarity, ensuring your landscape feels grounded and effortless year-round.',
-    services: [
-      {
-        name: 'Landscape Design',
-        description:
-          'Site-specific concepts that blend structure, softness, and year-round color.',
-        icon: '/images/service-design.png',
-        ctaLabel: 'See concepts',
-      },
-      {
-        name: 'Seasonal Maintenance',
-        description:
-          'Thoughtful upkeep, pruning, and planting rhythms that keep every bed balanced.',
-        icon: '/images/service-maintenance.png',
-        ctaLabel: 'Request a plan',
-      },
-      {
-        name: 'Stone & Hardscape',
-        description:
-          'Paths, patios, and terraces that feel grounded, tactile, and enduring.',
-        icon: '/images/service-stone.png',
-        ctaLabel: 'View materials',
-      },
-      {
-        name: 'Garden Lighting',
-        description:
-          'Warm, low-glow lighting that highlights texture and extends evening use.',
-        icon: '/images/service-lighting.png',
-        ctaLabel: 'Light the night',
-      },
+    buttons: [
+      { id: 'landscaping', label: 'Landscaping' },
+      { id: 'gardening', label: 'Gardening' },
+      { id: 'design', label: 'Design' },
+      { id: 'commercial', label: 'Commercial' },
     ],
+    defaultId: 'landscaping',
   },
   testimonials: [
     {

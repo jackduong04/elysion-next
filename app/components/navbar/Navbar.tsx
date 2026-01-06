@@ -6,7 +6,7 @@ import { navigationConfig } from '../../data/navigation';
 import { NavItem } from './types';
 import Image from 'next/image';
 
-export function Navbar() {
+export function NavBar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [openDropdown, setOpenDropdown] = useState<string | null>(null);
   const [openAccordion, setOpenAccordion] = useState<string | null>(null);
@@ -37,7 +37,7 @@ export function Navbar() {
             href={item.href ?? '/'}
             className={`
               rounded-full px-3 py-2 text-xs font-semibold uppercase transition duration-200
-              tracking-[0.28em] hover:text-elysion-rust focus-visible:outline-2
+              text-white text-shadow-lg tracking-[0.28em] hover:text-elysion-gold focus-visible:outline-2
               focus-visible:outline-offset-4 focus-visible:outline-(--elysion-olive)
             `}
           >
@@ -65,7 +65,7 @@ export function Navbar() {
           aria-expanded={openDropdown === item.id}
           className={`
             flex items-center gap-2 rounded-full px-3 py-2 text-xs font-semibold transition
-            duration-200 uppercase tracking-[0.28em] hover:text-elysion-rust
+            text-white text-shadow-lg duration-200 uppercase tracking-[0.28em] hover:text-elysion-gold
             focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-(--elysion-olive)
           `}
         >
@@ -113,8 +113,8 @@ export function Navbar() {
   return (
     <header
       className={`
-      fixed top-0 left-0 right-0 z-50 transition-colors duration-200
-      bg-elysion-cream/5 text-elysion-forest shadow-xl backdrop-blur-sm
+      fixed top-0 left-0 right-0 z-50 transition-colors duration-200 border-b
+      border-elysion-cream/10 bg-elysion-forest/70 shadow-xl backdrop-blur-sm
     `}
     >
       <div className="flex w-full items-center justify-between px-9 2xl:px-12 py-3 2xl:py-4">
@@ -126,8 +126,8 @@ export function Navbar() {
           `}
         >
           <Image
-            src="/vectors/elysion_logo_dark.svg"
-            alt="Elysion Logo Dark"
+            src="/vectors/elysion_logo_light.svg"
+            alt="Elysion Logo"
             width={32}
             height={32}
           />
@@ -150,10 +150,9 @@ export function Navbar() {
           <button
             type="button"
             className={`
-              rounded-full px-4 py-2 text-xs font-semibold uppercase transition duration-200
-              tracking-[0.26em] focus-visible:outline-2 focus-visible:outline-offset-4
-              focus-visible:outline-(--elysion-gold) border border-elysion-forest text-elysion-forest
-              hover:bg-elysion-forest hover:text-elysion-cream
+              rounded-full px-4 py-2 text-xs font-semibold uppercase transition duration-200 text-shadow-lg
+              tracking-[0.26em] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-(--elysion-gold)
+              border border-elysion-cream text-white hover:text-elysion-gold hover:border-elysion-gold
             `}
           >
             Cart
@@ -163,8 +162,8 @@ export function Navbar() {
             type="button"
             className={`inline-flex items-center justify-center rounded-full border px-4 py-2 text-xs
               font-semibold uppercase tracking-[0.26em] focus-visible:outline-2 focus-visible:outline-offset-4
-              focus-visible:outline-(--elysion-gold) 2xl:hidden border-elysion-forest text-elysion-forest
-              hover:bg-elysion-forest hover:text-elysion-cream
+              focus-visible:outline-(--elysion-gold) 2xl:hidden border-elysion-cream text-white
+              hover:text-elysion-gold hover:border-elysion-gold text-shadow-lg
             `}
             aria-expanded={isMobileMenuOpen}
             aria-controls="mobile-menu"

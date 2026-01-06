@@ -1,4 +1,10 @@
+'use client';
+
 import Image from 'next/image';
+import Link from 'next/link';
+import { useMemo, useState } from 'react';
+import { categories, services } from '../../data/services';
+import { ToggleGroup } from './ToggleGroup';
 import { ServicesSectionContent } from './types';
 
 type ServicesSectionProps = {
@@ -10,7 +16,32 @@ export function ServicesSection({
   content,
   sectionId = 'services',
 }: ServicesSectionProps) {
-  const { eyebrow, title, description, services } = content;
+  const { eyebrow, title, description, buttons, defaultId } = content;
+  const initialId =
+    buttons.find((button) => button.id === defaultId)?.id ||
+    buttons[0]?.id ||
+    defaultId;
+  const [activeId, setActiveId] = useState(initialId);
+  const resolvedActiveId = categories[activeId] ? activeId : initialId;
+
+  const activeCategory = useMemo(() => {
+    const category =
+      categories[resolvedActiveId] ||
+      categories[defaultId] ||
+      categories[buttons[0]?.id];
+    return category;
+  }, [resolvedActiveId, defaultId, buttons]);
+
+  const categoryServices = useMemo(() => {
+    if (!activeCategory?.serviceSlugs?.length) {
+      return [];
+    }
+    return activeCategory.serviceSlugs
+      .map((slug) => services[slug])
+      .filter(Boolean);
+  }, [activeCategory]);
+
+  const showCTA = !categoryServices.length && activeCategory?.cta;
 
   return (
     <section id={sectionId} className="scroll-mt-24 py-20">
@@ -29,35 +60,66 @@ export function ServicesSection({
           </p>
         </div>
 
-        <div className="mt-12 grid gap-6 sm:grid-cols-1 md:grid-cols-2 xl:grid-cols-4">
-          {services.map((service) => (
-            <article
-              key={service.name}
-              className={`group flex h-full flex-col justify-between rounded-2xl border border-elysion-sand bg-elysion-sand p-6 shadow-xl transition duration-300 hover:-translate-y-1 hover:shadow-lg focus-within:-translate-y-1 cursor-pointer`}
-            >
-              <div>
-                <p className="text-xs font-medium uppercase tracking-[0.3em] text-elysion-olive">
-                  {service.ctaLabel}
-                </p>
-                <h3 className="mt-4 text-xl font-semibold text-elysion-forest">
-                  {service.name}
-                </h3>
-                <p className="mt-4 text-sm leading-relaxed text-elysion-forest opacity-80">
-                  {service.description}
-                </p>
-              </div>
-              <div className="mt-8 flex items-center justify-between text-xs font-semibold uppercase tracking-[0.3em] text-elysion-rust">
-                <span>Explore</span>
+        <div className="mt-10">
+          <ToggleGroup
+            items={buttons}
+            activeId={resolvedActiveId}
+            onSelect={setActiveId}
+            ariaLabel="Select a service category"
+          />
+        </div>
+
+        {showCTA ? (
+          <div className="mt-12 rounded-2xl border border-elysion-sand bg-elysion-sand p-8 shadow-xl">
+            <p className="text-base leading-relaxed text-elysion-forest">
+              {activeCategory?.cta?.text}
+            </p>
+            {activeCategory?.cta?.href ? (
+              <Link
+                href={activeCategory.cta.href}
+                className="mt-4 inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-[0.2em] text-elysion-rust underline underline-offset-4"
+              >
+                Visit page
                 <Image
                   src="/images/left-click.png"
-                  alt="Left click icon"
-                  width={24}
-                  height={24}
+                  alt="Visit page"
+                  width={20}
+                  height={20}
                 />
-              </div>
-            </article>
-          ))}
-        </div>
+              </Link>
+            ) : null}
+          </div>
+        ) : (
+          <div className="mt-12 grid gap-6 sm:grid-cols-1 md:grid-cols-2 xl:grid-cols-4">
+            {categoryServices.map((service) => (
+              <article
+                key={service.slug}
+                className="group flex h-full flex-col justify-between rounded-2xl border border-elysion-sand bg-elysion-sand p-6 shadow-xl transition duration-300 hover:-translate-y-1 hover:shadow-lg focus-within:-translate-y-1 cursor-pointer"
+              >
+                <div>
+                  <p className="text-xs font-medium uppercase tracking-[0.3em] text-elysion-olive">
+                    {service.card.ctaLabel}
+                  </p>
+                  <h3 className="mt-4 text-xl font-semibold text-elysion-forest">
+                    {service.name}
+                  </h3>
+                  <p className="mt-4 text-sm leading-relaxed text-elysion-forest opacity-80">
+                    {service.card.description}
+                  </p>
+                </div>
+                <div className="mt-8 flex items-center justify-between text-xs font-semibold uppercase tracking-[0.3em] text-elysion-rust">
+                  <span>Explore</span>
+                  <Image
+                    src="/images/left-click.png"
+                    alt="Left click icon"
+                    width={24}
+                    height={24}
+                  />
+                </div>
+              </article>
+            ))}
+          </div>
+        )}
       </div>
     </section>
   );
