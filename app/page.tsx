@@ -1,7 +1,7 @@
 import {
   HeroSection,
   HighlightsSection,
-  ServicesSection,
+  HomepageServicesSection,
 } from './components/sections';
 import { homepageContent } from './data/pages-content/home';
 
@@ -13,7 +13,7 @@ export default function Home() {
     <main className="bg-elysion-cream text-elysion-ink">
       <HeroSection content={hero} sectionId="hero" />
 
-      <ServicesSection content={servicesSection} sectionId="services" />
+      <HomepageServicesSection content={servicesSection} sectionId="services" />
 
       <section id="reviews" className="scroll-mt-24 bg-elysion-forest py-20">
         <div className="mx-auto max-w-6xl px-6">
