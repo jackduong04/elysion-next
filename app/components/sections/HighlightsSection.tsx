@@ -42,11 +42,11 @@ export function HighlightsSection({
                 <h3 className="mt-4 text-xl font-semibold text-elysion-forest">
                   {highlight.title}
                 </h3>
-                <p className="mt-4 text-sm leading-relaxed text-elysion-forest opacity-80">
+                <p className="mt-4 text-sm leading-relaxed text-elysion-forest/80">
                   {highlight.summary}
                 </p>
               </div>
-              <div className="mt-8 flex items-center justify-between text-xs font-semibold uppercase tracking-[0.3em] text-elysion-olive">
+              {/* <div className="mt-8 flex items-center justify-between text-xs font-semibold uppercase tracking-[0.3em] text-elysion-olive">
                 <span>View details</span>
                 <Image
                   src="/images/left-click.png"
@@ -54,7 +54,7 @@ export function HighlightsSection({
                   width={24}
                   height={24}
                 />
-              </div>
+              </div> */}
             </article>
           ))}
         </div>

@@ -2,18 +2,26 @@ import {
   HeroSection,
   HighlightsSection,
   HomepageServicesSection,
+  ProcessSection,
 } from './components/sections';
 import { homepageContent } from './data/pages-content/home';
 
 export default function Home() {
-  const { hero, servicesSection, testimonials, highlightsSection } =
-    homepageContent;
+  const {
+    hero,
+    servicesSection,
+    testimonials,
+    highlightsSection,
+    processSection,
+  } = homepageContent;
 
   return (
     <main className="bg-elysion-cream text-elysion-ink">
       <HeroSection content={hero} sectionId="hero" />
 
       <HomepageServicesSection content={servicesSection} sectionId="services" />
+
+      <ProcessSection content={processSection} sectionId="process" />
 
       <section id="reviews" className="scroll-mt-24 bg-elysion-forest py-20">
         <div className="mx-auto max-w-6xl px-6">

@@ -1,7 +1,6 @@
 import { NavItem } from '../components/navbar/types';
 
 export const navigationConfig: NavItem[] = [
-  { id: 'home', label: 'Home', href: '/' },
   {
     id: 'landscaping',
     label: 'Landscaping',

@@ -131,7 +131,7 @@ export function NavBar() {
             width={34}
             height={34}
           />
-          <span className="text-lg text-white font-semibold uppercase tracking-[0.3em]">
+          <span className="text-lg text-white font-semibold uppercase tracking-[0.3em] invisible sm:visible">
             Elysion
           </span>
         </Link>

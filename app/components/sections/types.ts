@@ -35,3 +35,17 @@ export type HighlightsSectionContent = {
   description: string;
   highlights: HighlightItem[];
 };
+
+export type ProcessItem = {
+  title: string;
+  description: string;
+  sequence: number;
+  image?: string;
+};
+
+export type ProcessSectionContent = {
+  eyebrow: string;
+  title: string;
+  description: string;
+  processes: ProcessItem[];
+};

@@ -2,6 +2,7 @@ import {
   HeroContent,
   HighlightsSectionContent,
   ServicesSectionContent,
+  ProcessSectionContent,
 } from '../../components/sections';
 
 type Testimonial = {
@@ -14,6 +15,7 @@ type HomepageContent = {
   servicesSection: ServicesSectionContent;
   testimonials: Testimonial[];
   highlightsSection: HighlightsSectionContent;
+  processSection: ProcessSectionContent;
 };
 
 export const homepageContent: HomepageContent = {
@@ -59,7 +61,7 @@ export const homepageContent: HomepageContent = {
     },
   ],
   highlightsSection: {
-    eyebrow: 'Process',
+    eyebrow: 'Why choose us?',
     title: 'A calm, collaborative path to renewal.',
     description:
       'We combine listening, design craft, and steady stewardship so the landscape grows alongside you.',
@@ -81,6 +83,35 @@ export const homepageContent: HomepageContent = {
       {
         title: 'Steady Stewardship',
         summary:
+          'Ongoing care keeps the landscape balanced, healthy, and effortless to enjoy.',
+        image: '/images/highlight-stewardship.jpg',
+        sequence: 3,
+      },
+    ],
+  },
+  processSection: {
+    eyebrow: 'Process',
+    title: 'A calm, collaborative path to renewal.',
+    description:
+      'We combine listening, design craft, and steady stewardship so the landscape grows alongside you.',
+    processes: [
+      {
+        title: 'Listening Walkthrough',
+        description:
+          'We map light, soil, and movement on site to understand the soul of the space.',
+        image: '/images/highlight-walkthrough.jpg',
+        sequence: 1,
+      },
+      {
+        title: 'Textured Planting Plan',
+        description:
+          'Layered perennials, shrubs, and evergreens keep the garden rich in every season.',
+        image: '/images/highlight-planting.jpg',
+        sequence: 2,
+      },
+      {
+        title: 'Steady Stewardship',
+        description:
           'Ongoing care keeps the landscape balanced, healthy, and effortless to enjoy.',
         image: '/images/highlight-stewardship.jpg',
         sequence: 3,
