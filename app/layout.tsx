@@ -1,5 +1,7 @@
 import type { Metadata } from 'next';
 import { Playfair_Display, Work_Sans } from 'next/font/google';
+
+// Components
 import './globals.css';
 import { NavBar } from './components/navbar/NavBar';
 

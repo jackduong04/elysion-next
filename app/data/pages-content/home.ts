@@ -1,4 +1,5 @@
-import {
+// Types
+import type {
   HeroContent,
   HighlightsSectionContent,
   ServicesSectionContent,

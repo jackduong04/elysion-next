@@ -1,4 +1,5 @@
-import { NavItem } from '../components/navbar/types';
+// Types
+import type { NavItem } from '../components/navbar/types';
 
 export const navigationConfig: NavItem[] = [
   {

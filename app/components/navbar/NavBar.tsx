@@ -1,10 +1,15 @@
 'use client';
 
+// Node modules
 import Link from 'next/link';
 import { useEffect, useRef, useState } from 'react';
-import { navigationConfig } from '../../data/navigation';
-import { NavItem } from './types';
 import Image from 'next/image';
+
+// Data
+import { navigationConfig } from '../../data/navigation';
+
+// Types
+import type { NavItem } from './types';
 
 export function NavBar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);

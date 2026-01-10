@@ -1,3 +1,5 @@
+// Types
+
 import type {
   HeroContent,
   HighlightsSectionContent,

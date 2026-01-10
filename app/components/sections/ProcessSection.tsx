@@ -1,8 +1,11 @@
 'use client';
 
+// Node modules
 import { useState } from 'react';
-import type { ProcessSectionContent } from './types';
 import Image from 'next/image';
+
+// Types
+import type { ProcessSectionContent } from './types';
 
 type ProcessSectionProps = {
   content: ProcessSectionContent;
@@ -39,7 +42,10 @@ export function ProcessSection({
 
             return (
               <div
-                className={`mb-5 flex items-center gap-10 text-left border rounded-xl border-elysion-sand p-5 transition-all duration-300 cursor-pointer`}
+                className={`
+                  mb-5 flex items-center gap-10 text-left border rounded-xl
+                  border-elysion-sand p-5 transition-all duration-300 cursor-pointer
+                `}
                 onClick={() => setIsProcessOpen(isOpen ? null : index)}
                 key={process.title}
                 aria-expanded={isOpen}

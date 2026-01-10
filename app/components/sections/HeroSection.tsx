@@ -1,4 +1,5 @@
-import { HeroContent } from './types';
+// Types
+import type { HeroContent } from './types';
 
 type HeroSectionProps = {
   content: HeroContent;

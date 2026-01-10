@@ -1,11 +1,18 @@
 'use client';
 
+// Node modules
 import Image from 'next/image';
 import Link from 'next/link';
 import { useMemo, useState } from 'react';
+
+// Data
 import { categories, services } from '../../data/services';
+
+// Components
 import { ToggleGroup } from './ToggleGroup';
-import { ServicesSectionContent, ToggleItem } from './types';
+
+// Types
+import type { ServicesSectionContent, ToggleItem } from './types';
 
 type ServicesSectionProps = {
   content: ServicesSectionContent;
@@ -87,7 +94,10 @@ export function HomepageServicesSection({
             {activeCategory?.cta?.href ? (
               <Link
                 href={activeCategory.cta.href}
-                className="mt-4 inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-[0.2em] text-elysion-rust underline underline-offset-4"
+                className={`
+                  mt-4 inline-flex items-center gap-2 text-sm font-semibold uppercase
+                  tracking-[0.2em] text-elysion-rust underline underline-offset-4
+                `}
               >
                 Visit page
                 <Image
@@ -104,7 +114,11 @@ export function HomepageServicesSection({
             {categoryServices.map((service) => (
               <article
                 key={service.slug}
-                className="group flex h-full flex-col justify-between rounded-2xl border border-elysion-sand bg-elysion-sand p-6 shadow-xl transition duration-300 hover:-translate-y-1 hover:shadow-lg focus-within:-translate-y-1 cursor-pointer"
+                className={`
+                  group flex h-full flex-col justify-between rounded-2xl border
+                  border-elysion-sand bg-elysion-sand p-6 shadow-xl transition duration-300
+                  hover:-translate-y-1 hover:shadow-lg focus-within:-translate-y-1 cursor-pointer
+                `}
               >
                 <div>
                   <p className="text-xs font-medium uppercase tracking-[0.3em] text-elysion-olive">

@@ -1,9 +1,12 @@
+// Components
 import {
   HeroSection,
   HighlightsSection,
   HomepageServicesSection,
   ProcessSection,
 } from './components/sections';
+
+// Data
 import { homepageContent } from './data/pages-content/home';
 
 export default function Home() {

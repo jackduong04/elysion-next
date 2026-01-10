@@ -1,4 +1,7 @@
+// Data
 import { maintenanceContent } from '../../data/pages-content/gardening-children/maintenance';
+
+// Components
 import {
   HeroSection,
   HighlightsSection,
