@@ -6,6 +6,20 @@ import type {
   ProcessSectionContent,
 } from '../../components/sections';
 
+type GalleryItem = {
+  id: string;
+  imageSrc: string;
+  alt: string;
+  caption?: string;
+};
+
+type GallerySectionContent = {
+  eyebrow: string;
+  title: string;
+  description: string;
+  items: GalleryItem[];
+};
+
 type Testimonial = {
   quote: string;
   author: string;
@@ -17,6 +31,7 @@ type HomepageContent = {
   testimonials: Testimonial[];
   highlightsSection: HighlightsSectionContent;
   processSection: ProcessSectionContent;
+  gallerySection: GallerySectionContent;
 };
 
 export const homepageContent: HomepageContent = {
@@ -87,6 +102,44 @@ export const homepageContent: HomepageContent = {
           'Ongoing care keeps the landscape balanced, healthy, and effortless to enjoy.',
         image: '/images/highlight-stewardship.jpg',
         sequence: 3,
+      },
+    ],
+  },
+  gallerySection: {
+    eyebrow: 'Portfolio',
+    title: 'A centered glimpse at recent landscapes.',
+    description:
+      'Scroll, tap, or use the controls to explore how we pair texture and structure across varied spaces.',
+    items: [
+      {
+        id: 'garden-path',
+        imageSrc: '/images/project-img/stock2.jpg',
+        alt: 'Stone garden path framed by dense greenery and shrubs.',
+        caption: 'Guided paths with layered greenery.',
+      },
+      {
+        id: 'terrace-seating',
+        imageSrc: '/images/project-img/stock1.jpg',
+        alt: 'Terraced patio with modern seating and trimmed hedges.',
+        caption: 'Structured seating that still feels organic.',
+      },
+      {
+        id: 'fire-pit-lounge',
+        imageSrc: '/images/project-img/stock3.jpg',
+        alt: 'Outdoor lounge with a central fire pit and surrounding chairs.',
+        caption: 'Evening gathering spaces with warmth.',
+      },
+      {
+        id: 'stone-steps',
+        imageSrc: '/images/project-img/stock4.jpg',
+        alt: 'Stone steps bordered by manicured plants and walls.',
+        caption: 'Elevation changes framed with planting.',
+      },
+      {
+        id: 'deck-overlook',
+        imageSrc: '/images/project-img/stock5.jpg',
+        alt: 'Wooden deck overlooking a lush, planted backyard.',
+        caption: 'Wood textures meeting soft plantings.',
       },
     ],
   },

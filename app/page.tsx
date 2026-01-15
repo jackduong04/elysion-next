@@ -5,6 +5,7 @@ import {
   HomepageServicesSection,
   ProcessSection,
 } from './components/sections';
+import ImageGallery from './components/image-gallery/ImageGallery';
 
 // Data
 import { homepageContent } from './data/pages-content/home';
@@ -16,6 +17,7 @@ export default function Home() {
     testimonials,
     highlightsSection,
     processSection,
+    gallerySection,
   } = homepageContent;
 
   return (
@@ -23,6 +25,35 @@ export default function Home() {
       <HeroSection content={hero} sectionId="hero" />
 
       <HomepageServicesSection content={servicesSection} sectionId="services" />
+
+      <section
+        id="portfolio"
+        className="scroll-mt-24 bg-elysion-cream py-20 sm:py-24"
+      >
+        <div className="mx-auto max-w-6xl px-6">
+          <div className="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
+            <div>
+              <p className="text-base uppercase tracking-[0.3em] text-elysion-olive">
+                {gallerySection.eyebrow}
+              </p>
+              <h2 className="mt-3 text-3xl font-semibold text-elysion-ink sm:text-4xl">
+                {gallerySection.title}
+              </h2>
+            </div>
+            <p className="max-w-xl text-base leading-relaxed text-elysion-ink/70">
+              {gallerySection.description}
+            </p>
+          </div>
+
+          <div className="mt-10">
+            <ImageGallery
+              items={gallerySection.items}
+              autoplayIntervalMs={3000}
+              initialIndex={0}
+            />
+          </div>
+        </div>
+      </section>
 
       <ProcessSection content={processSection} sectionId="process" />
 
