@@ -6,11 +6,11 @@ export const navigationConfig: NavItem[] = [
     id: 'landscaping',
     label: 'Landscaping',
     children: [
-      { id: 'carpentry', label: 'Carpentry', href: '/landscaping/carpentry' },
+      { id: 'carpentry', label: 'Carpentry', href: '/pages/landscaping/carpentry' },
       {
         id: 'foundation',
         label: 'Foundation',
-        href: '/landscaping/foundation',
+        href: '/pages/landscaping/foundation',
       },
     ],
   },
@@ -21,22 +21,22 @@ export const navigationConfig: NavItem[] = [
       {
         id: 'soft-scaping',
         label: 'Soft-scaping',
-        href: '/gardening/soft-scaping',
+        href: '/pages/gardening/soft-scaping',
       },
       {
         id: 'maintenance',
         label: 'Maintenance',
-        href: '/gardening/maintenance',
+        href: '/pages/gardening/maintenance',
       },
     ],
   },
-  { id: 'commercial', label: 'Commercial', href: '/commercial' },
-  { id: 'design', label: 'Design', href: '/design' },
+  { id: 'commercial', label: 'Commercial', href: '/pages/commercial' },
+  { id: 'design', label: 'Design', href: '/pages/design' },
   {
     id: 'exterior-cleaning',
     label: 'Exterior Cleaning',
-    href: '/exterior-cleaning',
+    href: '/pages/exterior-cleaning',
   },
-  { id: 'about', label: 'About', href: '/about' },
-  { id: 'contact', label: 'Contact', href: '/contact' },
+  { id: 'about', label: 'About', href: '/pages/about' },
+  { id: 'contact', label: 'Contact', href: '/pages/contact' },
 ];
