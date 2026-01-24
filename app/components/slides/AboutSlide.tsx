@@ -21,7 +21,10 @@ export const AboutSlide = ({ content, index }: AboutSlideProps) => {
           ease: 'easeInOut',
         }}
         viewport={{ amount: 0.6 }}
-        className="relative w-[85vw] h-[75vh] md:w-[80vw] md:h-[80vh] overflow-hidden rounded-2xl shadow-2xl bg-elysion-cream flex flex-col md:flex-row items-stretch"
+        className={`
+          relative w-[85vw] h-[75vh] md:w-[80vw] md:h-[80vh] overflow-hidden
+          rounded-2xl shadow-2xl bg-elysion-cream flex flex-col md:flex-row items-stretch
+        `}
       >
         {/* Content Side */}
         <div

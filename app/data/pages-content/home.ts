@@ -39,7 +39,8 @@ export const homepageContent: HomepageContent = {
     eyebrow: 'Elysion Auckland',
     title: 'Elysion, timeless landscapes for modern living.',
     subtitle:
-      'We shape warm, lived-in outdoor spaces with old-world texture and clean, contemporary lines. From seasonal stewardship to full garden design, every detail is intentional.',
+      'We shape warm, lived-in outdoor spaces with old-world texture and clean, contemporary lines. ' +
+      'From seasonal stewardship to full garden design, every detail is intentional.',
     cta: {
       label: 'Explore our services',
       href: '#services',
@@ -50,7 +51,8 @@ export const homepageContent: HomepageContent = {
     eyebrow: 'Services',
     title: 'Cultivated offerings for every season.',
     description:
-      'Each service blends old-world materiality with contemporary clarity, ensuring your landscape feels grounded and effortless year-round.',
+      'Each service blends old-world materiality with contemporary clarity, ' +
+      'ensuring your landscape feels grounded and effortless year-round.',
     buttons: [
       { id: 'landscaping', label: 'Landscaping' },
       { id: 'gardening', label: 'Gardening' },

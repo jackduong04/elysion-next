@@ -27,7 +27,12 @@ export default function AboutPage() {
       </div>
 
       {/* Optional: Scroll Indicator */}
-      <div className="fixed bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-elysion-forest/80 animate-bounce pointer-events-none">
+      <div
+        className={`
+        fixed bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2
+        text-elysion-forest/80 animate-bounce pointer-events-none
+      `}
+      >
         <span className="text-sm uppercase tracking-widest font-medium">
           Scroll
         </span>

@@ -20,7 +20,8 @@ export const aboutSlides: SlideContent[] = [
     title: 'Rooted in Passion',
     subtitle: 'Small Seeds, Big Dreams',
     description:
-      'Founded in 2010, Elysion began as a small project to bring back the "wild gardens" of our childhoods. Today, we are a team of visionaries dedicated to the art of landscaping.',
+      'Founded in 2010, Elysion began as a small project to bring back the "wild gardens" of our childhoods. ' +
+      'Today, we are a team of visionaries dedicated to the art of landscaping.',
     imagePlaceholder: 'Founder at Work',
   },
   {
@@ -36,7 +37,8 @@ export const aboutSlides: SlideContent[] = [
     title: 'The Elysion Edge',
     subtitle: 'Why We Stand Out',
     description:
-      "While others focus on aesthetics, we focus on atmosphere. We balance the architectural with the organic to create spaces that feel like they've always been there.",
+      'While others focus on aesthetics, we focus on atmosphere. ' +
+      "We balance the architectural with the organic to create spaces that feel like they've always been there.",
     imagePlaceholder: 'Texture and Light',
   },
   {
@@ -52,7 +54,8 @@ export const aboutSlides: SlideContent[] = [
     title: 'Nurturing the Future',
     subtitle: 'Environmental Stewardship',
     description:
-      "Sustainability isn't a buzzword for us—it's our foundation. From water-wise irrigation to native planting, we ensure your garden thrives for generations.",
+      "Sustainability isn't a buzzword for us—it's our foundation. " +
+      'From water-wise irrigation to native planting, we ensure your garden thrives for generations.',
     imagePlaceholder: 'Eco-friendly Garden',
   },
 ];

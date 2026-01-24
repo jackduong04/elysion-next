@@ -19,8 +19,8 @@ export function ToggleGroup({
       {items.map((item) => {
         const isActive = item.id === activeId;
         const baseClasses =
-          'rounded-full border px-4 py-2 text-sm font-semibold transition' +
-          'focus:outline-none focus:ring-2 focus:ring-elysion-olive' +
+          'rounded-full border px-4 py-2 text-sm font-semibold transition ' +
+          'focus:outline-none focus:ring-2 focus:ring-elysion-olive ' +
           'focus:ring-offset-2 focus:ring-offset-elysion-cream';
         const activeClasses =
           'border-elysion-forest bg-elysion-forest text-elysion-cream shadow-sm';

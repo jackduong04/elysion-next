@@ -16,13 +16,16 @@ export function NavBar() {
   const [openDropdown, setOpenDropdown] = useState<string | null>(null);
   const [openAccordion, setOpenAccordion] = useState<string | null>(null);
   const mobileMenuRef = useRef<HTMLDivElement | null>(null);
+  const menuToggleButtonRef = useRef<HTMLButtonElement | null>(null);
 
   useEffect(() => {
     if (!isMobileMenuOpen) return;
     const handleClick = (event: MouseEvent) => {
       if (
         mobileMenuRef.current &&
-        !mobileMenuRef.current.contains(event.target as Node)
+        !mobileMenuRef.current.contains(event.target as Node) &&
+        menuToggleButtonRef.current &&
+        !menuToggleButtonRef.current.contains(event.target as Node)
       ) {
         setIsMobileMenuOpen(false);
         setOpenAccordion(null);
@@ -43,7 +46,7 @@ export function NavBar() {
             className={`
               rounded-full px-3 py-2 text-xs font-semibold uppercase transition duration-200
               text-white text-shadow-lg tracking-[0.28em] hover:text-elysion-gold focus-visible:outline-2
-              focus-visible:outline-offset-4 focus-visible:outline-(--elysion-olive)
+              focus-visible:outline-offset-4 focus-visible:outline-elysion-olive
             `}
           >
             {item.label}
@@ -71,7 +74,7 @@ export function NavBar() {
           className={`
             flex items-center gap-2 rounded-full px-3 py-2 text-xs font-semibold transition
             text-white text-shadow-lg duration-200 uppercase tracking-[0.28em] hover:text-elysion-gold
-            focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-(--elysion-olive)
+            focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-elysion-olive
           `}
         >
           <span>{item.label}</span>
@@ -102,7 +105,7 @@ export function NavBar() {
                   className={`
                     block rounded-xl px-3 py-2 text-xs font-semibold uppercase tracking-[0.22em]
                     hover:bg-elysion-sand/60 focus-visible:outline-2 focus-visible:outline-offset-4
-                    focus-visible:outline-(--elysion-olive)
+                    focus-visible:outline-elysion-olive
                   `}
                 >
                   {child.label}
@@ -127,7 +130,7 @@ export function NavBar() {
           href="/"
           className={`
             flex items-center gap-5 focus-visible:outline-2
-            focus-visible:outline-offset-4 focus-visible:outline-(--elysion-gold)
+            focus-visible:outline-offset-4 focus-visible:outline-elysion-olive
           `}
         >
           <div className="relative w-12 h-12">
@@ -138,7 +141,7 @@ export function NavBar() {
               className="object-contain"
             />
           </div>
-          <span className="text-lg text-white font-semibold uppercase tracking-[0.3em] invisible sm:visible">
+          <span className="text-lg text-white font-semibold uppercase tracking-[0.3em] hidden sm:block">
             Elysion
           </span>
         </Link>
@@ -157,20 +160,21 @@ export function NavBar() {
           <button
             type="button"
             className={`
-              rounded-full px-4 py-2 text-xs font-semibold uppercase transition duration-200 text-shadow-lg
-              tracking-[0.26em] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-(--elysion-gold)
-              border border-elysion-cream text-white hover:text-elysion-gold hover:border-elysion-gold
+              rounded-full px-4 py-2 text-xs font-semibold uppercase transition duration-200 text-shadow-lg tracking-[0.25em]
+              focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-elysion-olive border-2
+              border-elysion-cream text-elysion-cream hover:text-elysion-forest hover:bg-elysion-cream
             `}
           >
             Cart
           </button>
 
           <button
+            ref={menuToggleButtonRef}
             type="button"
-            className={`inline-flex items-center justify-center rounded-full border px-4 py-2 text-xs
-              font-semibold uppercase tracking-[0.26em] focus-visible:outline-2 focus-visible:outline-offset-4
-              focus-visible:outline-(--elysion-gold) 2xl:hidden border-elysion-cream text-white
-              hover:text-elysion-gold hover:border-elysion-gold text-shadow-lg
+            className={`
+              rounded-full px-4 py-2 text-xs font-semibold uppercase transition duration-200 text-shadow-lg tracking-[0.25em]
+              focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-elysion-olive border-2
+              border-elysion-cream text-elysion-cream hover:text-elysion-forest hover:bg-elysion-cream 2xl:hidden
             `}
             aria-expanded={isMobileMenuOpen}
             aria-controls="mobile-menu"
@@ -205,7 +209,7 @@ export function NavBar() {
                   className={`
                     block rounded-xl px-3 py-3 text-sm font-semibold uppercase tracking-[0.28em]
                     hover:bg-elysion-sand/60 focus-visible:outline-2 focus-visible:outline-offset-4
-                    focus-visible:outline-(--elysion-olive)
+                    focus-visible:outline-elysion-olive
                   `}
                 >
                   {item.label}
@@ -225,7 +229,7 @@ export function NavBar() {
                   className={`
                     flex w-full items-center justify-between px-3 py-3 text-sm font-semibold uppercase
                     tracking-[0.28em] hover:bg-elysion-sand/60 focus-visible:outline-2 focus-visible:outline-offset-4
-                    focus-visible:outline-(--elysion-olive)
+                    focus-visible:outline-elysion-olive
                   `}
                   onClick={() =>
                     setOpenAccordion((current) =>
@@ -260,7 +264,7 @@ export function NavBar() {
                           className={`
                             block rounded-lg px-3 py-2 text-xs font-semibold uppercase tracking-[0.22em]
                             hover:bg-elysion-sand/60 focus-visible:outline-2 focus-visible:outline-offset-4
-                            focus-visible:outline-(--elysion-olive)
+                            focus-visible:outline-elysion-olive
                           `}
                         >
                           {child.label}

@@ -31,16 +31,16 @@ export default function Home() {
         className="scroll-mt-24 bg-elysion-cream py-20 sm:py-24"
       >
         <div className="mx-auto max-w-6xl px-6">
-          <div className="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
+          <div className="flex flex-wrap items-end justify-between gap-6">
             <div>
               <p className="text-base uppercase tracking-[0.3em] text-elysion-olive">
                 {gallerySection.eyebrow}
               </p>
-              <h2 className="mt-3 text-3xl font-semibold text-elysion-ink sm:text-4xl">
+              <h1 className="mt-3 text-3xl font-semibold text-elysion-forest sm:text-4xl">
                 {gallerySection.title}
-              </h2>
+              </h1>
             </div>
-            <p className="max-w-xl text-base leading-relaxed text-elysion-ink/70">
+            <p className="max-w-xl text-base leading-relaxed text-elysion-forest/80">
               {gallerySection.description}
             </p>
           </div>

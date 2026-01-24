@@ -260,7 +260,11 @@ export default function ImageGallery({
             type="button"
             onClick={() => handleNavClick('prev')}
             onPointerDown={onPointerInteract}
-            className="rounded-full border border-elysion-olive bg-elysion-cream px-3 py-2 text-sm font-semibold text-elysion-ink transition hover:-translate-y-0.5 hover:shadow focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-elysion-gold"
+            className={`
+              rounded-full border border-elysion-olive bg-elysion-cream px-3 py-2 text-sm font-semibold
+              text-elysion-ink transition hover:-translate-y-0.5 hover:shadow focus-visible:outline-none
+              focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-elysion-gold
+            `}
             aria-label="Previous image"
           >
             Prev
@@ -269,7 +273,11 @@ export default function ImageGallery({
             type="button"
             onClick={() => handleNavClick('next')}
             onPointerDown={onPointerInteract}
-            className="rounded-full border border-elysion-olive bg-elysion-cream px-3 py-2 text-sm font-semibold text-elysion-ink transition hover:-translate-y-0.5 hover:shadow focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-elysion-gold"
+            className={`
+              rounded-full border border-elysion-olive bg-elysion-cream px-3 py-2 text-sm font-semibold
+              text-elysion-ink transition hover:-translate-y-0.5 hover:shadow focus-visible:outline-none
+              focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-elysion-gold
+            `}
             aria-label="Next image"
           >
             Next
@@ -303,7 +311,10 @@ export default function ImageGallery({
                 itemRefs.current[index] = node;
               }}
               onClick={() => handleItemClick(index)}
-              className="group relative w-65 shrink-0 snap-center focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-elysion-gold sm:w-80 md:w-90"
+              className={`
+                group relative w-65 shrink-0 snap-center focus-visible:outline-none
+                focus-visible:ring-2 focus-visible:ring-elysion-gold sm:w-80 md:w-90
+              `}
               initial={false}
               animate={isActive ? 'active' : 'inactive'}
               variants={focusVariants}

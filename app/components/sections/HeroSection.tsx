@@ -34,11 +34,11 @@ export function HeroSection({ content, sectionId = 'hero' }: HeroSectionProps) {
         <div className="mt-10 flex flex-wrap items-center gap-4">
           <a
             className={`
-                inline-flex items-center gap-3 rounded-full bg-elysion-forest px-6 py-3 text-sm font-semibold
-                uppercase tracking-[0.25em] text-elysion-cream shadow-xl transition duration-300
-                hover:-translate-y-0.5 hover:bg-elysion-olive focus-visible:outline-2
-                focus-visible:outline-offset-4 focus-visible:outline-(--elysion-gold)
-              `}
+              items-center rounded-full bg-elysion-forest px-6 py-3 text-sm font-semibold
+              uppercase tracking-[0.25em] text-elysion-cream shadow-xl transition duration-300
+              hover:-translate-y-0.5 hover:bg-elysion-olive focus-visible:outline-2
+              focus-visible:outline-offset-4 focus-visible:outline-elysion-gold
+            `}
             href={cta.href}
           >
             {cta.label}
