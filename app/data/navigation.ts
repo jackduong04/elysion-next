@@ -6,7 +6,11 @@ export const navigationConfig: NavItem[] = [
     id: 'landscaping',
     label: 'Landscaping',
     children: [
-      { id: 'carpentry', label: 'Carpentry', href: '/pages/landscaping/carpentry' },
+      {
+        id: 'carpentry',
+        label: 'Carpentry',
+        href: '/pages/landscaping/carpentry',
+      },
       {
         id: 'foundation',
         label: 'Foundation',
@@ -38,5 +42,4 @@ export const navigationConfig: NavItem[] = [
     href: '/pages/exterior-cleaning',
   },
   { id: 'about', label: 'About', href: '/pages/about' },
-  { id: 'contact', label: 'Contact', href: '/pages/contact' },
 ];

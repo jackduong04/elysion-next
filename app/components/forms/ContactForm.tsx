@@ -1,0 +1,161 @@
+'use client';
+
+import { useState, useEffect } from 'react';
+
+export const ContactForm = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  // Toggle scroll lock on body when form is open
+  useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'unset';
+    }
+    return () => {
+      document.body.style.overflow = 'unset';
+    };
+  }, [isOpen]);
+
+  const toggleForm = () => setIsOpen(!isOpen);
+
+  return (
+    <>
+      {/* Contact Toggle Button */}
+      <button
+        onClick={toggleForm}
+        className={`fixed bottom-8 right-8 z-70 px-6 py-3 rounded-full font-display text-lg tracking-wide transition-all duration-300 shadow-lg hover:scale-105 active:scale-95 ${
+          isOpen
+            ? 'bg-elysion-rust text-white'
+            : 'bg-elysion-forest text-elysion-cream hover:bg-elysion-olive'
+        }`}
+        aria-label={isOpen ? 'Close Contact Form' : 'Open Contact Form'}
+      >
+        {isOpen ? 'Close' : 'Contact'}
+      </button>
+
+      {/* Backdrop and Form Modal */}
+      <div
+        className={`fixed inset-0 z-60 flex items-center justify-center p-4 transition-all duration-500 ease-in-out ${
+          isOpen
+            ? 'opacity-100 pointer-events-auto visible'
+            : 'opacity-0 pointer-events-none invisible'
+        }`}
+      >
+        {/* Backdrop overlay */}
+        <div
+          className="absolute inset-0 bg-elysion-ink/60"
+          onClick={toggleForm}
+        />
+
+        {/* Form Container */}
+        <div
+          className={`relative w-full max-w-xl bg-elysion-cream rounded-2xl shadow-2xl overflow-hidden transition-transform duration-500 ease-[cubic-bezier(0.34,1.56,0.64,1)] ${
+            isOpen ? 'scale-100 translate-y-0' : 'scale-90 translate-y-8'
+          }`}
+        >
+          <div className="relative p-8 md:p-12">
+            <h2 className="text-3xl md:text-4xl font-display text-elysion-forest mb-2">
+              Get in Touch
+            </h2>
+            <p className="text-elysion-ink/70 mb-8 font-body">
+              Tell us about your project and let's create something beautiful
+              together.
+            </p>
+
+            <form className="space-y-5" onSubmit={(e) => e.preventDefault()}>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+                <div className="space-y-1.5">
+                  <label
+                    htmlFor="name"
+                    className="block text-sm font-medium text-elysion-forest tracking-wide"
+                  >
+                    Full Name *
+                  </label>
+                  <input
+                    required
+                    type="text"
+                    id="name"
+                    placeholder="Jane Doe"
+                    className="w-full px-4 py-3 bg-elysion-sand/30 border border-elysion-sand rounded-xl focus:ring-2 focus:ring-elysion-olive outline-none transition-all placeholder:text-elysion-ink/30"
+                  />
+                </div>
+                <div className="space-y-1.5">
+                  <label
+                    htmlFor="phone"
+                    className="block text-sm font-medium text-elysion-forest tracking-wide"
+                  >
+                    Phone Number *
+                  </label>
+                  <input
+                    required
+                    type="tel"
+                    id="phone"
+                    placeholder="+1 (555) 000-0000"
+                    className="w-full px-4 py-3 bg-elysion-sand/30 border border-elysion-sand rounded-xl focus:ring-2 focus:ring-elysion-olive outline-none transition-all placeholder:text-elysion-ink/30"
+                  />
+                </div>
+              </div>
+
+              <div className="space-y-1.5">
+                <label
+                  htmlFor="email"
+                  className="block text-sm font-medium text-elysion-forest tracking-wide"
+                >
+                  Email Address *
+                </label>
+                <input
+                  required
+                  type="email"
+                  id="email"
+                  placeholder="jane@example.com"
+                  className="w-full px-4 py-3 bg-elysion-sand/30 border border-elysion-sand rounded-xl focus:ring-2 focus:ring-elysion-olive outline-none transition-all placeholder:text-elysion-ink/30"
+                />
+              </div>
+
+              <div className="space-y-1.5">
+                <label
+                  htmlFor="address"
+                  className="block text-sm font-medium text-elysion-forest tracking-wide"
+                >
+                  Address *
+                </label>
+                <input
+                  required
+                  type="text"
+                  id="address"
+                  placeholder="123 Field Ave, Green Valley"
+                  className="w-full px-4 py-3 bg-elysion-sand/30 border border-elysion-sand rounded-xl focus:ring-2 focus:ring-elysion-olive outline-none transition-all placeholder:text-elysion-ink/30"
+                />
+              </div>
+
+              <div className="space-y-1.5">
+                <label
+                  htmlFor="message"
+                  className="block text-sm font-medium text-elysion-forest tracking-wide"
+                >
+                  Message
+                </label>
+                <textarea
+                  id="message"
+                  rows={4}
+                  placeholder="What can we help you with?"
+                  className="w-full px-4 py-3 bg-elysion-sand/30 border border-elysion-sand rounded-xl focus:ring-2 focus:ring-elysion-olive outline-none transition-all placeholder:text-elysion-ink/30 resize-none"
+                />
+              </div>
+
+              <div className="pt-4">
+                <button
+                  type="submit"
+                  className="w-full py-4 bg-elysion-forest text-elysion-cream rounded-xl font-display text-lg tracking-wide hover:bg-elysion-olive transition-colors shadow-md"
+                >
+                  Send Inquiry
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </>
+  );
+};
