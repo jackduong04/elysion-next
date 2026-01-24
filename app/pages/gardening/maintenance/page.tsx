@@ -4,12 +4,11 @@ import { maintenanceContent } from '../../../data/pages-content/gardening-childr
 // Components
 import {
   HeroSection,
-  HighlightsSection,
   ServicePageServicesSection,
 } from '../../../components/sections';
 
 export default function GardeningMaintenancePage() {
-  const { hero, servicesSection, highlightsSection } = maintenanceContent;
+  const { hero, servicesSection } = maintenanceContent;
 
   return (
     <main className="bg-elysion-cream text-elysion-ink">
@@ -18,7 +17,6 @@ export default function GardeningMaintenancePage() {
         content={servicesSection}
         sectionId="services"
       />
-      <HighlightsSection content={highlightsSection} sectionId="highlights" />
     </main>
   );
 }

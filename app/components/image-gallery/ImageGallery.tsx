@@ -303,7 +303,7 @@ export default function ImageGallery({
                 itemRefs.current[index] = node;
               }}
               onClick={() => handleItemClick(index)}
-              className="group relative w-65 shrink-0 snap-center focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-elysion-gold sm:w-[320px] md:w-90"
+              className="group relative w-65 shrink-0 snap-center focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-elysion-gold sm:w-80 md:w-90"
               initial={false}
               animate={isActive ? 'active' : 'inactive'}
               variants={focusVariants}

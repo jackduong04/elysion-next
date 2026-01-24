@@ -130,12 +130,14 @@ export function NavBar() {
             focus-visible:outline-offset-4 focus-visible:outline-(--elysion-gold)
           `}
         >
-          <Image
-            src="/vectors/elysion_logo_light.svg"
-            alt="Elysion Logo"
-            width={34}
-            height={34}
-          />
+          <div className="relative w-12 h-12">
+            <Image
+              src="/vectors/elysion_logo_light.svg"
+              alt="Elysion Logo"
+              fill
+              className="object-contain"
+            />
+          </div>
           <span className="text-lg text-white font-semibold uppercase tracking-[0.3em] invisible sm:visible">
             Elysion
           </span>

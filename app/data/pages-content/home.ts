@@ -86,21 +86,18 @@ export const homepageContent: HomepageContent = {
         title: 'Listening Walkthrough',
         summary:
           'We map light, soil, and movement on site to understand the soul of the space.',
-        image: '/images/highlight-walkthrough.jpg',
         sequence: 1,
       },
       {
         title: 'Textured Planting Plan',
         summary:
           'Layered perennials, shrubs, and evergreens keep the garden rich in every season.',
-        image: '/images/highlight-planting.jpg',
         sequence: 2,
       },
       {
         title: 'Steady Stewardship',
         summary:
           'Ongoing care keeps the landscape balanced, healthy, and effortless to enjoy.',
-        image: '/images/highlight-stewardship.jpg',
         sequence: 3,
       },
     ],
@@ -153,21 +150,18 @@ export const homepageContent: HomepageContent = {
         title: 'Listening Walkthrough',
         description:
           'We map light, soil, and movement on site to understand the soul of the space.',
-        image: '/images/highlight-walkthrough.jpg',
         sequence: 1,
       },
       {
         title: 'Textured Planting Plan',
         description:
           'Layered perennials, shrubs, and evergreens keep the garden rich in every season.',
-        image: '/images/highlight-planting.jpg',
         sequence: 2,
       },
       {
         title: 'Steady Stewardship',
         description:
           'Ongoing care keeps the landscape balanced, healthy, and effortless to enjoy.',
-        image: '/images/highlight-stewardship.jpg',
         sequence: 3,
       },
     ],

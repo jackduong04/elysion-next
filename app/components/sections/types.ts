@@ -26,7 +26,6 @@ export type HighlightItem = {
   title: string;
   summary: string;
   sequence: number;
-  image?: string;
 };
 
 export type HighlightsSectionContent = {
