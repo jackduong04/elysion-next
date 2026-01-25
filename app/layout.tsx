@@ -5,7 +5,7 @@ import { Playfair_Display, Work_Sans } from 'next/font/google';
 import './globals.css';
 import { NavBar } from './components/navbar/NavBar';
 import { ContactForm } from './components/forms/ContactForm';
-import { Footer } from './components/sections/Footer';
+import { ConditionalFooter } from './components/footer/ConditionalFooter';
 
 const displayFont = Playfair_Display({
   variable: '--font-display',
@@ -34,7 +34,7 @@ export default function RootLayout({
       >
         <NavBar />
         {children}
-        <Footer />
+        <ConditionalFooter />
         <ContactForm />
       </body>
     </html>

@@ -11,8 +11,8 @@ export const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 lg:gap-8 mb-16">
           {/* Branding Column */}
           <div className="space-y-6 lg:col-span-2">
-            <Link href="/" className="flex items-center gap-4 group">
-              <div className="relative w-16 h-16 transition-transform duration-300 group-hover:scale-110">
+            <Link href="/" className="flex items-center gap-4">
+              <div className="relative w-16 h-16 transition-transform duration-300">
                 <Image
                   src="/vectors/elysion_logo_light.svg"
                   alt="Elysion Logo"
