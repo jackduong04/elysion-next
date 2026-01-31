@@ -32,6 +32,8 @@ function idResolver({ buttons, defaultId }: idResolverProps) {
   return initialId;
 }
 
+const repo = process.env.NEXT_PUBLIC_BASE_PATH;
+
 export function HomepageServicesSection({
   content,
   sectionId = 'services',
@@ -101,7 +103,7 @@ export function HomepageServicesSection({
               >
                 Visit page
                 <Image
-                  src="/images/left-click.png"
+                  src={`${repo}/images/left-click.png`}
                   alt="Visit page"
                   width={20}
                   height={20}
@@ -134,7 +136,7 @@ export function HomepageServicesSection({
                 <div className="mt-8 flex items-center justify-between text-xs font-semibold uppercase tracking-[0.3em] text-elysion-rust">
                   <span>Explore</span>
                   <Image
-                    src="/images/left-click.png"
+                    src={`${repo}/images/left-click.png`}
                     alt="Left click icon"
                     width={24}
                     height={24}
@@ -171,7 +173,7 @@ export function ServicePageServicesSection({
   const detail = activeService?.detail || {
     description:
       'Details for this service are coming soon. Reach out to our team for specifics.',
-    image: '/images/service-maintenance.png',
+    image: `${repo}/images/service-maintenance.png`,
   };
 
   return (

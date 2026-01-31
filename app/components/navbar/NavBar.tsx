@@ -12,6 +12,8 @@ import { navigationConfig } from '../../data/navigation';
 import type { NavItem } from './types';
 
 export function NavBar() {
+  const repo = process.env.NEXT_PUBLIC_BASE_PATH;
+
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [openDropdown, setOpenDropdown] = useState<string | null>(null);
   const [openAccordion, setOpenAccordion] = useState<string | null>(null);
@@ -135,7 +137,7 @@ export function NavBar() {
         >
           <div className="relative w-12 h-12">
             <Image
-              src="/vectors/elysion_logo_light.svg"
+              src={`${repo}/vectors/elysion_logo_light.svg`}
               alt="Elysion Logo"
               fill
               className="object-contain"

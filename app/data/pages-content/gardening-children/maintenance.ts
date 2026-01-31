@@ -9,6 +9,8 @@ export type ServicePageContent = {
   servicesSection: ServicesSectionContent;
 };
 
+const repo = process.env.NEXT_PUBLIC_BASE_PATH;
+
 export const maintenanceContent: ServicePageContent = {
   hero: {
     eyebrow: 'Elysion Gardening',
@@ -18,7 +20,7 @@ export const maintenanceContent: ServicePageContent = {
       label: 'Explore our services',
       href: '/',
     },
-    background: '/images/hedge-in-sky.png',
+    background: `${repo}/images/hedge-in-sky.png`,
   },
   servicesSection: {
     eyebrow: 'Services',

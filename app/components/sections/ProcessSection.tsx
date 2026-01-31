@@ -16,6 +16,8 @@ export function ProcessSection({
   content,
   sectionId = 'process',
 }: ProcessSectionProps) {
+  const repo = process.env.NEXT_PUBLIC_BASE_PATH;
+
   const { eyebrow, title, description, processes } = content;
   const [isProcessOpen, setIsProcessOpen] = useState<number | null>(null);
 
@@ -66,7 +68,7 @@ export function ProcessSection({
                     </div>
                   </div>
                   <Image
-                    src="/images/left-click.png"
+                    src={`${repo}/images/left-click.png`}
                     alt="Left click icon"
                     width={24}
                     height={24}

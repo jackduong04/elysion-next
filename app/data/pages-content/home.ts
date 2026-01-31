@@ -34,6 +34,8 @@ type HomepageContent = {
   gallerySection: GallerySectionContent;
 };
 
+const repo = process.env.NEXT_PUBLIC_BASE_PATH;
+
 export const homepageContent: HomepageContent = {
   hero: {
     eyebrow: 'Elysion Auckland',
@@ -45,7 +47,7 @@ export const homepageContent: HomepageContent = {
       label: 'Explore our services',
       href: '#services',
     },
-    background: '/images/hedge-in-sky.png',
+    background: `${repo}/images/hedge-in-sky.png`,
   },
   servicesSection: {
     eyebrow: 'Services',
@@ -112,31 +114,31 @@ export const homepageContent: HomepageContent = {
     items: [
       {
         id: 'garden-path',
-        imageSrc: '/images/project-img/stock2.jpg',
+        imageSrc: `${repo}/images/project-img/stock2.jpg`,
         alt: 'Stone garden path framed by dense greenery and shrubs.',
         caption: 'Guided paths with layered greenery.',
       },
       {
         id: 'terrace-seating',
-        imageSrc: '/images/project-img/stock1.jpg',
+        imageSrc: `${repo}/images/project-img/stock1.jpg`,
         alt: 'Terraced patio with modern seating and trimmed hedges.',
         caption: 'Structured seating that still feels organic.',
       },
       {
         id: 'fire-pit-lounge',
-        imageSrc: '/images/project-img/stock3.jpg',
+        imageSrc: `${repo}/images/project-img/stock3.jpg`,
         alt: 'Outdoor lounge with a central fire pit and surrounding chairs.',
         caption: 'Evening gathering spaces with warmth.',
       },
       {
         id: 'stone-steps',
-        imageSrc: '/images/project-img/stock4.jpg',
+        imageSrc: `${repo}/images/project-img/stock4.jpg`,
         alt: 'Stone steps bordered by manicured plants and walls.',
         caption: 'Elevation changes framed with planting.',
       },
       {
         id: 'deck-overlook',
-        imageSrc: '/images/project-img/stock5.jpg',
+        imageSrc: `${repo}/images/project-img/stock5.jpg`,
         alt: 'Wooden deck overlooking a lush, planted backyard.',
         caption: 'Wood textures meeting soft plantings.',
       },

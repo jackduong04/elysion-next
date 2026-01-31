@@ -9,6 +9,8 @@ export type ServicePageContent = {
   processSection: ProcessSectionContent;
 };
 
+const repo = process.env.NEXT_PUBLIC_BASE_PATH;
+
 export const designContent: ServicePageContent = {
   hero: {
     eyebrow: 'Elysion Design',
@@ -18,7 +20,7 @@ export const designContent: ServicePageContent = {
       label: 'Explore our services',
       href: '/',
     },
-    background: '/images/hedge-in-sky.png',
+    background: `${repo}/images/hedge-in-sky.png`,
   },
   processSection: {
     eyebrow: 'Process',
@@ -31,21 +33,21 @@ export const designContent: ServicePageContent = {
         description:
           'We map light, soil, and movement on site to understand the soul of the space.',
         sequence: 1,
-        image: '/images/project-img/stock1.jpg',
+        image: `${repo}/images/project-img/stock1.jpg`,
       },
       {
         title: 'Textured Planting Plan',
         description:
           'Layered perennials, shrubs, and evergreens keep the garden rich in every season.',
         sequence: 2,
-        image: '/images/project-img/stock2.jpg',
+        image: `${repo}/images/project-img/stock2.jpg`,
       },
       {
         title: 'Steady Stewardship',
         description:
           'Ongoing care keeps the landscape balanced, healthy, and effortless to enjoy.',
         sequence: 3,
-        image: '/images/project-img/stock3.jpg',
+        image: `${repo}/images/project-img/stock3.jpg`,
       },
     ],
   },

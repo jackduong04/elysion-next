@@ -3,6 +3,8 @@ import Image from 'next/image';
 import { navigationConfig } from '../../data/navigation';
 
 export const Footer = () => {
+  const repo = process.env.NEXT_PUBLIC_BASE_PATH;
+
   const currentYear = new Date().getFullYear();
 
   return (
@@ -14,7 +16,7 @@ export const Footer = () => {
             <Link href="/" className="flex items-center gap-4">
               <div className="relative w-16 h-16 transition-transform duration-300">
                 <Image
-                  src="/vectors/elysion_logo_light.svg"
+                  src={`${repo}/vectors/elysion_logo_light.svg`}
                   alt="Elysion Logo"
                   fill
                   className="object-contain"
