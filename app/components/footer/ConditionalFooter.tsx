@@ -7,7 +7,7 @@ export const ConditionalFooter = () => {
   const pathname = usePathname();
 
   // Do not show footer on the About page
-  if (pathname === '/pages/about') {
+  if (pathname === '/pages/about/') {
     return null;
   }
 

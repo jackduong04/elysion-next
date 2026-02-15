@@ -39,22 +39,22 @@ const repo = process.env.NEXT_PUBLIC_BASE_PATH;
 export const homepageContent: HomepageContent = {
   hero: {
     eyebrow: 'Elysion Auckland',
-    title: 'Elysion, timeless landscapes for modern living.',
+    title: 'Where timeless design meets everyday life.',
     subtitle:
-      'We shape warm, lived-in outdoor spaces with old-world texture and clean, contemporary lines. ' +
-      'From seasonal stewardship to full garden design, every detail is intentional.',
+      'We design, build, and care for gardens that feel established from day one. ' +
+      'Warm textures, clean lines, and thoughtful maintenance - all handled seamlessly.',
     cta: {
-      label: 'Explore our services',
+      label: 'Start your journey',
       href: '#services',
     },
     background: `${repo}/images/hedge-in-sky.png`,
   },
   servicesSection: {
     eyebrow: 'Services',
-    title: 'Cultivated offerings for every season.',
+    title: 'Gardens designed to be lived in.',
     description:
-      'Each service blends old-world materiality with contemporary clarity, ' +
-      'ensuring your landscape feels grounded and effortless year-round.',
+      'We offer a complete suite of landscaping, gardening, design, and commercial services, ' +
+      'delivered with an eye for detail and a respect for timeless form.',
     buttons: [
       { id: 'landscaping', label: 'Landscaping' },
       { id: 'gardening', label: 'Gardening' },
@@ -66,51 +66,49 @@ export const homepageContent: HomepageContent = {
   testimonials: [
     {
       quote:
-        'Elysion turned our yard into a layered retreat. Every season feels curated.',
-      author: 'Marin Wells, Beacon Hill',
+        'Our garden finally feels like part of our home, not just something outside the windows.',
+      author: 'Emily Foster, Auckland',
     },
     {
       quote:
-        'The team balanced modern lines with classic planting. It feels timeless.',
-      author: 'Rafael Ortiz, South End',
+        'Elysion understood the feeling we wanted, not just the layout. The space has real warmth to it now.',
+      author: 'Daniel Wright, Auckland',
     },
     {
       quote:
-        'Maintenance is meticulous and calm. The garden looks better every month.',
-      author: 'Priya Patel, Back Bay',
+        "It's rare to find a team that blends design sensitivity with long-term care so seamlessly.",
+      author: 'Laura Kim, Auckland',
     },
   ],
   highlightsSection: {
-    eyebrow: 'Why choose us?',
-    title: 'A calm, collaborative path to renewal.',
+    eyebrow: 'Why Elysion?',
+    title: 'Quietly different by design.',
     description:
-      'We combine listening, design craft, and steady stewardship so the landscape grows alongside you.',
+      'A refined approach to landscaping, grounded in longevity and care.',
     highlights: [
       {
-        title: 'Listening Walkthrough',
+        title: 'Designed around real life',
         summary:
-          'We map light, soil, and movement on site to understand the soul of the space.',
+          'Our gardens are built to be used, enjoyed, and lived in every day.',
         sequence: 1,
       },
       {
-        title: 'Textured Planting Plan',
-        summary:
-          'Layered perennials, shrubs, and evergreens keep the garden rich in every season.',
+        title: 'Long-term mindset',
+        summary: 'We plan for how landscapes mature, not just how they start.',
         sequence: 2,
       },
       {
-        title: 'Steady Stewardship',
-        summary:
-          'Ongoing care keeps the landscape balanced, healthy, and effortless to enjoy.',
+        title: 'Trusted execution',
+        summary: 'Clear communication, careful work, and no unnecessary fuss.',
         sequence: 3,
       },
     ],
   },
   gallerySection: {
-    eyebrow: 'Portfolio',
-    title: 'A centered glimpse at recent landscapes.',
+    eyebrow: 'Our Work',
+    title: 'Landscapes shaped to be lived in.',
     description:
-      'Scroll, tap, or use the controls to explore how we pair texture and structure across varied spaces.',
+      'A selection of gardens and outdoor spaces designed to feel settled, balanced, and quietly timeless.',
     items: [
       {
         id: 'garden-path',
@@ -145,27 +143,27 @@ export const homepageContent: HomepageContent = {
     ],
   },
   processSection: {
-    eyebrow: 'Process',
-    title: 'A calm, collaborative path to renewal.',
+    eyebrow: 'Our Process',
+    title: 'Designed to last.',
     description:
-      'We combine listening, design craft, and steady stewardship so the landscape grows alongside you.',
+      'A simple, thoughtful process focused on quality, consistency, and long-term care.',
     processes: [
       {
-        title: 'Listening Walkthrough',
+        title: 'Consider',
         description:
-          'We map light, soil, and movement on site to understand the soul of the space.',
+          'We take time to understand the site, proportions, materials, and how the space will be used day to day.',
         sequence: 1,
       },
       {
-        title: 'Textured Planting Plan',
+        title: 'Create',
         description:
-          'Layered perennials, shrubs, and evergreens keep the garden rich in every season.',
+          'Design and construction are carried out with care, restraint, and attention to detail at every stage.',
         sequence: 2,
       },
       {
-        title: 'Steady Stewardship',
+        title: 'Sustain',
         description:
-          'Ongoing care keeps the landscape balanced, healthy, and effortless to enjoy.',
+          'Ongoing garden care ensures the landscape matures gracefully and continues to improve over time.',
         sequence: 3,
       },
     ],

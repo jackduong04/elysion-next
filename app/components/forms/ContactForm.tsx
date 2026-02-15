@@ -57,7 +57,9 @@ export const ContactForm = () => {
           className={`
             relative w-full max-w-xl bg-elysion-cream rounded-2xl shadow-2xl
             overflow-hidden transition-transform duration-500 ease-[cubic-bezier(0.34,1.56,0.64,1)] ${
-              isOpen ? 'scale-100 translate-y-0' : 'scale-90 translate-y-8'
+              isOpen
+                ? 'scale-85 md:scale-100 translate-y-0'
+                : 'scale-75 md:scale-90 translate-y-8'
             }`}
         >
           {/* Close button for all screen sizes */}

@@ -36,10 +36,5 @@ export const navigationConfig: NavItem[] = [
   },
   { id: 'commercial', label: 'Commercial', href: '/pages/commercial' },
   { id: 'design', label: 'Design', href: '/pages/design' },
-  {
-    id: 'exterior-cleaning',
-    label: 'Exterior Cleaning',
-    href: '/pages/exterior-cleaning',
-  },
   { id: 'about', label: 'About', href: '/pages/about' },
 ];

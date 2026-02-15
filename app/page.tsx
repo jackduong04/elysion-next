@@ -31,7 +31,7 @@ export default function Home() {
         className="scroll-mt-24 bg-elysion-cream py-20 sm:py-24"
       >
         <div className="mx-auto max-w-6xl px-6">
-          <div className="flex flex-wrap items-end justify-between gap-6">
+          <div className="flex flex-col gap-6">
             <div>
               <p className="text-base uppercase tracking-[0.3em] text-elysion-olive">
                 {gallerySection.eyebrow}
@@ -59,7 +59,7 @@ export default function Home() {
 
       <section id="reviews" className="scroll-mt-24 bg-elysion-forest py-20">
         <div className="mx-auto max-w-6xl px-6">
-          <div className="flex flex-wrap items-end justify-between gap-6">
+          <div className="flex flex-col gap-6">
             <div>
               <p className="text-base uppercase tracking-[0.3em] text-elysion-gold">
                 Reviews

@@ -65,7 +65,7 @@ export function HomepageServicesSection({
   return (
     <section id={sectionId} className="scroll-mt-24 py-20">
       <div className="mx-auto max-w-6xl px-6">
-        <div className="flex flex-wrap items-end justify-between gap-6">
+        <div className="flex flex-col gap-6">
           <div>
             <p className="text-base font-medium uppercase tracking-[0.3em] text-elysion-olive">
               {eyebrow}
@@ -179,7 +179,7 @@ export function ServicePageServicesSection({
   return (
     <section id={sectionId} className="scroll-mt-24 py-20">
       <div className="mx-auto max-w-6xl px-6">
-        <div className="flex flex-wrap items-end justify-between gap-6">
+        <div className="flex flex-col gap-6">
           <div>
             <p className="text-base font-medium uppercase tracking-[0.3em] text-elysion-olive">
               {eyebrow}

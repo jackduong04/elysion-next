@@ -1,5 +1,5 @@
 // Data
-import { designContent } from '../../data/pages-content/design/design';
+import { carpentryContent } from '../../../data/pages-content/landscaping-children/carpentry';
 
 // Components
 import {
@@ -7,11 +7,11 @@ import {
   ServicePageServicesSection,
   HighlightsSection,
   ProcessSection,
-} from '../../components/sections';
+} from '../../../components/sections';
 
-export default function DesignPage() {
+export default function GardeningMaintenancePage() {
   const { hero, servicesSection, highlightsSection, processSection } =
-    designContent;
+    carpentryContent;
 
   return (
     <main className="bg-elysion-cream text-elysion-ink">

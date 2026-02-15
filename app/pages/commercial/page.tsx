@@ -1,17 +1,15 @@
 // Data
-import { designContent } from '../../data/pages-content/design/design';
+import { commercialContent } from '../../data/pages-content/commercial/commercial';
 
 // Components
 import {
   HeroSection,
   ServicePageServicesSection,
   HighlightsSection,
-  ProcessSection,
 } from '../../components/sections';
 
 export default function DesignPage() {
-  const { hero, servicesSection, highlightsSection, processSection } =
-    designContent;
+  const { hero, servicesSection, highlightsSection } = commercialContent;
 
   return (
     <main className="bg-elysion-cream text-elysion-ink">
@@ -21,7 +19,6 @@ export default function DesignPage() {
         sectionId="services"
       />
       <HighlightsSection content={highlightsSection} sectionId="highlights" />
-      <ProcessSection content={processSection} sectionId="process" />
     </main>
   );
 }
