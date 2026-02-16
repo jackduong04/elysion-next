@@ -46,8 +46,9 @@ export function NavBar() {
           <Link
             href={item.href ?? '/'}
             className={`
-              rounded-full px-3 py-2 text-xs font-semibold uppercase transition duration-200
-              text-white text-shadow-lg tracking-[0.28em] hover:text-elysion-gold focus-visible:outline-2
+              rounded-full px-3 py-2 text-xs font-semibold uppercase 
+              transition duration-200 text-white text-shadow-lg 
+              tracking-[0.28em] hover:text-elysion-gold focus-visible:outline-2
               focus-visible:outline-offset-4 focus-visible:outline-elysion-olive
             `}
           >
@@ -74,9 +75,11 @@ export function NavBar() {
           type="button"
           aria-expanded={openDropdown === item.id}
           className={`
-            flex items-center gap-2 rounded-full px-3 py-2 text-xs font-semibold transition
-            text-white text-shadow-lg duration-200 uppercase tracking-[0.28em] hover:text-elysion-gold
-            focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-elysion-olive
+            flex items-center gap-2 rounded-full px-3 py-2 text-xs 
+            font-semibold transition text-white text-shadow-lg duration-200 
+            uppercase tracking-[0.28em] hover:text-elysion-gold
+            focus-visible:outline-2 focus-visible:outline-offset-4 
+            focus-visible:outline-elysion-olive
           `}
         >
           <span>{item.label}</span>
@@ -143,7 +146,12 @@ export function NavBar() {
               className="object-contain"
             />
           </div>
-          <span className="text-lg text-white font-semibold uppercase tracking-[0.3em] hidden sm:block">
+          <span
+            className={`
+              text-lg text-white font-semibold uppercase tracking-[0.3em] 
+              hidden sm:block
+            `}
+          >
             Elysion
           </span>
         </Link>
@@ -162,9 +170,12 @@ export function NavBar() {
           <button
             type="button"
             className={`
-              rounded-full px-4 py-2 text-xs font-semibold uppercase transition duration-200 text-shadow-lg tracking-[0.25em]
-              focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-elysion-olive border-2
-              border-elysion-cream text-elysion-cream hover:text-elysion-forest hover:bg-elysion-cream
+              rounded-full px-4 py-2 text-xs font-semibold uppercase 
+              transition duration-200 text-shadow-lg tracking-[0.25em]
+              focus-visible:outline-2 focus-visible:outline-offset-4 
+              focus-visible:outline-elysion-olive border-2
+              border-elysion-cream text-elysion-cream hover:text-elysion-forest 
+              hover:bg-elysion-cream
             `}
           >
             Cart
@@ -174,9 +185,12 @@ export function NavBar() {
             ref={menuToggleButtonRef}
             type="button"
             className={`
-              rounded-full px-4 py-2 text-xs font-semibold uppercase transition duration-200 text-shadow-lg tracking-[0.25em]
-              focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-elysion-olive border-2
-              border-elysion-cream text-elysion-cream hover:text-elysion-forest hover:bg-elysion-cream 2xl:hidden
+              rounded-full px-4 py-2 text-xs font-semibold uppercase 
+              transition duration-200 text-shadow-lg tracking-[0.25em]
+              focus-visible:outline-2 focus-visible:outline-offset-4 
+              focus-visible:outline-elysion-olive border-2
+              border-elysion-cream text-elysion-cream hover:text-elysion-forest 
+              hover:bg-elysion-cream 2xl:hidden
             `}
             aria-expanded={isMobileMenuOpen}
             aria-controls="mobile-menu"
@@ -199,7 +213,12 @@ export function NavBar() {
             : 'pointer-events-none max-h-0 opacity-0'
         }`}
       >
-        <div className="space-y-1 border-t border-elysion-sand bg-elysion-cream/95 px-4 pb-6 pt-4 text-elysion-forest shadow-xl">
+        <div
+          className={`
+            space-y-1 border-t border-elysion-sand bg-elysion-cream/95 
+            px-4 pb-6 pt-4 text-elysion-forest shadow-xl
+          `}
+        >
           {navigationConfig.map((item) => {
             const hasChildren = item.children && item.children.length > 0;
             if (!hasChildren) {
@@ -209,8 +228,9 @@ export function NavBar() {
                   href={item.href ?? '/'}
                   onClick={() => setIsMobileMenuOpen(false)}
                   className={`
-                    block rounded-xl px-3 py-3 text-sm font-semibold uppercase tracking-[0.28em]
-                    hover:bg-elysion-sand/60 focus-visible:outline-2 focus-visible:outline-offset-4
+                    block rounded-xl px-3 py-3 text-sm font-semibold 
+                    uppercase tracking-[0.28em] hover:bg-elysion-sand/60 
+                    focus-visible:outline-2 focus-visible:outline-offset-4
                     focus-visible:outline-elysion-olive
                   `}
                 >
@@ -229,8 +249,10 @@ export function NavBar() {
                   type="button"
                   aria-expanded={isOpen}
                   className={`
-                    flex w-full items-center justify-between px-3 py-3 text-sm font-semibold uppercase
-                    tracking-[0.28em] hover:bg-elysion-sand/60 focus-visible:outline-2 focus-visible:outline-offset-4
+                    flex w-full items-center justify-between px-3 py-3 
+                    text-sm font-semibold uppercase tracking-[0.28em] 
+                    hover:bg-elysion-sand/60 focus-visible:outline-2 
+                    focus-visible:outline-offset-4
                     focus-visible:outline-elysion-olive
                   `}
                   onClick={() =>
@@ -264,8 +286,10 @@ export function NavBar() {
                             setOpenAccordion(null);
                           }}
                           className={`
-                            block rounded-lg px-3 py-2 text-xs font-semibold uppercase tracking-[0.22em]
-                            hover:bg-elysion-sand/60 focus-visible:outline-2 focus-visible:outline-offset-4
+                            block rounded-lg px-3 py-2 text-xs font-semibold 
+                            uppercase tracking-[0.22em] 
+                            hover:bg-elysion-sand/60 focus-visible:outline-2 
+                            focus-visible:outline-offset-4
                             focus-visible:outline-elysion-olive
                           `}
                         >

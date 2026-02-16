@@ -89,7 +89,12 @@ export function HomepageServicesSection({
         </div>
 
         {showCTA ? (
-          <div className="mt-12 rounded-2xl border border-elysion-sand bg-elysion-sand p-8 shadow-xl">
+          <div
+            className={`
+              mt-12 rounded-2xl border border-elysion-sand bg-elysion-sand 
+              p-8 shadow-xl
+            `}
+          >
             <p className="text-base leading-relaxed text-elysion-forest">
               {activeCategory?.cta?.text}
             </p>
@@ -133,7 +138,12 @@ export function HomepageServicesSection({
                     {service.card.description}
                   </p>
                 </div>
-                <div className="mt-8 flex items-center justify-between text-xs font-semibold uppercase tracking-[0.3em] text-elysion-rust">
+                <div
+                  className={`
+                    mt-8 flex items-center justify-between text-xs font-semibold 
+                    uppercase tracking-[0.3em] text-elysion-rust
+                  `}
+                >
                   <span>Explore</span>
                   <Image
                     src={`${repo}/images/left-click.png`}
@@ -214,7 +224,12 @@ export function ServicePageServicesSection({
               {detail.description}
             </p>
           </div>
-          <div className="overflow-hidden rounded-2xl border border-elysion-sand bg-elysion-cream shadow-xl">
+          <div
+            className={`
+              overflow-hidden rounded-2xl border border-elysion-sand 
+              bg-elysion-cream shadow-xl
+            `}
+          >
             <Image
               src={detail.image}
               alt={activeService?.name || 'Service detail'}

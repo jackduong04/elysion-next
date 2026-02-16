@@ -1,5 +1,8 @@
+// Node modules
 import Link from 'next/link';
 import Image from 'next/image';
+
+// Data
 import { navigationConfig } from '../../data/navigation';
 
 export const Footer = () => {
@@ -8,7 +11,12 @@ export const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-elysion-forest text-elysion-cream pt-16 pb-8 border-t border-elysion-cream/10">
+    <footer
+      className={`
+        bg-elysion-forest text-elysion-cream pt-16 pb-8 border-t 
+        border-elysion-cream/10
+      `}
+    >
       <div className="max-w-7xl mx-auto px-6 lg:px-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 lg:gap-8 mb-16">
           {/* Branding Column */}
@@ -45,7 +53,10 @@ export const Footer = () => {
                 </p>
                 <a
                   href="tel:+6490000000"
-                  className="text-elysion-cream/90 hover:text-elysion-gold transition-colors text-sm"
+                  className={`
+                    text-elysion-cream/90 hover:text-elysion-gold transition-colors 
+                    text-sm
+                  `}
                 >
                   +64 9 000 0000
                 </a>
@@ -56,7 +67,10 @@ export const Footer = () => {
                 </p>
                 <a
                   href="mailto:hello@elysion.co.nz"
-                  className="text-elysion-cream/90 hover:text-elysion-gold transition-colors text-sm"
+                  className={`
+                    text-elysion-cream/90 hover:text-elysion-gold transition-colors 
+                    text-sm
+                  `}
                 >
                   hello@elysion.co.nz
                 </a>
@@ -84,7 +98,11 @@ export const Footer = () => {
                 <li key={item.id}>
                   <Link
                     href={item.href || '#'}
-                    className="text-elysion-cream/70 hover:text-elysion-gold transition-colors duration-200 text-sm font-medium uppercase tracking-widest"
+                    className={`
+                      text-elysion-cream/70 hover:text-elysion-gold 
+                      transition-colors duration-200 text-sm font-medium 
+                      uppercase tracking-widest
+                    `}
                   >
                     {item.label}
                   </Link>
@@ -94,7 +112,11 @@ export const Footer = () => {
                         <li key={child.id}>
                           <Link
                             href={child.href}
-                            className="text-elysion-cream/50 hover:text-elysion-gold transition-colors duration-200 text-xs font-medium uppercase tracking-widest"
+                            className={`
+                              text-elysion-cream/50 hover:text-elysion-gold 
+                              transition-colors duration-200 text-xs font-medium 
+                              uppercase tracking-widest
+                            `}
                           >
                             {child.label}
                           </Link>
@@ -117,7 +139,10 @@ export const Footer = () => {
                 href="https://instagram.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group flex items-center gap-3 text-elysion-cream/70 hover:text-elysion-gold transition-colors"
+                className={`
+                  group flex items-center gap-3 text-elysion-cream/70 
+                  hover:text-elysion-gold transition-colors
+                `}
               >
                 <span className="text-xs font-medium uppercase tracking-widest">
                   Instagram
@@ -127,7 +152,10 @@ export const Footer = () => {
                 href="https://facebook.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group flex items-center gap-3 text-elysion-cream/70 hover:text-elysion-gold transition-colors"
+                className={`
+                  group flex items-center gap-3 text-elysion-cream/70 
+                  hover:text-elysion-gold transition-colors
+                `}
               >
                 <span className="text-xs font-medium uppercase tracking-widest">
                   Facebook
@@ -137,7 +165,10 @@ export const Footer = () => {
                 href="https://pinterest.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group flex items-center gap-3 text-elysion-cream/70 hover:text-elysion-gold transition-colors"
+                className={`
+                  group flex items-center gap-3 text-elysion-cream/70 
+                  hover:text-elysion-gold transition-colors
+                `}
               >
                 <span className="text-xs font-medium uppercase tracking-widest">
                   Pinterest
@@ -148,7 +179,13 @@ export const Footer = () => {
         </div>
 
         {/* Bottom Bar */}
-        <div className="pt-8 border-t border-elysion-cream/5 flex flex-col md:flex-row justify-between items-center gap-4 text-[10px] uppercase tracking-[0.2em] text-elysion-cream/40">
+        <div
+          className={`
+            pt-8 border-t border-elysion-cream/5 flex flex-col md:flex-row 
+            justify-between items-center gap-4 text-[10px] uppercase 
+            tracking-[0.2em] text-elysion-cream/40
+          `}
+        >
           <p>© {currentYear} Elysion Landscapes Ltd. All rights reserved.</p>
           <div className="flex gap-8">
             <Link

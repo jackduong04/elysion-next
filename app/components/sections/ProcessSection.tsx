@@ -60,7 +60,13 @@ export function ProcessSection({
                       {process.title}
                     </h3>
                     <div
-                      className={`transition-all duration-300 ${isOpen ? 'max-h-40 mt-4 opacity-100' : 'max-h-0 mt-0 opacity-0'}`}
+                      className={`
+                        transition-all duration-300 ${
+                          isOpen
+                            ? 'max-h-40 mt-4 opacity-100'
+                            : 'max-h-0 mt-0 opacity-0'
+                        }
+                      `}
                     >
                       <p className="text-sm leading-relaxed text-elysion-forest/80">
                         {process.description}
@@ -76,12 +82,21 @@ export function ProcessSection({
                   />
                 </div>
                 {process.image && (
-                  <div className="relative w-80 sm:w-100 md:w-120 lg:w-140 xl:w-160 h-60 sm:h-75 md:h-90 lg:h-105 xl:h-120 mx-auto mb-5">
+                  <div
+                    className={`
+                      relative w-80 sm:w-100 md:w-120 lg:w-140 xl:w-160 h-60 
+                      sm:h-75 md:h-90 lg:h-105 xl:h-120 mx-auto mb-5
+                    `}
+                  >
                     <Image
                       src={process.image}
                       alt={process.description}
                       fill
-                      sizes="(max-width: 640px) 400px, (max-width: 768px) 480px, (max-width: 1024px) 560px, 640px"
+                      sizes={`
+                        (max-width: 640px) 400px, 
+                        (max-width: 768px) 480px, 
+                        (max-width: 1024px) 560px, 640px
+                      `}
                       className="w-full h-full object-cover"
                     />
                   </div>

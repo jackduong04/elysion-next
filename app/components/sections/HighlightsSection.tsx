@@ -49,7 +49,12 @@ export function HighlightsSection({
                   {highlight.summary}
                 </p>
               </div>
-              {/* <div className="mt-8 flex items-center justify-between text-xs font-semibold uppercase tracking-[0.3em] text-elysion-olive">
+              {/* <div 
+                className={`
+                  mt-8 flex items-center justify-between text-xs font-semibold 
+                  uppercase tracking-[0.3em] text-elysion-olive
+                `}
+              >
                 <span>View details</span>
                 <Image
                   src="/images/left-click.png"

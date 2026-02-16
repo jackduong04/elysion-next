@@ -71,12 +71,14 @@ export const homepageContent: HomepageContent = {
     },
     {
       quote:
-        'Elysion understood the feeling we wanted, not just the layout. The space has real warmth to it now.',
+        'Elysion understood the feeling we wanted, not just the layout. ' +
+        'The space has real warmth to it now.',
       author: 'Daniel Wright, Auckland',
     },
     {
       quote:
-        "It's rare to find a team that blends design sensitivity with long-term care so seamlessly.",
+        "It's rare to find a team that blends design sensitivity with " +
+        'long-term care so seamlessly.',
       author: 'Laura Kim, Auckland',
     },
   ],
@@ -108,7 +110,8 @@ export const homepageContent: HomepageContent = {
     eyebrow: 'Our Work',
     title: 'Landscapes shaped to be lived in.',
     description:
-      'A selection of gardens and outdoor spaces designed to feel settled, balanced, and quietly timeless.',
+      'A selection of gardens and outdoor spaces designed to feel settled, ' +
+      'balanced, and quietly timeless.',
     items: [
       {
         id: 'garden-path',
@@ -151,19 +154,22 @@ export const homepageContent: HomepageContent = {
       {
         title: 'Consider',
         description:
-          'We take time to understand the site, proportions, materials, and how the space will be used day to day.',
+          'We take time to understand the site, proportions, materials, and ' +
+          'how the space will be used day to day.',
         sequence: 1,
       },
       {
         title: 'Create',
         description:
-          'Design and construction are carried out with care, restraint, and attention to detail at every stage.',
+          'Design and construction are carried out with care, restraint, and ' +
+          'attention to detail at every stage.',
         sequence: 2,
       },
       {
         title: 'Sustain',
         description:
-          'Ongoing garden care ensures the landscape matures gracefully and continues to improve over time.',
+          'Ongoing garden care ensures the landscape matures gracefully and ' +
+          'continues to improve over time.',
         sequence: 3,
       },
     ],

@@ -79,12 +79,18 @@ export default function Home() {
               <article
                 key={testimonial.author}
                 className={`
-                  flex h-full flex-col justify-between rounded-2xl border border-elysion-olive bg-[rgba(246,241,231,0.08)]
+                  flex h-full flex-col justify-between rounded-2xl border 
+                  border-elysion-olive bg-[rgba(246,241,231,0.08)]
                   p-6 text-elysion-cream shadow-xl transition duration-500 hover:-translate-y-1
                 `}
               >
                 <p className="text-sm leading-relaxed">{testimonial.quote}</p>
-                <div className="mt-6 flex items-center text-xs font-semibold uppercase tracking-[0.3em] text-elysion-gold">
+                <div
+                  className={`
+                    mt-6 flex items-center text-xs font-semibold uppercase 
+                    tracking-[0.3em] text-elysion-gold
+                  `}
+                >
                   <span>{testimonial.author}</span>
                 </div>
               </article>

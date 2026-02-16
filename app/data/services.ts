@@ -103,7 +103,8 @@ export const services: Record<string, Service> = {
     },
     detail: {
       description: `Our fencing and gate service delivers clean, durable structures 
-        that define boundaries and improve privacy, built with attention to detail and proportion.`,
+        that define boundaries and improve privacy, built with attention to 
+        detail and proportion.`,
       image: '/images/unavailable.png',
     },
   },
@@ -130,8 +131,9 @@ export const services: Record<string, Service> = {
       ctaLabel: 'Foundation',
     },
     detail: {
-      description: `Our retaining wall construction services are delivered by licensed professionals, 
-        considering loads, drainage, and ground conditions for long-term performance.`,
+      description: `Our retaining wall construction services are delivered by 
+        licensed professionals, considering loads, drainage, and ground 
+        conditions for long-term performance.`,
       image: '/images/unavailable.png',
     },
   },
@@ -202,9 +204,10 @@ export const services: Record<string, Service> = {
       ctaLabel: 'Maintenance',
     },
     detail: {
-      description: `Our Auckland lawn care service focuses on regular mowing, edging, and seasonal attention 
-        to keep lawns healthy and presentable year-round. By maintaining correct cutting heights and 
-        consistent scheduling, we help lawns remain resilient, tidy, and easy to manage in Auckland conditions.`,
+      description: `Our Auckland lawn care service focuses on regular mowing, 
+        edging, and seasonal attention to keep lawns healthy and presentable year-round. 
+        By maintaining correct cutting heights and consistent scheduling, we help 
+        lawns remain resilient, tidy, and easy to manage in Auckland conditions.`,
       image: '/images/unavailable.png',
     },
   },
@@ -293,7 +296,8 @@ export const services: Record<string, Service> = {
     },
     detail: {
       description: `Our mulching and finishing service completes garden installations by 
-        improving moisture retention, suppressing weeds, and unifying the overall look of the landscape.`,
+        improving moisture retention, suppressing weeds, and unifying the overall 
+        look of the landscape.`,
       image: '/images/unavailable.png',
     },
   },

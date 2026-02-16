@@ -30,8 +30,9 @@ export const commercialContent: ServicePageContent = {
     eyebrow: 'Commercial Services',
     title: 'Considered care for commercial environments.',
     description:
-      'We support commercial properties with structured landscaping, ongoing maintenance, and exterior cleaning - ' +
-      'delivered with consistency and attention to detail.',
+      'We support commercial properties with structured landscaping, ' +
+      'ongoing maintenance, and exterior cleaning - delivered with consistency ' +
+      'and attention to detail.',
     buttons: [
       { id: 'commercial-landscaping', label: 'Commercial Landscaping' },
       { id: 'ground-maintenance', label: 'Ongoing Grounds Maintenance' },

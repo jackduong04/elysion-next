@@ -1,5 +1,6 @@
 'use client';
 
+// Node modules
 import { useState, useEffect } from 'react';
 
 export const ContactForm = () => {
@@ -25,9 +26,10 @@ export const ContactForm = () => {
       <button
         onClick={toggleForm}
         className={`
-          fixed bottom-8 right-8 z-70 px-6 py-3 rounded-full font-semibold uppercase text-sm
-          md:text-base tracking-widest transition-all duration-300 shadow-xl/30 hover:scale-105
-          active:scale-95 border border-elysion-olive focus-visible:outline-none focus-visible:ring-2
+          fixed bottom-8 right-8 z-70 px-6 py-3 rounded-full font-semibold uppercase 
+          text-sm md:text-base tracking-widest transition-all duration-300 
+          shadow-xl/30 hover:scale-105 active:scale-95 border border-elysion-olive 
+          focus-visible:outline-none focus-visible:ring-2
           focus-visible:ring-offset-2 focus-visible:ring-elysion-olive ${
             isOpen
               ? 'bg-elysion-rust text-white hidden lg:block'
@@ -40,11 +42,14 @@ export const ContactForm = () => {
 
       {/* Backdrop and Form Modal */}
       <div
-        className={`fixed inset-0 z-60 flex items-center justify-center p-4 transition-all duration-500 ease-in-out ${
-          isOpen
-            ? 'opacity-100 pointer-events-auto visible'
-            : 'opacity-0 pointer-events-none invisible'
-        }`}
+        className={`
+          fixed inset-0 z-60 flex items-center justify-center p-4 transition-all 
+          duration-500 ease-in-out ${
+            isOpen
+              ? 'opacity-100 pointer-events-auto visible'
+              : 'opacity-0 pointer-events-none invisible'
+          }
+        `}
       >
         {/* Backdrop overlay */}
         <div
@@ -56,11 +61,13 @@ export const ContactForm = () => {
         <div
           className={`
             relative w-full max-w-xl bg-elysion-cream rounded-2xl shadow-2xl
-            overflow-hidden transition-transform duration-500 ease-[cubic-bezier(0.34,1.56,0.64,1)] ${
+            overflow-hidden transition-transform duration-500 
+            ease-[cubic-bezier(0.34,1.56,0.64,1)] ${
               isOpen
                 ? 'scale-85 md:scale-100 translate-y-0'
                 : 'scale-75 md:scale-90 translate-y-8'
-            }`}
+            }
+          `}
         >
           {/* Close button for all screen sizes */}
           <button
@@ -110,8 +117,9 @@ export const ContactForm = () => {
                     id="name"
                     placeholder="Jane Doe"
                     className={`
-                      w-full px-4 py-3 bg-elysion-sand/30 border border-elysion-sand rounded-xl
-                      focus:ring-2 focus:ring-elysion-olive outline-none transition-all placeholder:text-elysion-ink/40
+                      w-full px-4 py-3 bg-elysion-sand/30 border border-elysion-sand 
+                      rounded-xl focus:ring-2 focus:ring-elysion-olive outline-none 
+                      transition-all placeholder:text-elysion-ink/40
                     `}
                   />
                 </div>
@@ -128,8 +136,9 @@ export const ContactForm = () => {
                     id="phone"
                     placeholder="+1 (555) 000-0000"
                     className={`
-                      w-full px-4 py-3 bg-elysion-sand/30 border border-elysion-sand rounded-xl
-                      focus:ring-2 focus:ring-elysion-olive outline-none transition-all placeholder:text-elysion-ink/40
+                      w-full px-4 py-3 bg-elysion-sand/30 border border-elysion-sand 
+                      rounded-xl focus:ring-2 focus:ring-elysion-olive outline-none 
+                      transition-all placeholder:text-elysion-ink/40
                     `}
                   />
                 </div>
@@ -148,8 +157,9 @@ export const ContactForm = () => {
                   id="email"
                   placeholder="jane@example.com"
                   className={`
-                    w-full px-4 py-3 bg-elysion-sand/30 border border-elysion-sand rounded-xl
-                    focus:ring-2 focus:ring-elysion-olive outline-none transition-all placeholder:text-elysion-ink/40
+                    w-full px-4 py-3 bg-elysion-sand/30 border border-elysion-sand 
+                    rounded-xl focus:ring-2 focus:ring-elysion-olive outline-none 
+                    transition-all placeholder:text-elysion-ink/40
                   `}
                 />
               </div>
@@ -167,8 +177,9 @@ export const ContactForm = () => {
                   id="address"
                   placeholder="123 Field Ave, Green Valley"
                   className={`
-                    w-full px-4 py-3 bg-elysion-sand/30 border border-elysion-sand rounded-xl
-                    focus:ring-2 focus:ring-elysion-olive outline-none transition-all placeholder:text-elysion-ink/40
+                    w-full px-4 py-3 bg-elysion-sand/30 border border-elysion-sand 
+                    rounded-xl focus:ring-2 focus:ring-elysion-olive outline-none 
+                    transition-all placeholder:text-elysion-ink/40
                   `}
                 />
               </div>
@@ -185,8 +196,9 @@ export const ContactForm = () => {
                   rows={4}
                   placeholder="What can we help you with?"
                   className={`
-                    w-full px-4 py-3 bg-elysion-sand/30 border border-elysion-sand rounded-xl focus:ring-2
-                    focus:ring-elysion-olive outline-none transition-all placeholder:text-elysion-ink/40 resize-none
+                    w-full px-4 py-3 bg-elysion-sand/30 border border-elysion-sand 
+                    rounded-xl focus:ring-2 focus:ring-elysion-olive outline-none 
+                    transition-all placeholder:text-elysion-ink/40 resize-none
                   `}
                 />
               </div>
@@ -195,8 +207,9 @@ export const ContactForm = () => {
                 <button
                   type="submit"
                   className={`
-                    w-full py-4 bg-elysion-forest text-elysion-cream rounded-xl font-semibold
-                    text-lg tracking-widest hover:bg-elysion-olive transition-colors shadow-md uppercase
+                    w-full py-4 bg-elysion-forest text-elysion-cream 
+                    rounded-xl font-semibold text-lg tracking-widest 
+                    hover:bg-elysion-olive transition-colors shadow-md uppercase
                   `}
                 >
                   Submit

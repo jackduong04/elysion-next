@@ -57,19 +57,27 @@ export const AboutSlide = ({ content, index }: AboutSlideProps) => {
 
         {/* Image/Placeholder Side */}
         <div
-          className={`flex-1 bg-elysion-sand/30 relative overflow-hidden flex items-center justify-center border-t md:border-t-0 ${
-            isEven ? 'md:order-2' : 'md:order-1'
-          } ${
-            isEven
-              ? 'md:border-l border-elysion-forest/10'
-              : 'md:border-r border-elysion-forest/10'
-          }`}
+          className={`
+            flex-1 bg-elysion-sand/30 relative overflow-hidden flex 
+            items-center justify-center border-t md:border-t-0 ${
+              isEven ? 'md:order-2' : 'md:order-1'
+            } ${
+              isEven
+                ? 'md:border-l border-elysion-forest/10'
+                : 'md:border-r border-elysion-forest/10'
+            }
+          `}
         >
           {/* Decorative Texture */}
           <div className="absolute inset-0 texture-grain opacity-50" />
 
           <div className="relative z-10 flex flex-col items-center gap-4 text-elysion-forest/40">
-            <div className="w-24 h-24 md:w-32 md:h-32 border-2 border-dashed border-elysion-olive/30 rounded-full flex items-center justify-center">
+            <div
+              className={`
+              w-24 h-24 md:w-32 md:h-32 border-2 border-dashed 
+              border-elysion-olive/30 rounded-full flex items-center justify-center
+            `}
+            >
               <span className="text-xs uppercase tracking-tighter text-center px-4">
                 {content.imagePlaceholder}
               </span>
@@ -80,7 +88,12 @@ export const AboutSlide = ({ content, index }: AboutSlideProps) => {
           </div>
 
           {/* Subtle Accent */}
-          <div className="absolute bottom-0 right-0 w-32 h-32 bg-elysion-olive/5 rounded-tl-full" />
+          <div
+            className={`
+              absolute bottom-0 right-0 w-32 h-32 bg-elysion-olive/5 
+              rounded-tl-full
+            `}
+          />
         </div>
       </motion.div>
     </div>

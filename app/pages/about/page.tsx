@@ -1,13 +1,21 @@
 'use client';
 
+// Data
 import { aboutSlides } from '@/app/data/pages-content/about/about';
+
+// Components
 import { AboutSlide } from '@/app/components/slides/AboutSlide';
 
 export default function AboutPage() {
   return (
     <main className="bg-elysion-cream min-h-screen">
       {/* Background elements */}
-      <div className="fixed inset-0 texture-grain bg-elysion-forest pointer-events-none opacity-50" />
+      <div
+        className={`
+          fixed inset-0 texture-grain bg-elysion-forest 
+          pointer-events-none opacity-50
+        `}
+      />
 
       {/* Scroll Container */}
       <div

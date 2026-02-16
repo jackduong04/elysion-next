@@ -90,7 +90,8 @@ export const designContent: ServicePageContent = {
       {
         title: 'Resolve the details',
         description:
-          'Final drawings, planting plans, and technical documentation prepare the project for build.',
+          'Final drawings, planting plans, and technical documentation prepare ' +
+          'the project for build.',
         sequence: 3,
         image: `${repo}/images/project-img/stock3.jpg`,
       },

@@ -21,14 +21,29 @@ export function HeroSection({ content, sectionId = 'hero' }: HeroSectionProps) {
       />
       <div className="absolute inset-0 hero-overlay" aria-hidden="true" />
 
-      <div className="relative z-10 mx-auto flex min-h-[70vh] max-w-6xl flex-col justify-center px-6 py-24">
+      <div
+        className={`
+          relative z-10 mx-auto flex min-h-[70vh] max-w-6xl flex-col 
+          justify-center px-6 py-24
+        `}
+      >
         <p className="text-lg font-semibold uppercase tracking-[0.35em] text-elysion-gold">
           {eyebrow}
         </p>
-        <h1 className="mt-4 text-4xl font-semibold leading-tight text-elysion-cream sm:text-5xl lg:text-6xl">
+        <h1
+          className={`
+            mt-4 text-4xl font-semibold leading-tight text-elysion-cream 
+            sm:text-5xl lg:text-6xl
+          `}
+        >
           {title}
         </h1>
-        <p className="mt-6 max-w-2xl text-base leading-relaxed text-elysion-cream opacity-90 sm:text-lg">
+        <p
+          className={`
+            mt-6 max-w-2xl text-base leading-relaxed text-elysion-cream 
+            opacity-90 sm:text-lg
+          `}
+        >
           {subtitle}
         </p>
         <div className="mt-10 flex flex-wrap items-center gap-4">
@@ -43,7 +58,12 @@ export function HeroSection({ content, sectionId = 'hero' }: HeroSectionProps) {
           >
             {cta.label}
           </a>
-          <span className="text-xs font-medium uppercase tracking-[0.3em] text-elysion-cream opacity-80">
+          <span
+            className={`
+              text-xs font-medium uppercase tracking-[0.3em] text-elysion-cream 
+              opacity-80
+            `}
+          >
             Serving Greater Auckland
           </span>
         </div>

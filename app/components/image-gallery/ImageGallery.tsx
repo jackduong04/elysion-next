@@ -1,5 +1,6 @@
 'use client';
 
+// Node modules
 import Image from 'next/image';
 import {
   useCallback,
@@ -245,7 +246,10 @@ export default function ImageGallery({
     <section
       aria-roledescription="carousel"
       aria-label="Project image gallery"
-      className="space-y-6 rounded-3xl border border-elysion-olive/30 bg-[rgba(246,241,231,0.65)] p-4 shadow-lg sm:p-6"
+      className={`
+        space-y-6 rounded-3xl border border-elysion-olive/30 
+        bg-[rgba(246,241,231,0.65)] p-4 shadow-lg sm:p-6
+      `}
       onMouseEnter={() => setIsHovering(true)}
       onMouseLeave={() => setIsHovering(false)}
       onFocusCapture={() => setIsHovering(true)}
@@ -261,9 +265,11 @@ export default function ImageGallery({
             onClick={() => handleNavClick('prev')}
             onPointerDown={onPointerInteract}
             className={`
-              rounded-full border border-elysion-olive bg-elysion-cream px-3 py-2 text-sm font-semibold
-              text-elysion-ink transition hover:-translate-y-0.5 hover:shadow focus-visible:outline-none
-              focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-elysion-gold
+              rounded-full border border-elysion-olive bg-elysion-cream 
+              px-3 py-2 text-sm font-semibold text-elysion-ink transition 
+              hover:-translate-y-0.5 hover:shadow focus-visible:outline-none
+              focus-visible:ring-2 focus-visible:ring-offset-2 
+              focus-visible:ring-elysion-gold
             `}
             aria-label="Previous image"
           >
@@ -274,9 +280,11 @@ export default function ImageGallery({
             onClick={() => handleNavClick('next')}
             onPointerDown={onPointerInteract}
             className={`
-              rounded-full border border-elysion-olive bg-elysion-cream px-3 py-2 text-sm font-semibold
-              text-elysion-ink transition hover:-translate-y-0.5 hover:shadow focus-visible:outline-none
-              focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-elysion-gold
+              rounded-full border border-elysion-olive bg-elysion-cream 
+              px-3 py-2 text-sm font-semibold text-elysion-ink transition 
+              hover:-translate-y-0.5 hover:shadow focus-visible:outline-none
+              focus-visible:ring-2 focus-visible:ring-offset-2 
+              focus-visible:ring-elysion-gold
             `}
             aria-label="Next image"
           >
@@ -287,7 +295,10 @@ export default function ImageGallery({
 
       <div
         ref={containerRef}
-        className="carousel-scroll relative flex snap-x snap-mandatory gap-6 overflow-x-auto pb-4 pt-2"
+        className={`
+          carousel-scroll relative flex snap-x snap-mandatory gap-6 
+          overflow-x-auto pb-4 pt-2
+        `}
         style={{
           paddingLeft: sidePadding,
           paddingRight: sidePadding,
@@ -321,14 +332,22 @@ export default function ImageGallery({
               transition={{ type: 'spring', stiffness: 260, damping: 30 }}
               aria-label={`View image ${index + 1} of ${items.length}`}
             >
-              <div className="overflow-hidden rounded-2xl border border-elysion-olive/40 bg-elysion-cream shadow-md">
+              <div
+                className={`
+                  overflow-hidden rounded-2xl border border-elysion-olive/40 
+                  bg-elysion-cream shadow-md
+                `}
+              >
                 <div className="relative h-56 w-full sm:h-64 md:h-72">
                   <Image
                     src={item.imageSrc}
                     alt={item.alt}
                     fill
                     sizes="(max-width: 640px) 260px, (max-width: 768px) 320px, 360px"
-                    className="h-full w-full object-cover transition duration-500 group-hover:scale-105"
+                    className={`
+                      h-full w-full object-cover transition duration-500 
+                      group-hover:scale-105
+                    `}
                     priority={index === 0}
                   />
                 </div>
@@ -354,11 +373,14 @@ export default function ImageGallery({
               type="button"
               onClick={() => handleDotClick(index)}
               onPointerDown={onPointerInteract}
-              className={`h-3 w-3 rounded-full transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-elysion-gold ${
-                isActive
-                  ? 'bg-elysion-ink'
-                  : 'bg-elysion-olive/40 hover:bg-elysion-olive'
-              }`}
+              className={`
+                h-3 w-3 rounded-full transition focus-visible:outline-none 
+                focus-visible:ring-2 focus-visible:ring-elysion-gold ${
+                  isActive
+                    ? 'bg-elysion-ink'
+                    : 'bg-elysion-olive/40 hover:bg-elysion-olive'
+                }
+              `}
               aria-label={`Go to image ${index + 1} of ${items.length}`}
             />
           );
