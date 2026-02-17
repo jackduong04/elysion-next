@@ -22,7 +22,7 @@ export const commercialContent: ServicePageContent = {
       'reliably for businesses, developments, and managed properties.',
     cta: {
       label: 'View our services',
-      href: '/',
+      href: '#services',
     },
     background: `${repo}/images/hedge-in-sky.png`,
   },

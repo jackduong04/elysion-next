@@ -24,7 +24,7 @@ export const carpentryContent: ServicePageContent = {
       'durable, practical, and quietly refined.',
     cta: {
       label: 'Arrange a consultation',
-      href: '/',
+      href: '#services',
     },
     background: `${repo}/images/hedge-in-sky.png`,
   },

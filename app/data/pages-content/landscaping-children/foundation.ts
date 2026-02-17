@@ -24,7 +24,7 @@ export const foundationContent: ServicePageContent = {
       'outdoor spaces function properly and stand the test of time.',
     cta: {
       label: 'Arrange a consultation',
-      href: '/',
+      href: '#services',
     },
     background: `${repo}/images/hedge-in-sky.png`,
   },

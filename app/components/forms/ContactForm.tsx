@@ -61,11 +61,9 @@ export const ContactForm = () => {
         <div
           className={`
             relative w-full max-w-xl bg-elysion-cream rounded-2xl shadow-2xl
-            overflow-hidden transition-transform duration-500 
-            ease-[cubic-bezier(0.34,1.56,0.64,1)] ${
-              isOpen
-                ? 'scale-85 md:scale-100 translate-y-0'
-                : 'scale-75 md:scale-90 translate-y-8'
+            max-h-[calc(100dvh-2rem)] flex flex-col overflow-hidden 
+            transition-transform duration-500 ease-[cubic-bezier(0.34,1.56,0.64,1)] ${
+              isOpen ? 'scale-100 translate-y-0' : 'scale-90 translate-y-8'
             }
           `}
         >
@@ -93,7 +91,7 @@ export const ContactForm = () => {
               <line x1="6" y1="6" x2="18" y2="18"></line>
             </svg>
           </button>
-          <div className="relative p-8 md:p-12">
+          <div className="relative p-6 md:p-12 overflow-y-auto flex-1">
             <h2 className="text-3xl md:text-4xl font-medium text-elysion-forest mb-2">
               Get in Touch
             </h2>

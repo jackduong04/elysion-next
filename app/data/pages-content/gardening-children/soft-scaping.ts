@@ -22,7 +22,7 @@ export const softscapingContent: ServicePageContent = {
       'and finishes that feel settled from day one.',
     cta: {
       label: 'Start your project',
-      href: '/',
+      href: '#services',
     },
     background: `${repo}/images/hedge-in-sky.png`,
   },

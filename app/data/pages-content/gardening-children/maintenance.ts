@@ -20,7 +20,7 @@ export const maintenanceContent: ServicePageContent = {
       'reliable care that keeps gardens healthy and effortless year-round.',
     cta: {
       label: 'Arrange maintenance',
-      href: '/',
+      href: '#services',
     },
     background: `${repo}/images/hedge-in-sky.png`,
   },

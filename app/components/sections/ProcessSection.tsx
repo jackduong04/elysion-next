@@ -47,7 +47,7 @@ export function ProcessSection({
                 <div
                   className={`
                     mb-5 flex items-center gap-10 text-left border rounded-xl
-                    border-elysion-sand p-5 transition-all duration-300 cursor-pointer
+                    border-elysion-sand p-5 transition-all duration-300
                   `}
                   onClick={() => setIsProcessOpen(isOpen ? null : index)}
                   aria-expanded={isOpen}

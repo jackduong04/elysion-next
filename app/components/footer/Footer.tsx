@@ -52,13 +52,13 @@ export const Footer = () => {
                   Phone
                 </p>
                 <a
-                  href="tel:+6490000000"
+                  href="tel:+642040680173"
                   className={`
                     text-elysion-cream/90 hover:text-elysion-gold transition-colors 
                     text-sm
                   `}
                 >
-                  +64 9 000 0000
+                  +64 20 4068 0173
                 </a>
               </li>
               <li>
@@ -66,7 +66,7 @@ export const Footer = () => {
                   Email
                 </p>
                 <a
-                  href="mailto:hello@elysion.co.nz"
+                  href="mailto:jack@elysion.co.nz"
                   className={`
                     text-elysion-cream/90 hover:text-elysion-gold transition-colors 
                     text-sm
@@ -80,7 +80,7 @@ export const Footer = () => {
                   Address
                 </p>
                 <p className="text-elysion-cream/90 text-sm">
-                  Greater Auckland Area,
+                  Auckland,
                   <br />
                   New Zealand
                 </p>
@@ -161,19 +161,6 @@ export const Footer = () => {
                   Facebook
                 </span>
               </a>
-              <a
-                href="https://pinterest.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className={`
-                  group flex items-center gap-3 text-elysion-cream/70 
-                  hover:text-elysion-gold transition-colors
-                `}
-              >
-                <span className="text-xs font-medium uppercase tracking-widest">
-                  Pinterest
-                </span>
-              </a>
             </div>
           </div>
         </div>
@@ -186,7 +173,7 @@ export const Footer = () => {
             tracking-[0.2em] text-elysion-cream/40
           `}
         >
-          <p>© {currentYear} Elysion Landscapes Ltd. All rights reserved.</p>
+          <p>© {currentYear} Elysion Landscaping Ltd. All rights reserved.</p>
           <div className="flex gap-8">
             <Link
               href="/privacy"

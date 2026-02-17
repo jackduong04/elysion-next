@@ -119,13 +119,14 @@ export function HomepageServicesSection({
         ) : (
           <div className="mt-12 grid gap-6 sm:grid-cols-1 md:grid-cols-2 xl:grid-cols-4">
             {categoryServices.map((service) => (
-              <article
+              <a
                 key={service.slug}
                 className={`
                   group flex h-full flex-col justify-between rounded-2xl border
                   border-elysion-sand bg-elysion-sand p-6 shadow-xl transition duration-300
-                  hover:-translate-y-1 hover:shadow-lg focus-within:-translate-y-1 cursor-pointer
+                  hover:-translate-y-1 hover:shadow-lg focus-within:-translate-y-1
                 `}
+                href={service.href}
               >
                 <div>
                   <p className="text-xs font-medium uppercase tracking-[0.3em] text-elysion-olive">
@@ -152,7 +153,7 @@ export function HomepageServicesSection({
                     height={24}
                   />
                 </div>
-              </article>
+              </a>
             ))}
           </div>
         )}
@@ -213,16 +214,34 @@ export function ServicePageServicesSection({
         </div>
 
         <div className="mt-12 grid gap-8 lg:grid-cols-2">
-          <div className="rounded-2xl border border-elysion-sand bg-elysion-sand p-8 shadow-xl">
-            <p className="text-xs font-medium uppercase tracking-[0.3em] text-elysion-olive">
-              {activeService?.name || 'Service'}
-            </p>
-            <h2 className="mt-4 text-2xl font-semibold text-elysion-forest">
-              {activeService?.name || 'Selected service'}
-            </h2>
-            <p className="mt-4 text-base leading-relaxed text-elysion-forest opacity-90">
-              {detail.description}
-            </p>
+          <div
+            className={`
+              rounded-2xl border border-elysion-sand bg-elysion-sand
+              p-8 shadow-xl flex flex-col justify-between items-end
+            `}
+          >
+            <div>
+              <p className="text-xs font-medium uppercase tracking-[0.3em] text-elysion-olive">
+                {activeService?.name || 'Service'}
+              </p>
+              <h2 className="mt-4 text-2xl font-semibold text-elysion-forest">
+                {activeService?.name || 'Selected service'}
+              </h2>
+              <p className="mt-4 text-base leading-relaxed text-elysion-forest opacity-90">
+                {detail.description}
+              </p>
+            </div>
+            <a
+              href="#"
+              className={`
+                mt-8 items-center rounded-full bg-elysion-forest px-6 py-3 text-sm font-semibold
+                uppercase tracking-[0.25em] text-elysion-cream shadow-xl transition duration-300
+                hover:-translate-y-0.5 hover:bg-elysion-olive focus-visible:outline-2
+                focus-visible:outline-offset-4 focus-visible:outline-elysion-gold
+              `}
+            >
+              Book Now
+            </a>
           </div>
           <div
             className={`

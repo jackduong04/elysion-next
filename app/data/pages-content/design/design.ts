@@ -23,8 +23,8 @@ export const designContent: ServicePageContent = {
       'We design landscapes with warmth and restraint - ' +
       'guided by proportion, materiality, and how spaces are lived in every day.',
     cta: {
-      label: 'Start your design journey',
-      href: '/',
+      label: 'Start designing',
+      href: '#services',
     },
     background: `${repo}/images/hedge-in-sky.png`,
   },

@@ -1,3 +1,6 @@
+// Data
+import { navigationConfig } from './navigation';
+
 export type ServiceDetail = {
   description: string;
   image: string;
@@ -13,6 +16,7 @@ export type Service = {
   slug: string;
   name: string;
   categoryId: string;
+  href: string;
   card: ServiceCard;
   detail?: ServiceDetail;
 };
@@ -26,6 +30,15 @@ export type Category = {
     href: string;
   };
 };
+
+const repo = process.env.NEXT_PUBLIC_BASE_PATH;
+
+const CARPENTRY_HREF = `${repo}/pages/landscaping/carpentry#services`;
+const FOUNDATION_HREF = `${repo}/pages/landscaping/foundation#services`;
+const MAINTENANCE_HREF = `${repo}/pages/gardening/maintenance#services`;
+const SOFTSCAPING_HREF = `${repo}/pages/gardening/soft-scaping#services`;
+const DESIGN_HREF = `${repo}/pages/design#services`;
+const COMMERCIAL_HREF = `${repo}/pages/commercial#services`;
 
 export const categories: Record<string, Category> = {
   landscaping: {
@@ -83,6 +96,7 @@ export const services: Record<string, Service> = {
     slug: 'decking',
     name: 'Decking',
     categoryId: 'landscaping',
+    href: CARPENTRY_HREF,
     card: {
       description: 'Decks designed to be lived on.',
       ctaLabel: 'Carpentry',
@@ -97,6 +111,7 @@ export const services: Record<string, Service> = {
     slug: 'fence-gate',
     name: 'Fences & Gates',
     categoryId: 'landscaping',
+    href: CARPENTRY_HREF,
     card: {
       description: 'Professionally built fences and gates in Auckland.',
       ctaLabel: 'Carpentry',
@@ -112,6 +127,7 @@ export const services: Record<string, Service> = {
     slug: 'planter-box',
     name: 'Planter Boxes',
     categoryId: 'landscaping',
+    href: CARPENTRY_HREF,
     card: {
       description: 'Custom-built planter boxes for Auckland gardens.',
       ctaLabel: 'Carpentry',
@@ -126,6 +142,7 @@ export const services: Record<string, Service> = {
     slug: 'timber-retaining-wall',
     name: 'Timber Retaining Walls',
     categoryId: 'landscaping',
+    href: FOUNDATION_HREF,
     card: {
       description: 'Licensed timber retaining wall construction.',
       ctaLabel: 'Foundation',
@@ -141,6 +158,7 @@ export const services: Record<string, Service> = {
     slug: 'concrete-pad-driveway',
     name: 'Concrete Pads & Driveways',
     categoryId: 'landscaping',
+    href: FOUNDATION_HREF,
     card: {
       description: 'Solid surfaces, properly prepared.',
       ctaLabel: 'Foundation',
@@ -155,6 +173,7 @@ export const services: Record<string, Service> = {
     slug: 'drainage-groundwork',
     name: 'Drainage & Groundworks',
     categoryId: 'landscaping',
+    href: FOUNDATION_HREF,
     card: {
       description: 'Effective drainage and groundworks across Auckland.',
       ctaLabel: 'Foundation',
@@ -169,6 +188,7 @@ export const services: Record<string, Service> = {
     slug: 'paving-footpath',
     name: 'Paving & Footpaths',
     categoryId: 'landscaping',
+    href: FOUNDATION_HREF,
     card: {
       description: 'Reliable paving and footpaths in Auckland.',
       ctaLabel: 'Foundation',
@@ -183,6 +203,7 @@ export const services: Record<string, Service> = {
     slug: 'concrete-retaining-wall',
     name: 'Concrete Block Retaining Walls',
     categoryId: 'landscaping',
+    href: FOUNDATION_HREF,
     card: {
       description: 'Solid retaining walls, built to perform.',
       ctaLabel: 'Foundation',
@@ -199,6 +220,7 @@ export const services: Record<string, Service> = {
     slug: 'lawn-care',
     name: 'Lawn Care',
     categoryId: 'gardening',
+    href: MAINTENANCE_HREF,
     card: {
       description: 'Professional lawn care services across Auckland.',
       ctaLabel: 'Maintenance',
@@ -215,6 +237,7 @@ export const services: Record<string, Service> = {
     slug: 'hedge-trimming',
     name: 'Hedge Trimming',
     categoryId: 'gardening',
+    href: MAINTENANCE_HREF,
     card: {
       description: 'Neat, balanced hedges that frame your garden.',
       ctaLabel: 'Maintenance',
@@ -230,6 +253,7 @@ export const services: Record<string, Service> = {
     slug: 'ongoing-maintenance',
     name: 'Ongoing Maintenance',
     categoryId: 'gardening',
+    href: MAINTENANCE_HREF,
     card: {
       description: 'Set-and-forget garden maintenance in Auckland.',
       ctaLabel: 'Maintenance',
@@ -245,6 +269,7 @@ export const services: Record<string, Service> = {
     slug: 'seasonal-clear-out',
     name: 'Seasonal Clear-outs',
     categoryId: 'gardening',
+    href: MAINTENANCE_HREF,
     card: {
       description: 'Seasonal garden clear-outs across Auckland.',
       ctaLabel: 'Maintenance',
@@ -260,6 +285,7 @@ export const services: Record<string, Service> = {
     slug: 'planting',
     name: 'Planting',
     categoryId: 'gardening',
+    href: SOFTSCAPING_HREF,
     card: {
       description: 'Planting that brings landscapes to life.',
       ctaLabel: 'Soft-scaping',
@@ -275,6 +301,7 @@ export const services: Record<string, Service> = {
     slug: 'soil-conditioning',
     name: 'Soil Conditioning',
     categoryId: 'gardening',
+    href: SOFTSCAPING_HREF,
     card: {
       description: 'Soil preparation tailored to Auckland conditions.',
       ctaLabel: 'Soft-scaping',
@@ -289,6 +316,7 @@ export const services: Record<string, Service> = {
     slug: 'mulching',
     name: 'Mulching & Finishing',
     categoryId: 'gardening',
+    href: SOFTSCAPING_HREF,
     card: {
       description:
         'Professional mulching and finishing for Auckland landscapes.',
@@ -307,6 +335,7 @@ export const services: Record<string, Service> = {
     slug: 'landscape-design',
     name: 'Full Landscape Design',
     categoryId: 'design',
+    href: DESIGN_HREF,
     card: {
       description: 'Complete landscape design services across Auckland.',
       ctaLabel: 'Design',
@@ -321,6 +350,7 @@ export const services: Record<string, Service> = {
     slug: 'concept-render',
     name: 'Concept Renders',
     categoryId: 'design',
+    href: DESIGN_HREF,
     card: {
       description: 'Seeing the landscape take shape.',
       ctaLabel: 'Design',
@@ -335,6 +365,7 @@ export const services: Record<string, Service> = {
     slug: 'planting-plan',
     name: 'Planting Plans',
     categoryId: 'design',
+    href: DESIGN_HREF,
     card: {
       description: 'Planting plans guided by site and season.',
       ctaLabel: 'Design',
@@ -349,6 +380,7 @@ export const services: Record<string, Service> = {
     slug: 'drawing-consent',
     name: 'Structural Drawings & Consented Work',
     categoryId: 'design',
+    href: DESIGN_HREF,
     card: {
       description: 'Design and documentation, properly resolved.',
       ctaLabel: 'Design',
@@ -365,6 +397,7 @@ export const services: Record<string, Service> = {
     slug: 'commercial-landscaping',
     name: 'Commercial Landscaping',
     categoryId: 'commercial',
+    href: COMMERCIAL_HREF,
     card: {
       description:
         'Professional commercial landscaping services across Auckland.',
@@ -380,6 +413,7 @@ export const services: Record<string, Service> = {
     slug: 'ground-maintenance',
     name: 'Ongoing Grounds Maintenance',
     categoryId: 'commercial',
+    href: COMMERCIAL_HREF,
     card: {
       description:
         'Reliable grounds maintenance for Auckland commercial sites.',
@@ -395,6 +429,7 @@ export const services: Record<string, Service> = {
     slug: 'pressure-washing',
     name: 'Pressure Washing & Building Washing',
     categoryId: 'commercial',
+    href: COMMERCIAL_HREF,
     card: {
       description:
         'Professional pressure and building washing services across Auckland.',
@@ -410,6 +445,7 @@ export const services: Record<string, Service> = {
     slug: 'landscape-enhance',
     name: 'Landscape Enhancement Plans',
     categoryId: 'commercial',
+    href: COMMERCIAL_HREF,
     card: {
       description:
         'Strategic landscaping enhancement plans for Auckland sites.',
