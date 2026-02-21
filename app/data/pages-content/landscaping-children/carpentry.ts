@@ -39,6 +39,7 @@ export const carpentryContent: ServicePageContent = {
       { id: 'decking', label: 'Decking' },
       { id: 'fence-gate', label: 'Fences & Gates' },
       { id: 'planter-box', label: 'Planter Boxes' },
+      { id: 'timber-retaining-wall', label: 'Timber Retaining Walls' },
     ],
     defaultId: 'decking',
   },

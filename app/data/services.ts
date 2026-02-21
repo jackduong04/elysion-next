@@ -48,7 +48,7 @@ export const categories: Record<string, Category> = {
       'decking',
       'fence-gate',
       'planter-box',
-      'timer-retaining-wall',
+      'timber-retaining-wall',
       'concrete-pad-driveway',
       'drainage-groundwork',
       'paving-footpath',
@@ -66,6 +66,7 @@ export const categories: Record<string, Category> = {
       'planting',
       'soil-conditioning',
       'mulching',
+      'remove-prep',
     ],
   },
   design: {
@@ -142,7 +143,7 @@ export const services: Record<string, Service> = {
     slug: 'timber-retaining-wall',
     name: 'Timber Retaining Walls',
     categoryId: 'landscaping',
-    href: FOUNDATION_HREF,
+    href: CARPENTRY_HREF,
     card: {
       description: 'Licensed timber retaining wall construction.',
       ctaLabel: 'Foundation',
@@ -278,6 +279,22 @@ export const services: Record<string, Service> = {
       description: `Our Auckland garden clear-out service focuses on removing 
         built-up growth, debris, and tired planting to reset gardens for the season ahead, 
         restoring structure and improving presentation.`,
+      image: '/images/unavailable.png',
+    },
+  },
+  'remove-prep': {
+    slug: 'remove-prep',
+    name: 'Removal & Preparation',
+    categoryId: 'gardening',
+    href: SOFTSCAPING_HREF,
+    card: {
+      description: 'Preparing gardens for what comes next.',
+      ctaLabel: 'Soft-scaping',
+    },
+    detail: {
+      description: `We approach removal and preparation with care and restraint,
+        clearing tired elements while preserving what can be retained to set a strong
+        foundation for new landscaping works.`,
       image: '/images/unavailable.png',
     },
   },

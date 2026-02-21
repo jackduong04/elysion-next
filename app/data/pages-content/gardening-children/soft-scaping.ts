@@ -36,6 +36,7 @@ export const softscapingContent: ServicePageContent = {
       { id: 'planting', label: 'Planting' },
       { id: 'soil-conditioning', label: 'Soil Conditioning' },
       { id: 'mulching', label: 'Mulching & Finishing' },
+      { id: 'remove-prep', label: 'Removal & Preparation' },
     ],
     defaultId: 'planting',
   },

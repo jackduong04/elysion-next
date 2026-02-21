@@ -35,10 +35,13 @@ export const foundationContent: ServicePageContent = {
       'We deliver calm, considered foundation work that supports ' +
       'long-term performance, drainage, and ease of use across the landscape.',
     buttons: [
-      { id: 'timber-retaining-wall', label: 'Timber Retaining Walls' },
       { id: 'concrete-pad-driveway', label: 'Concrete Pads & Driveways' },
       { id: 'drainage-groundwork', label: 'Drainage & Groundworks' },
       { id: 'paving-footpath', label: 'Paving & Footpaths' },
+      {
+        id: 'concrete-retaining-wall',
+        label: 'Concrete Block Retaining Walls',
+      },
     ],
     defaultId: 'timber-retaining-wall',
   },
