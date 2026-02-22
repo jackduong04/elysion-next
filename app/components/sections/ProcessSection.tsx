@@ -12,12 +12,12 @@ type ProcessSectionProps = {
   sectionId?: string;
 };
 
+const repo = process.env.NEXT_PUBLIC_BASE_PATH;
+
 export function ProcessSection({
   content,
   sectionId = 'process',
 }: ProcessSectionProps) {
-  const repo = process.env.NEXT_PUBLIC_BASE_PATH;
-
   const { eyebrow, title, description, processes } = content;
   const [isProcessOpen, setIsProcessOpen] = useState<number | null>(null);
 
