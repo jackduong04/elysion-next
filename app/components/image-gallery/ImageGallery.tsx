@@ -25,6 +25,8 @@ type ImageGalleryProps = {
   initialIndex?: number;
 };
 
+const repo = process.env.NEXT_PUBLIC_BASE_PATH;
+
 const DEFAULT_INTERVAL = 3000;
 
 const clampIndex = (value: number, max: number) =>
@@ -340,7 +342,7 @@ export default function ImageGallery({
               >
                 <div className="relative h-56 w-full sm:h-64 md:h-72">
                   <Image
-                    src={item.imageSrc}
+                    src={`${repo}${item.imageSrc}`}
                     alt={item.alt}
                     fill
                     sizes="(max-width: 640px) 260px, (max-width: 768px) 320px, 360px"

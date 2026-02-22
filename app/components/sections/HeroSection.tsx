@@ -6,6 +6,8 @@ type HeroSectionProps = {
   sectionId?: string;
 };
 
+const repo = process.env.NEXT_PUBLIC_BASE_PATH;
+
 export function HeroSection({ content, sectionId = 'hero' }: HeroSectionProps) {
   const { eyebrow, title, subtitle, cta, background } = content;
 
@@ -16,7 +18,7 @@ export function HeroSection({ content, sectionId = 'hero' }: HeroSectionProps) {
     >
       <div
         className="absolute inset-0 bg-cover bg-center"
-        style={{ backgroundImage: `url(${background})` }}
+        style={{ backgroundImage: `url(${repo}${background})` }}
         aria-hidden="true"
       />
       <div className="absolute inset-0 hero-overlay" aria-hidden="true" />

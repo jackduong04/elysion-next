@@ -34,8 +34,6 @@ type HomepageContent = {
   gallerySection: GallerySectionContent;
 };
 
-const repo = process.env.NEXT_PUBLIC_BASE_PATH;
-
 export const homepageContent: HomepageContent = {
   hero: {
     eyebrow: 'Elysion Auckland',
@@ -47,7 +45,7 @@ export const homepageContent: HomepageContent = {
       label: 'Start your journey',
       href: '#services',
     },
-    background: `${repo}/images/home-pg/hedge-in-sky.webp`,
+    background: `/images/home-pg/hedge-in-sky.webp`,
   },
   servicesSection: {
     eyebrow: 'Services',
@@ -115,31 +113,31 @@ export const homepageContent: HomepageContent = {
     items: [
       {
         id: 'garden-path',
-        imageSrc: `${repo}/images/home-pg/gallery-img/dairy-flat01.webp`,
+        imageSrc: `/images/home-pg/gallery-img/dairy-flat01.webp`,
         alt: 'Stone garden path framed by dense greenery and shrubs.',
         caption: 'Need to change this text, image alt text and id',
       },
       {
         id: 'terrace-seating',
-        imageSrc: `${repo}/images/home-pg/gallery-img/henderson01.webp`,
+        imageSrc: `/images/home-pg/gallery-img/henderson01.webp`,
         alt: 'Terraced patio with modern seating and trimmed hedges.',
         caption: 'Need to change this text, image alt text and id',
       },
       {
         id: 'fire-pit-lounge',
-        imageSrc: `${repo}/images/home-pg/gallery-img/kumeu01.webp`,
+        imageSrc: `/images/home-pg/gallery-img/kumeu01.webp`,
         alt: 'Outdoor lounge with a central fire pit and surrounding chairs.',
         caption: 'Need to change this text, image alt text and id',
       },
       {
         id: 'stone-steps',
-        imageSrc: `${repo}/images/home-pg/gallery-img/kumeu02.webp`,
+        imageSrc: `/images/home-pg/gallery-img/kumeu02.webp`,
         alt: 'Stone steps bordered by manicured plants and walls.',
         caption: 'Need to change this text, image alt text and id',
       },
       {
         id: 'deck-overlook',
-        imageSrc: `${repo}/images/home-pg/gallery-img/silverdale01.webp`,
+        imageSrc: `/images/home-pg/gallery-img/silverdale01.webp`,
         alt: 'Wooden deck overlooking a lush, planted backyard.',
         caption: 'Need to change this text, image alt text and id',
       },

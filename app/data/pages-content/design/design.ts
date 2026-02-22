@@ -13,8 +13,6 @@ export type ServicePageContent = {
   processSection: ProcessSectionContent;
 };
 
-const repo = process.env.NEXT_PUBLIC_BASE_PATH;
-
 export const designContent: ServicePageContent = {
   hero: {
     eyebrow: 'Landscape Design Auckland',
@@ -26,7 +24,7 @@ export const designContent: ServicePageContent = {
       label: 'Start designing',
       href: '#services',
     },
-    background: `${repo}/images/design-pg/silverdale-render01.webp`,
+    background: `/images/design-pg/silverdale-render01.webp`,
   },
   servicesSection: {
     eyebrow: 'Design Services',
@@ -78,14 +76,14 @@ export const designContent: ServicePageContent = {
         description:
           "We explore how the space will be used, your priorities, and the site's constraints.",
         sequence: 1,
-        image: `${repo}/images/unavailable.jpg`,
+        image: `/images/unavailable.jpg`,
       },
       {
         title: 'Develop the design',
         description:
           'Concepts, layouts, and planting ideas are refined into a cohesive direction.',
         sequence: 2,
-        video: `${repo}/videos/develop-the-design.mp4`,
+        video: `/videos/develop-the-design.mp4`,
       },
       {
         title: 'Resolve the details',
@@ -93,7 +91,7 @@ export const designContent: ServicePageContent = {
           'Final drawings, planting plans, and technical documentation prepare ' +
           'the project for build.',
         sequence: 3,
-        image: `${repo}/images/unavailable.jpg`,
+        image: `/images/unavailable.jpg`,
       },
     ],
   },

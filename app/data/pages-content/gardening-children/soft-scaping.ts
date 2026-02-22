@@ -11,8 +11,6 @@ export type ServicePageContent = {
   highlightsSection: HighlightsSectionContent;
 };
 
-const repo = process.env.NEXT_PUBLIC_BASE_PATH;
-
 export const softscapingContent: ServicePageContent = {
   hero: {
     eyebrow: 'Soft-scaping in Auckland',
@@ -24,7 +22,7 @@ export const softscapingContent: ServicePageContent = {
       label: 'Start your project',
       href: '#services',
     },
-    background: `${repo}/images/softscaping-pg/silverdale01-wide.webp`,
+    background: `/images/softscaping-pg/silverdale01-wide.webp`,
   },
   servicesSection: {
     eyebrow: 'Soft-scaping Services',

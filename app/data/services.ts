@@ -29,14 +29,12 @@ export type Category = {
   };
 };
 
-const repo = process.env.NEXT_PUBLIC_BASE_PATH;
-
-const CARPENTRY_HREF = `${repo}/pages/landscaping/carpentry#services`;
-const FOUNDATION_HREF = `${repo}/pages/landscaping/foundation#services`;
-const MAINTENANCE_HREF = `${repo}/pages/gardening/maintenance#services`;
-const SOFTSCAPING_HREF = `${repo}/pages/gardening/soft-scaping#services`;
-const DESIGN_HREF = `${repo}/pages/design#services`;
-const COMMERCIAL_HREF = `${repo}/pages/commercial#services`;
+const CARPENTRY_HREF = '/pages/landscaping/carpentry#services';
+const FOUNDATION_HREF = '/pages/landscaping/foundation#services';
+const MAINTENANCE_HREF = '/pages/gardening/maintenance#services';
+const SOFTSCAPING_HREF = '/pages/gardening/soft-scaping#services';
+const DESIGN_HREF = '/pages/design#services';
+const COMMERCIAL_HREF = '/pages/commercial#services';
 
 export const categories: Record<string, Category> = {
   landscaping: {

@@ -89,7 +89,7 @@ export function ProcessSection({
                     `}
                   >
                     <Image
-                      src={process.image}
+                      src={`${repo}${process.image}`}
                       alt={process.description}
                       fill
                       sizes={`
@@ -108,7 +108,7 @@ export function ProcessSection({
                     `}
                   >
                     <video
-                      src={process.video}
+                      src={`${repo}${process.video}`}
                       width={800}
                       height={600}
                       autoPlay

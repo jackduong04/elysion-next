@@ -13,8 +13,6 @@ export type ServicePageContent = {
   processSection: ProcessSectionContent;
 };
 
-const repo = process.env.NEXT_PUBLIC_BASE_PATH;
-
 export const carpentryContent: ServicePageContent = {
   hero: {
     eyebrow: 'Outdoor Carpentry in Auckland',
@@ -26,7 +24,7 @@ export const carpentryContent: ServicePageContent = {
       label: 'Arrange a consultation',
       href: '#services',
     },
-    background: `${repo}/images/carpentry-pg/kumeu01-wide.webp`,
+    background: `/images/carpentry-pg/kumeu01-wide.webp`,
   },
   servicesSection: {
     eyebrow: 'Carpentry Services',

@@ -13,8 +13,6 @@ export type ServicePageContent = {
   processSection: ProcessSectionContent;
 };
 
-const repo = process.env.NEXT_PUBLIC_BASE_PATH;
-
 export const foundationContent: ServicePageContent = {
   hero: {
     eyebrow: 'Landscape Foundations',
@@ -26,7 +24,7 @@ export const foundationContent: ServicePageContent = {
       label: 'Arrange a consultation',
       href: '#services',
     },
-    background: `${repo}/images/foundation-pg/orewa01-wide.webp`,
+    background: `/images/foundation-pg/orewa01-wide.webp`,
   },
   servicesSection: {
     eyebrow: 'Foundation Services',

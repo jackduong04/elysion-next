@@ -11,8 +11,6 @@ export type ServicePageContent = {
   highlightsSection: HighlightsSectionContent;
 };
 
-const repo = process.env.NEXT_PUBLIC_BASE_PATH;
-
 export const commercialContent: ServicePageContent = {
   hero: {
     eyebrow: 'Auckland Commercial Landscaping',
@@ -24,7 +22,7 @@ export const commercialContent: ServicePageContent = {
       label: 'View our services',
       href: '#services',
     },
-    background: `${repo}/images/commercial-pg/apollo01-wide.webp`,
+    background: `/images/commercial-pg/apollo01-wide.webp`,
   },
   servicesSection: {
     eyebrow: 'Commercial Services',
