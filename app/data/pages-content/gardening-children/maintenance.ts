@@ -22,7 +22,7 @@ export const maintenanceContent: ServicePageContent = {
       label: 'Arrange maintenance',
       href: '#services',
     },
-    background: `${repo}/images/hedge-in-sky.png`,
+    background: `${repo}/images/maintenance-pg/dairy-flat01-wide.webp`,
   },
   servicesSection: {
     eyebrow: 'Maintenance Services',

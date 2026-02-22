@@ -249,13 +249,26 @@ export function ServicePageServicesSection({
               bg-elysion-cream shadow-xl
             `}
           >
-            <Image
-              src={detail.image}
-              alt={activeService?.name || 'Service detail'}
-              width={800}
-              height={600}
-              className="h-full w-full object-cover"
-            />
+            {detail.video ? (
+              <video
+                src={detail.video}
+                width={800}
+                height={600}
+                autoPlay
+                loop
+                muted
+                playsInline
+                className="h-full w-full object-cover"
+              />
+            ) : detail.image ? (
+              <Image
+                src={detail.image}
+                alt={activeService?.name || 'Service detail'}
+                width={800}
+                height={600}
+                className="h-full w-full object-cover"
+              />
+            ) : null}
           </div>
         </div>
       </div>

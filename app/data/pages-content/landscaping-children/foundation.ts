@@ -26,7 +26,7 @@ export const foundationContent: ServicePageContent = {
       label: 'Arrange a consultation',
       href: '#services',
     },
-    background: `${repo}/images/hedge-in-sky.png`,
+    background: `${repo}/images/foundation-pg/orewa01-wide.webp`,
   },
   servicesSection: {
     eyebrow: 'Foundation Services',

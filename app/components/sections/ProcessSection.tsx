@@ -81,7 +81,7 @@ export function ProcessSection({
                     className="ml-auto"
                   />
                 </div>
-                {process.image && (
+                {process.image ? (
                   <div
                     className={`
                       relative w-80 sm:w-100 md:w-120 lg:w-140 xl:w-160 h-60 
@@ -100,7 +100,25 @@ export function ProcessSection({
                       className="w-full h-full object-cover"
                     />
                   </div>
-                )}
+                ) : process.video ? (
+                  <div
+                    className={`
+                      relative w-80 sm:w-100 md:w-120 lg:w-140 xl:w-160 h-60 
+                      sm:h-75 md:h-90 lg:h-105 xl:h-120 mx-auto mb-5
+                    `}
+                  >
+                    <video
+                      src={process.video}
+                      width={800}
+                      height={600}
+                      autoPlay
+                      loop
+                      muted
+                      playsInline
+                      className="h-full w-full object-cover"
+                    />
+                  </div>
+                ) : null}
               </div>
             );
           })}

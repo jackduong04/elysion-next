@@ -1,9 +1,7 @@
-// Data
-import { navigationConfig } from './navigation';
-
 export type ServiceDetail = {
   description: string;
-  image: string;
+  image?: string;
+  video?: string;
 };
 
 export type ServiceCard = {
@@ -105,7 +103,7 @@ export const services: Record<string, Service> = {
     detail: {
       description: `We design and build timber decking that extends living spaces outdoors, 
         constructed by licensed professionals for durability, compliance, and everyday use.`,
-      image: '/images/unavailable.png',
+      image: '/images/home-pg/gallery-img/kumeu02.webp',
     },
   },
   'fence-gate': {
@@ -121,7 +119,7 @@ export const services: Record<string, Service> = {
       description: `Our fencing and gate service delivers clean, durable structures 
         that define boundaries and improve privacy, built with attention to 
         detail and proportion.`,
-      image: '/images/unavailable.png',
+      image: '/images/carpentry-pg/warkworth01.webp',
     },
   },
   'planter-box': {
@@ -136,7 +134,7 @@ export const services: Record<string, Service> = {
     detail: {
       description: `We build well-constructed timber planter boxes designed 
         for durability, drainage, and long-term use.`,
-      image: '/images/unavailable.png',
+      image: '/images/home-pg/gallery-img/henderson01.webp',
     },
   },
   'timber-retaining-wall': {
@@ -152,7 +150,7 @@ export const services: Record<string, Service> = {
       description: `Our retaining wall construction services are delivered by 
         licensed professionals, considering loads, drainage, and ground 
         conditions for long-term performance.`,
-      image: '/images/unavailable.png',
+      image: '/images/carpentry-pg/kumeu03.webp',
     },
   },
   'concrete-pad-driveway': {
@@ -167,7 +165,7 @@ export const services: Record<string, Service> = {
     detail: {
       description: `We construct concrete pads and driveways with careful preparation 
         and attention to detail, ensuring clean finishes and good drainage.`,
-      image: '/images/unavailable.png',
+      image: '/images/foundation-pg/epsom02.webp',
     },
   },
   'drainage-groundwork': {
@@ -182,7 +180,7 @@ export const services: Record<string, Service> = {
     detail: {
       description: `Our drainage and groundworks service manages water, levels, 
         and ground conditions to support long-term site performance.`,
-      image: '/images/unavailable.png',
+      image: '/images/foundation-pg/epsom01.webp',
     },
   },
   'paving-footpath': {
@@ -197,7 +195,7 @@ export const services: Record<string, Service> = {
     detail: {
       description: `We create clean, functional paved surfaces and 
         footpaths that improve access, flow, and presentation.`,
-      image: '/images/unavailable.png',
+      image: '/images/foundation-pg/kumeu06.webp',
     },
   },
   'concrete-retaining-wall': {
@@ -212,7 +210,7 @@ export const services: Record<string, Service> = {
     detail: {
       description: `We build concrete block retaining walls that provide 
         strength and stability while sitting cleanly within the landscape.`,
-      image: '/images/unavailable.png',
+      image: '/images/foundation-pg/kumeu05.webp',
     },
   },
 
@@ -231,7 +229,7 @@ export const services: Record<string, Service> = {
         edging, and seasonal attention to keep lawns healthy and presentable year-round. 
         By maintaining correct cutting heights and consistent scheduling, we help 
         lawns remain resilient, tidy, and easy to manage in Auckland conditions.`,
-      image: '/images/unavailable.png',
+      image: '/images/maintenance-pg/whenuapai01.webp',
     },
   },
   'hedge-trimming': {
@@ -247,7 +245,7 @@ export const services: Record<string, Service> = {
       description: `We provide careful hedge trimming services across Auckland, helping gardens 
         stay tidy and well defined without overcutting. Each trim is timed and shaped to suit 
         the plant and the surrounding landscape.`,
-      image: '/images/unavailable.png',
+      video: '/videos/hedge-trimming.mp4',
     },
   },
   'ongoing-maintenance': {
@@ -263,7 +261,7 @@ export const services: Record<string, Service> = {
       description: `We deliver reliable, ongoing garden maintenance services across Auckland, 
         taking care of pruning,  tidying, and general upkeep so your garden remains 
         presentable with minimal involvement from you.`,
-      image: '/images/unavailable.png',
+      image: '/images/maintenance-pg/dairy-flat02.webp',
     },
   },
   'seasonal-clear-out': {
@@ -279,7 +277,7 @@ export const services: Record<string, Service> = {
       description: `Our Auckland garden clear-out service focuses on removing 
         built-up growth, debris, and tired planting to reset gardens for the season ahead, 
         restoring structure and improving presentation.`,
-      image: '/images/unavailable.png',
+      image: '/images/maintenance-pg/henderson02.webp',
     },
   },
   'remove-prep': {
@@ -295,7 +293,7 @@ export const services: Record<string, Service> = {
       description: `We approach removal and preparation with care and restraint,
         clearing tired elements while preserving what can be retained to set a strong
         foundation for new landscaping works.`,
-      image: '/images/unavailable.png',
+      video: '/videos/removal-prep.mp4',
     },
   },
   planting: {
@@ -311,7 +309,7 @@ export const services: Record<string, Service> = {
       description: `We approach planting as a defining stage of the landscape, 
         carefully positioning plants to create rhythm, structure, 
         and longevity so gardens improve with time.`,
-      image: '/images/unavailable.png',
+      video: '/videos/planting.mp4',
     },
   },
   'soil-conditioning': {
@@ -326,7 +324,7 @@ export const services: Record<string, Service> = {
     detail: {
       description: `Our Auckland soil conditioning service improves soil structure, 
         drainage, and nutrients to support strong root development and resilient planting.`,
-      image: '/images/unavailable.png',
+      image: '/images/softscaping-pg/kumeu04.webp',
     },
   },
   mulching: {
@@ -343,7 +341,7 @@ export const services: Record<string, Service> = {
       description: `Our mulching and finishing service completes garden installations by 
         improving moisture retention, suppressing weeds, and unifying the overall 
         look of the landscape.`,
-      image: '/images/unavailable.png',
+      image: '/images/softscaping-pg/silverdale02.webp',
     },
   },
 
@@ -360,7 +358,7 @@ export const services: Record<string, Service> = {
     detail: {
       description: `Our full landscape design service provides a clear, considered vision 
         from concept through to detailed plans, balancing aesthetics and long-term function.`,
-      image: '/images/unavailable.png',
+      image: '/images/design-pg/full-design.webp',
     },
   },
   'concept-render': {
@@ -375,7 +373,7 @@ export const services: Record<string, Service> = {
     detail: {
       description: `We produce concept renders that communicate the feel and intent of 
         a design clearly, helping clients visualise projects before construction.`,
-      image: '/images/unavailable.png',
+      image: '/images/design-pg/renders.webp',
     },
   },
   'planting-plan': {
@@ -390,7 +388,7 @@ export const services: Record<string, Service> = {
     detail: {
       description: `Our planting plans consider soil, aspect, and climate to 
         support healthy establishment and resilient planting schemes.`,
-      image: '/images/unavailable.png',
+      image: '/images/design-pg/planting-plan.webp',
     },
   },
   'drawing-consent': {
@@ -405,7 +403,7 @@ export const services: Record<string, Service> = {
     detail: {
       description: `We provide structural drawings and consent-ready documentation 
         to ensure projects are planned accurately and approved with confidence.`,
-      image: '/images/unavailable.png',
+      image: '/images/design-pg/structural.webp',
     },
   },
 
@@ -423,7 +421,7 @@ export const services: Record<string, Service> = {
     detail: {
       description: `We support businesses and managed properties with structured, 
         presentable outdoor environments built for durability and consistency.`,
-      image: '/images/unavailable.png',
+      image: '/images/commercial-pg/silverdale02.webp',
     },
   },
   'ground-maintenance': {
@@ -439,7 +437,7 @@ export const services: Record<string, Service> = {
     detail: {
       description: `Our ongoing grounds maintenance service provides consistent care 
         to keep commercial landscapes tidy, safe, and well presented.`,
-      image: '/images/unavailable.png',
+      image: '/images/commercial-pg/northcote01.webp',
     },
   },
   'pressure-washing': {
@@ -455,7 +453,7 @@ export const services: Record<string, Service> = {
     detail: {
       description: `We restore exterior surfaces safely and effectively, 
         removing grime while protecting materials and surrounding landscaping.`,
-      image: '/images/unavailable.png',
+      image: '/images/commercial-pg/pressure-washing.webp',
     },
   },
   'landscape-enhance': {
@@ -471,7 +469,7 @@ export const services: Record<string, Service> = {
     detail: {
       description: `Our enhancement plans provide a clear roadmap for 
         staged improvements, prioritising long-term value and practical implementation.`,
-      image: '/images/unavailable.png',
+      image: '/images/commercial-pg/remuera01.webp',
     },
   },
 };

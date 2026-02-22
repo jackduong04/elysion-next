@@ -40,6 +40,7 @@ export type ProcessItem = {
   description: string;
   sequence: number;
   image?: string;
+  video?: string;
 };
 
 export type ProcessSectionContent = {

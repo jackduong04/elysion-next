@@ -24,7 +24,7 @@ export const softscapingContent: ServicePageContent = {
       label: 'Start your project',
       href: '#services',
     },
-    background: `${repo}/images/hedge-in-sky.png`,
+    background: `${repo}/images/softscaping-pg/silverdale01-wide.webp`,
   },
   servicesSection: {
     eyebrow: 'Soft-scaping Services',

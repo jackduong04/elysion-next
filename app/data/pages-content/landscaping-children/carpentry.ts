@@ -26,7 +26,7 @@ export const carpentryContent: ServicePageContent = {
       label: 'Arrange a consultation',
       href: '#services',
     },
-    background: `${repo}/images/hedge-in-sky.png`,
+    background: `${repo}/images/carpentry-pg/kumeu01-wide.webp`,
   },
   servicesSection: {
     eyebrow: 'Carpentry Services',

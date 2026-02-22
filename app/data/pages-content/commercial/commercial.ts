@@ -24,7 +24,7 @@ export const commercialContent: ServicePageContent = {
       label: 'View our services',
       href: '#services',
     },
-    background: `${repo}/images/hedge-in-sky.png`,
+    background: `${repo}/images/commercial-pg/apollo01-wide.webp`,
   },
   servicesSection: {
     eyebrow: 'Commercial Services',
