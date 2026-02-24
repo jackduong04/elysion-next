@@ -8,6 +8,7 @@ import {
   HighlightsSection,
   ProcessSection,
 } from '../../components/sections';
+import BookSlider from '@/app/components/flip-book/BookSlider';
 
 export default function DesignPage() {
   const { hero, servicesSection, highlightsSection, processSection } =
@@ -22,6 +23,7 @@ export default function DesignPage() {
       />
       <HighlightsSection content={highlightsSection} sectionId="highlights" />
       <ProcessSection content={processSection} sectionId="process" />
+      <BookSlider />
     </main>
   );
 }

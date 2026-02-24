@@ -271,11 +271,11 @@ export default function ImageGallery({
               px-3 py-2 text-sm font-semibold text-elysion-ink transition 
               hover:-translate-y-0.5 hover:shadow focus-visible:outline-none
               focus-visible:ring-2 focus-visible:ring-offset-2 
-              focus-visible:ring-elysion-gold
+              focus-visible:ring-elysion-gold uppercase
             `}
             aria-label="Previous image"
           >
-            Prev
+            Previous
           </button>
           <button
             type="button"
@@ -286,7 +286,7 @@ export default function ImageGallery({
               px-3 py-2 text-sm font-semibold text-elysion-ink transition 
               hover:-translate-y-0.5 hover:shadow focus-visible:outline-none
               focus-visible:ring-2 focus-visible:ring-offset-2 
-              focus-visible:ring-elysion-gold
+              focus-visible:ring-elysion-gold uppercase
             `}
             aria-label="Next image"
           >

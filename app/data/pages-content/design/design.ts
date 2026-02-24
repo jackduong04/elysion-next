@@ -91,7 +91,6 @@ export const designContent: ServicePageContent = {
           'Final drawings, planting plans, and technical documentation prepare ' +
           'the project for build.',
         sequence: 3,
-        image: `/images/unavailable.jpg`,
       },
     ],
   },
