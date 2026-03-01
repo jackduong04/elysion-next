@@ -267,30 +267,30 @@ export default function ImageGallery({
             onClick={() => handleNavClick('prev')}
             onPointerDown={onPointerInteract}
             className={`
-              rounded-full border border-elysion-olive bg-elysion-cream 
-              px-3 py-2 text-sm font-semibold text-elysion-ink transition 
+              rounded-2xl border border-elysion-olive bg-elysion-cream 
+              px-4 py-2 text-sm font-bold text-elysion-ink transition 
               hover:-translate-y-0.5 hover:shadow focus-visible:outline-none
               focus-visible:ring-2 focus-visible:ring-offset-2 
               focus-visible:ring-elysion-gold uppercase
             `}
             aria-label="Previous image"
           >
-            Previous
+            &lt;
           </button>
           <button
             type="button"
             onClick={() => handleNavClick('next')}
             onPointerDown={onPointerInteract}
             className={`
-              rounded-full border border-elysion-olive bg-elysion-cream 
-              px-3 py-2 text-sm font-semibold text-elysion-ink transition 
+              rounded-2xl border border-elysion-olive bg-elysion-cream 
+              px-4 py-2 text-sm font-bold text-elysion-ink transition 
               hover:-translate-y-0.5 hover:shadow focus-visible:outline-none
               focus-visible:ring-2 focus-visible:ring-offset-2 
               focus-visible:ring-elysion-gold uppercase
             `}
             aria-label="Next image"
           >
-            Next
+            &gt;
           </button>
         </div>
       </div>

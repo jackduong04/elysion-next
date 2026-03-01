@@ -4,18 +4,21 @@
 import { Loader } from '@react-three/drei';
 import { Canvas } from '@react-three/fiber';
 import { Suspense, useEffect, useState } from 'react';
-import { useAtomValue } from 'jotai';
+import { useAtomValue, useAtom } from 'jotai';
 
 // Components
 import { Experience } from './Experience';
-import { UI, isHoveringBookAtom } from './UI';
+import { UI, isHoveringBookAtom, isTouchDeviceAtom } from './UI';
 
 export default function BookSlider() {
   const [windowWidth, setWindowWidth] = useState(0);
   const isHoveringBook = useAtomValue(isHoveringBookAtom);
+  const [isTouchDevice, setIsTouchDevice] = useAtom(isTouchDeviceAtom);
 
   useEffect(() => {
     setWindowWidth(window.innerWidth);
+    setIsTouchDevice('ontouchstart' in window || navigator.maxTouchPoints > 0);
+
     const handleResize = () => setWindowWidth(window.innerWidth);
     window.addEventListener('resize', handleResize);
     return () => window.removeEventListener('resize', handleResize);
@@ -26,7 +29,13 @@ export default function BookSlider() {
       <UI />
       <Loader />
       <Canvas
-        style={{ touchAction: isHoveringBook ? 'none' : 'pan-y' }}
+        style={{
+          touchAction: isTouchDevice
+            ? 'pan-y'
+            : isHoveringBook
+              ? 'none'
+              : 'pan-y',
+        }}
         shadows={'basic'}
         camera={{
           position: [0, 0.25, windowWidth > 1024 ? 4 : 5],
