@@ -7,6 +7,8 @@ export const pictures = ['epsom-design02', 'epsom-design03'];
 
 export const pageAtom = atom(1);
 export const isHoveringBookAtom = atom(false);
+export const isTouchDeviceAtom = atom(false);
+export const zoomActionAtom = atom(0);
 
 export const pages = [
   {
@@ -29,12 +31,14 @@ pages.push({
 
 export const UI = () => {
   const [page, setPage] = useAtom(pageAtom);
+  const [isTouchDevice] = useAtom(isTouchDeviceAtom);
+  const [, setZoomAction] = useAtom(zoomActionAtom);
 
   return (
     <div
       className={`
-      absolute inset-0 z-20 pointer-events-none flex flex-col
-      items-center justify-between p-10 select-none text-elysion-cream
+      absolute inset-0 z-20 pointer-events-none flex flex-col items-center
+      justify-between p-10 pb-5 lg:pb-10 select-none text-elysion-cream
     `}
     >
       <h1
@@ -77,10 +81,41 @@ export const UI = () => {
           </button>
         </div>
         <p className="text-sm md:text-base leading-relaxed text-elysion-cream text-center">
-          Use scroll wheel to zoom in/out; Pinch-to-zoom on touch-screen
-          devices.
+          Tips: You can also click on the right-side page to go next, left-side
+          to go previous.
         </p>
       </div>
+
+      {isTouchDevice && (
+        <div className="absolute right-5 bottom-1/2 translate-y-1/2 flex flex-col gap-3 pointer-events-auto">
+          <button
+            onPointerDown={() => setZoomAction(1)}
+            onPointerUp={() => setZoomAction(0)}
+            onPointerLeave={() => setZoomAction(0)}
+            className={`
+              w-9 h-9 flex items-center justify-center bg-elysion-forest/40 hover:bg-white/20
+              rounded-full backdrop-blur-sm transition-all border border-elysion-olive active:scale-95
+              text-xl font-bold shadow-xl/30 text-elysion-gold
+            `}
+            aria-label="Zoom In"
+          >
+            +
+          </button>
+          <button
+            onPointerDown={() => setZoomAction(-1)}
+            onPointerUp={() => setZoomAction(0)}
+            onPointerLeave={() => setZoomAction(0)}
+            className={`
+              w-9 h-9 flex items-center justify-center bg-elysion-forest/40 hover:bg-white/20
+              rounded-full backdrop-blur-sm transition-all border border-elysion-olive active:scale-95
+              text-xl font-bold shadow-xl/30 text-elysion-gold
+            `}
+            aria-label="Zoom Out"
+          >
+            -
+          </button>
+        </div>
+      )}
     </div>
   );
 };
