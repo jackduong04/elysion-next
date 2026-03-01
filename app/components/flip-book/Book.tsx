@@ -22,7 +22,7 @@ import {
 } from 'three';
 
 // Components
-import { pageAtom, pages } from './UI';
+import { pageAtom, pages, isHoveringBookAtom } from './UI';
 
 const easingFactor = 0.5;
 const easingFactorFold = 0.3;
@@ -106,13 +106,7 @@ const Page = ({
     `${repo}/textures/${back}.webp`,
   ]);
 
-  useEffect(() => {
-    if (picture && picture2) {
-      picture.anisotropy = 16;
-      picture2.anisotropy = 16;
-      picture.colorSpace = picture2.colorSpace = SRGBColorSpace;
-    }
-  }, [picture, picture2]);
+  picture.colorSpace = picture2.colorSpace = SRGBColorSpace;
 
   const group = useRef<Group>(null);
   const turnedAt = useRef(0);
@@ -234,6 +228,7 @@ const Page = ({
   });
 
   const [_, setPage] = useAtom(pageAtom);
+  const [, setIsHoveringBook] = useAtom(isHoveringBookAtom);
   const [highlighted, setHighlighted] = useState(false);
   useCursor(highlighted);
 
@@ -244,10 +239,12 @@ const Page = ({
       onPointerEnter={(e) => {
         e.stopPropagation();
         setHighlighted(true);
+        setIsHoveringBook(true);
       }}
       onPointerLeave={(e) => {
         e.stopPropagation();
         setHighlighted(false);
+        setIsHoveringBook(false);
       }}
       onClick={(e) => {
         e.stopPropagation();

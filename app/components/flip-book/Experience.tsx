@@ -1,16 +1,25 @@
 'use client';
 
 // Node modules
-import { Environment, OrbitControls } from '@react-three/drei';
+import { Environment, OrbitControls, Preload } from '@react-three/drei';
+
+import { useAtom } from 'jotai';
 
 // Components
 import { Book } from './Book';
+import { isHoveringBookAtom } from './UI';
 
 export const Experience = () => {
+  const [isHoveringBook] = useAtom(isHoveringBookAtom);
+
   return (
     <>
       <Book />
-      <OrbitControls enableRotate={false} />
+      <OrbitControls
+        enableRotate={false}
+        enablePan={false}
+        enableZoom={isHoveringBook}
+      />
       <Environment preset="night" />
       <directionalLight
         position={[2, 2, 5]}
@@ -24,6 +33,7 @@ export const Experience = () => {
         <planeGeometry args={[100, 100]} />
         <shadowMaterial transparent opacity={0.15} />
       </mesh>
+      <Preload all />
     </>
   );
 };
