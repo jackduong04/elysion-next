@@ -12,12 +12,12 @@ export const AboutSlide = ({ content, index }: AboutSlideProps) => {
   const isEven = index % 2 === 0;
 
   return (
-    <div className="flex items-center justify-center min-h-screen w-full snap-start snap-always">
+    <div className="flex items-center justify-center h-full w-full snap-center snap-always pt-8">
       <motion.div
         initial={{ opacity: 0, scale: 0.9 }}
         whileInView={{ opacity: 1, scale: 1 }}
         transition={{
-          duration: 0.8,
+          duration: 0.5,
           ease: 'easeInOut',
         }}
         viewport={{ amount: 0.6 }}

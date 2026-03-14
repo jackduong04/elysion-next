@@ -8,18 +8,18 @@ import { AboutSlide } from '@/app/components/slides/AboutSlide';
 
 export default function AboutPage() {
   return (
-    <main className="bg-elysion-cream min-h-screen">
+    <main className="bg-elysion-cream min-h-dvh">
       {/* Background elements */}
       <div
         className={`
-          fixed inset-0 texture-grain bg-elysion-forest 
+          fixed inset-0 texture-grain bg-elysion-forest
           pointer-events-none opacity-50
         `}
       />
 
       {/* Scroll Container */}
       <div
-        className="h-screen overflow-y-auto snap-y snap-mandatory"
+        className="h-dvh overflow-y-scroll snap-y snap-mandatory"
         style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
       >
         {/* Hide scrollbar for Chrome/Safari */}
