@@ -20,6 +20,29 @@ export const ContactForm = () => {
 
   const toggleForm = () => setIsOpen(!isOpen);
 
+  async function handleSubmit(event: any) {
+    event.preventDefault();
+    const formData = new FormData(event.target);
+
+    formData.append('access_key', 'bc5c9e68-b456-4b56-aadb-63453b520e4c');
+
+    const object = Object.fromEntries(formData);
+    const json = JSON.stringify(object);
+
+    const response = await fetch('https://api.web3forms.com/submit', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        Accept: 'application/json',
+      },
+      body: json,
+    });
+    const result = await response.json();
+    if (result.success) {
+      console.log(result);
+    }
+  }
+
   return (
     <>
       {/* Contact Toggle Button */}
@@ -100,7 +123,7 @@ export const ContactForm = () => {
               together.
             </p>
 
-            <form className="space-y-5" onSubmit={(e) => e.preventDefault()}>
+            <form className="space-y-5" onSubmit={handleSubmit}>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
                 <div className="space-y-1.5">
                   <label
@@ -132,7 +155,7 @@ export const ContactForm = () => {
                     required
                     type="tel"
                     id="phone"
-                    placeholder="+1 (555) 000-0000"
+                    placeholder="020 4068 0173"
                     className={`
                       w-full px-4 py-3 bg-elysion-sand/30 border border-elysion-sand 
                       rounded-xl focus:ring-2 focus:ring-elysion-olive outline-none 

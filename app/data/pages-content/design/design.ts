@@ -76,14 +76,13 @@ export const designContent: ServicePageContent = {
         description:
           "We explore how the space will be used, your priorities, and the site's constraints.",
         sequence: 1,
-        image: `/images/unavailable.jpg`,
       },
       {
         title: 'Develop the design',
         description:
           'Concepts, layouts, and planting ideas are refined into a cohesive direction.',
         sequence: 2,
-        video: `/videos/develop-the-design.mp4`,
+        video: '/videos/develop-the-design.mp4',
       },
       {
         title: 'Resolve the details',

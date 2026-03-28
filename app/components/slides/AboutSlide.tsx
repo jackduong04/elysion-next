@@ -1,12 +1,17 @@
 'use client';
-
+// Node modules
 import { motion } from 'motion/react';
+import Image from 'next/image';
+
+// Data
 import { SlideContent } from '@/app/data/pages-content/about/about';
 
 interface AboutSlideProps {
   content: SlideContent;
   index: number;
 }
+
+const repo = process.env.NEXT_PUBLIC_BASE_PATH;
 
 export const AboutSlide = ({ content, index }: AboutSlideProps) => {
   const isEven = index % 2 === 0;
@@ -22,7 +27,7 @@ export const AboutSlide = ({ content, index }: AboutSlideProps) => {
         }}
         viewport={{ amount: 0.6 }}
         className={`
-          relative w-[85vw] h-[75vh] md:w-[80vw] md:h-[80vh] overflow-hidden
+          relative w-[85vw] h-[70vh] md:w-[80vw] md:h-[80vh] overflow-hidden
           rounded-2xl shadow-2xl bg-elysion-cream flex flex-col md:flex-row items-stretch
         `}
       >
@@ -49,16 +54,16 @@ export const AboutSlide = ({ content, index }: AboutSlideProps) => {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.5, duration: 0.6 }}
-            className="text-elysion-ink/80 text-lg md:text-xl leading-relaxed max-w-xl"
+            className="text-elysion-ink/80 text-base md:text-lg leading-relaxed max-w-xl"
           >
             {content.description}
           </motion.p>
         </div>
 
-        {/* Image/Placeholder Side */}
+        {/* Image Side */}
         <div
           className={`
-            flex-1 bg-elysion-sand/30 relative overflow-hidden flex 
+            flex-1 relative overflow-hidden flex 
             items-center justify-center border-t md:border-t-0 ${
               isEven ? 'md:order-2' : 'md:order-1'
             } ${
@@ -68,30 +73,23 @@ export const AboutSlide = ({ content, index }: AboutSlideProps) => {
             }
           `}
         >
-          {/* Decorative Texture */}
-          <div className="absolute inset-0 texture-grain opacity-50" />
+          <Image
+            src={`${repo}${content.imageUrl}`}
+            alt={content.title}
+            fill
+            className="object-cover"
+            sizes="(max-width: 768px) 100vw, 50vw"
+            priority={index === 0}
+          />
 
-          <div className="relative z-10 flex flex-col items-center gap-4 text-elysion-forest/40">
-            <div
-              className={`
-              w-24 h-24 md:w-32 md:h-32 border-2 border-dashed 
-              border-elysion-olive/30 rounded-full flex items-center justify-center
-            `}
-            >
-              <span className="text-xs uppercase tracking-tighter text-center px-4">
-                {content.imagePlaceholder}
-              </span>
-            </div>
-            <p className="text-[10px] md:text-xs uppercase tracking-[0.2em] font-medium">
-              Image Placeholder
-            </p>
-          </div>
+          {/* Decorative Texture Overlay */}
+          <div className="absolute inset-0 texture-grain opacity-20 pointer-events-none" />
 
-          {/* Subtle Accent */}
+          {/* Subtle Accent Overlay */}
           <div
             className={`
-              absolute bottom-0 right-0 w-32 h-32 bg-elysion-olive/5 
-              rounded-tl-full
+              absolute bottom-0 right-0 w-32 h-32 bg-elysion-olive/10 
+              rounded-tl-full pointer-events-none
             `}
           />
         </div>

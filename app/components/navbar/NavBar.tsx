@@ -126,8 +126,8 @@ export function NavBar() {
   return (
     <header
       className={`
-      fixed top-0 left-0 right-0 z-50 transition-colors duration-200 border-b
-      border-elysion-cream/10 bg-elysion-forest/80 shadow-xl backdrop-blur-sm
+      fixed top-0 left-0 right-0 z-50 transition-colors duration-200
+      border-b border-elysion-cream/10 bg-elysion-forest shadow-xl
     `}
     >
       <div className="flex w-full items-center justify-between px-9 2xl:px-12 py-3 2xl:py-4">
