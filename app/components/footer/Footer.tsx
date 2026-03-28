@@ -72,7 +72,7 @@ export const Footer = () => {
                     text-sm
                   `}
                 >
-                  hello@elysion.co.nz
+                  jack@elysion.co.nz
                 </a>
               </li>
               <li>
@@ -136,7 +136,7 @@ export const Footer = () => {
             </h3>
             <div className="flex flex-col gap-4">
               <a
-                href="https://instagram.com"
+                href="https://www.instagram.com/elysion.nz"
                 target="_blank"
                 rel="noopener noreferrer"
                 className={`
@@ -149,7 +149,7 @@ export const Footer = () => {
                 </span>
               </a>
               <a
-                href="https://facebook.com"
+                href="https://www.facebook.com/elysionnz"
                 target="_blank"
                 rel="noopener noreferrer"
                 className={`
@@ -159,6 +159,19 @@ export const Footer = () => {
               >
                 <span className="text-xs font-medium uppercase tracking-widest">
                   Facebook
+                </span>
+              </a>
+              <a
+                href="https://www.tiktok.com/@elysion.nz"
+                target="_blank"
+                rel="noopener noreferrer"
+                className={`
+                  group flex items-center gap-3 text-elysion-cream/70 
+                  hover:text-elysion-gold transition-colors
+                `}
+              >
+                <span className="text-xs font-medium uppercase tracking-widest">
+                  TikTok
                 </span>
               </a>
             </div>

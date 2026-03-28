@@ -354,7 +354,7 @@ export default function ImageGallery({
                   />
                 </div>
                 {item.caption && (
-                  <div className="flex items-center px-4 py-3 text-left">
+                  <div className="flex items-center px-4 py-3 justify-center">
                     <p className="text-sm font-semibold text-elysion-ink">
                       {item.caption}
                     </p>

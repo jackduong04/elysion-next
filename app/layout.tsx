@@ -19,7 +19,7 @@ const bodyFont = Work_Sans({
 });
 
 export const metadata: Metadata = {
-  title: 'Elysion',
+  title: 'Elysion Landscaping',
   description: 'Nostalgic landscape design and modern outdoor living.',
 };
 
