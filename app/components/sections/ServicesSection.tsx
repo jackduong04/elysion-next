@@ -206,8 +206,10 @@ export function ServicePageServicesSection({
                 {detail.description}
               </p>
             </div>
-            <a
-              href="#"
+            <button
+              onClick={() =>
+                window.dispatchEvent(new Event('open-contact-form'))
+              }
               className={`
                 mt-8 items-center rounded-full bg-elysion-forest px-6 py-3 text-sm font-semibold
                 uppercase tracking-[0.25em] text-elysion-cream shadow-xl transition duration-300
@@ -216,7 +218,7 @@ export function ServicePageServicesSection({
               `}
             >
               Book Now
-            </a>
+            </button>
           </div>
           <div
             className={`

@@ -18,6 +18,13 @@ export const ContactForm = () => {
     };
   }, [isOpen]);
 
+  // Listen for custom event to open the form
+  useEffect(() => {
+    const handleOpen = () => setIsOpen(true);
+    window.addEventListener('open-contact-form', handleOpen);
+    return () => window.removeEventListener('open-contact-form', handleOpen);
+  }, []);
+
   const toggleForm = () => setIsOpen(!isOpen);
 
   async function handleSubmit(event: any) {
