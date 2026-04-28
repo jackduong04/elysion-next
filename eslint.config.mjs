@@ -16,6 +16,7 @@ const eslintConfig = defineConfig([
     "dist/**",
     "coverage/**",
     "node_modules/**",
+    ".vercel/**",
   ]),
 ]);
 
