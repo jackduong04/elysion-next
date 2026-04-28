@@ -60,6 +60,13 @@ export default function ImageGallery({
 }: ImageGalleryProps) {
   const clampedInitial = clampIndex(initialIndex, items.length - 1);
   const [currentIndex, setCurrentIndex] = useState(clampedInitial);
+  const [prevClampedInitial, setPrevClampedInitial] = useState(clampedInitial);
+
+  if (clampedInitial !== prevClampedInitial) {
+    setPrevClampedInitial(clampedInitial);
+    setCurrentIndex(clampedInitial);
+  }
+
   const [userStopped, setUserStopped] = useState(false);
   const [isHovering, setIsHovering] = useState(false);
   const [sidePadding, setSidePadding] = useState(0);
@@ -140,7 +147,6 @@ export default function ImageGallery({
 
   useEffect(() => {
     if (!items.length) return;
-    setCurrentIndex(clampedInitial);
     scrollToIndex(clampedInitial, 'auto');
   }, [clampedInitial, items.length, scrollToIndex]);
 

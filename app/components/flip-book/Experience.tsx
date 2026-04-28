@@ -18,6 +18,7 @@ export const Experience = () => {
   useFrame(() => {
     if (zoomAction !== 0) {
       const step = 0.08 * zoomAction;
+      // eslint-disable-next-line react-hooks/immutability
       camera.position.z = Math.max(2, Math.min(8, camera.position.z - step));
     }
   });

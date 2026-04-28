@@ -144,7 +144,9 @@ export function ServicePageServicesSection({
     const params = new URLSearchParams(window.location.search);
     const serviceSlug = params.get('service');
     if (serviceSlug && services[serviceSlug]) {
-      setActiveServiceId(serviceSlug);
+      requestAnimationFrame(() => {
+        setActiveServiceId(serviceSlug);
+      });
     }
   }, []);
 

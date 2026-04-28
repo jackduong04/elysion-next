@@ -12,16 +12,18 @@ import { UI, isTouchDeviceAtom } from './UI';
 
 export default function BookSlider() {
   const [windowWidth, setWindowWidth] = useState(0);
-  const [_, setIsTouchDevice] = useAtom(isTouchDeviceAtom);
+  const [, setIsTouchDevice] = useAtom(isTouchDeviceAtom);
 
   useEffect(() => {
-    setWindowWidth(window.innerWidth);
-    setIsTouchDevice('ontouchstart' in window || navigator.maxTouchPoints > 0);
+    requestAnimationFrame(() => {
+      setWindowWidth(window.innerWidth);
+      setIsTouchDevice('ontouchstart' in window || navigator.maxTouchPoints > 0);
+    });
 
     const handleResize = () => setWindowWidth(window.innerWidth);
     window.addEventListener('resize', handleResize);
     return () => window.removeEventListener('resize', handleResize);
-  }, []);
+  }, [setIsTouchDevice]);
 
   return (
     <div className="relative w-full h-[75vh] bg-elysion-forest">

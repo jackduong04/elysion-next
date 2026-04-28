@@ -27,9 +27,9 @@ export const ContactForm = () => {
 
   const toggleForm = () => setIsOpen(!isOpen);
 
-  async function handleSubmit(event: any) {
+  async function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
-    const formData = new FormData(event.target);
+    const formData = new FormData(event.currentTarget);
 
     formData.append('access_key', 'bc5c9e68-b456-4b56-aadb-63453b520e4c');
 
@@ -126,8 +126,8 @@ export const ContactForm = () => {
               Get in Touch
             </h2>
             <p className="text-elysion-ink/70 mb-8 font-body">
-              Tell us about your project and let's create something beautiful
-              together.
+              Tell us about your project and let&apos;s create something
+              beautiful together.
             </p>
 
             <form className="space-y-5" onSubmit={handleSubmit}>

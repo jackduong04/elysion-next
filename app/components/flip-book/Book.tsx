@@ -56,7 +56,7 @@ for (let i = 0; i < position.count; i++) {
   const x = vertex.x;
 
   const skinIndex = Math.max(0, Math.floor(x / SEGMENT_WIDTH));
-  let skinWeight = (x % SEGMENT_WIDTH) / SEGMENT_WIDTH;
+  const skinWeight = (x % SEGMENT_WIDTH) / SEGMENT_WIDTH;
 
   skinIndexes.push(skinIndex, skinIndex + 1, 0, 0);
   skinWeights.push(1 - skinWeight, skinWeight, 0, 0);
@@ -87,7 +87,7 @@ interface PageProps {
   page: number;
   opened: boolean;
   bookClosed: boolean;
-  [key: string]: any;
+  [key: string]: unknown;
 }
 
 const repo = process.env.NEXT_PUBLIC_BASE_PATH;
@@ -106,6 +106,7 @@ const Page = ({
     `${repo}/textures/${back}.webp`,
   ]);
 
+  // eslint-disable-next-line react-hooks/immutability
   picture.colorSpace = picture2.colorSpace = SRGBColorSpace;
 
   const group = useRef<Group>(null);
@@ -113,10 +114,13 @@ const Page = ({
   const lastOpened = useRef(opened);
   const skinnedMeshRef = useRef<SkinnedMesh>(null);
 
+  const [highlighted, setHighlighted] = useState(false);
+  useCursor(highlighted);
+
   const manualSkinnedMesh = useMemo(() => {
     const bones: Bone[] = [];
     for (let i = 0; i <= PAGE_SEGMENTS; i++) {
-      let bone = new Bone();
+      const bone = new Bone();
       bones.push(bone);
       if (i === 0) {
         bone.position.x = 0;
@@ -150,7 +154,7 @@ const Page = ({
     mesh.add(skeleton.bones[0]);
     mesh.bind(skeleton);
     return mesh;
-  }, [picture, picture2, number]);
+  }, [picture, picture2]);
 
   useFrame((_, delta) => {
     if (!skinnedMeshRef.current || !group.current) return;
@@ -158,10 +162,10 @@ const Page = ({
     const currentMaterials = skinnedMeshRef.current
       .material as MeshStandardMaterial[];
     const emissiveIntensity = highlighted ? 0.22 : 0;
-    (currentMaterials[4] as any).emissiveIntensity = (
-      currentMaterials[5] as any
+    (currentMaterials[4] as MeshStandardMaterial).emissiveIntensity = (
+      currentMaterials[5] as MeshStandardMaterial
     ).emissiveIntensity = MathUtils.lerp(
-      (currentMaterials[4] as any).emissiveIntensity,
+      (currentMaterials[4] as MeshStandardMaterial).emissiveIntensity,
       emissiveIntensity,
       0.1,
     );
@@ -227,10 +231,8 @@ const Page = ({
     }
   });
 
-  const [_, setPage] = useAtom(pageAtom);
+  const [, setPage] = useAtom(pageAtom);
   const [, setIsHoveringBook] = useAtom(isHoveringBookAtom);
-  const [highlighted, setHighlighted] = useState(false);
-  useCursor(highlighted);
 
   return (
     <group
