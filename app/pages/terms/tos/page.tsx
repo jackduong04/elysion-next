@@ -15,7 +15,7 @@ export default function ToSPage() {
           <p className="text-elysion-olive text-sm font-medium uppercase tracking-[0.4em] mb-4">
             Legal
           </p>
-          <h1 className="text-5xl md:text-6xl font-semibold text-elysion-forest leading-tight">
+          <h1 className="text-4xl md:text-5xl font-semibold text-elysion-forest leading-tight">
             Terms of Service
           </h1>
           <div className="mt-8 flex flex-col sm:flex-row sm:items-center gap-4 sm:gap-8 text-sm text-elysion-ink/60 italic">

@@ -17,7 +17,9 @@ export default function BookSlider() {
   useEffect(() => {
     requestAnimationFrame(() => {
       setWindowWidth(window.innerWidth);
-      setIsTouchDevice('ontouchstart' in window || navigator.maxTouchPoints > 0);
+      setIsTouchDevice(
+        'ontouchstart' in window || navigator.maxTouchPoints > 0,
+      );
     });
 
     const handleResize = () => setWindowWidth(window.innerWidth);
