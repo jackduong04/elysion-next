@@ -79,6 +79,24 @@ export const homepageContent: HomepageContent = {
         'long-term care so seamlessly.',
       author: 'Laura Kim, Auckland',
     },
+    {
+      quote:
+        'We had tried to fix our sloping, unusable backyard for years. ' +
+        'Elysion transformed it into a series of beautiful, functional terraces we actually live in.',
+      author: 'Sarah Mitchell, Auckland',
+    },
+    {
+      quote:
+        'Even a year later, the design has matured exactly the way they said it would. ' +
+        "For us it's not just landscaping, it's an investment that benefits us in many ways.",
+      author: 'Thomas Bell, Auckland',
+    },
+    {
+      quote:
+        'I was nervous about committing to a full redesign, but Elysion listened to every concern ' +
+        'and delivered beyond what I imagined. The result is peaceful, practical, and absolutely beautiful.',
+      author: 'Rebecca Tan, Auckland',
+    },
   ],
   highlightsSection: {
     eyebrow: 'Why Elysion?',

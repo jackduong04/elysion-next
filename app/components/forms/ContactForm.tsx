@@ -2,10 +2,12 @@
 
 // Node modules
 import { useState, useEffect } from 'react';
-import { useForm } from 'react-hook-form';
+import { useForm, Controller } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import * as z from 'zod';
 import { motion, AnimatePresence } from 'motion/react';
+import { services as servicesData } from '../../data/services';
+import Select from 'react-select';
 
 // Form Schema
 const contactSchema = z.object({
@@ -19,6 +21,7 @@ const contactSchema = z.object({
   phone: z.string().regex(/^(?:\+64|0)[2-9][\d\s-]{7,11}$/, {
     message: 'Please enter a valid New Zealand phone number',
   }),
+  services: z.array(z.string()).optional(),
   message: z
     .string()
     .min(10, { message: 'Message must be at least 10 characters' })
@@ -39,6 +42,8 @@ export const ContactForm = () => {
     register,
     handleSubmit,
     reset,
+    setValue,
+    control,
     formState: { errors },
   } = useForm<ContactFormData>({
     resolver: zodResolver(contactSchema),
@@ -58,10 +63,18 @@ export const ContactForm = () => {
 
   // Listen for custom event to open the form
   useEffect(() => {
-    const handleOpen = () => setIsOpen(true);
+    const handleOpen = (e: Event) => {
+      setIsOpen(true);
+      if ('detail' in e) {
+        const customEvent = e as CustomEvent;
+        if (customEvent.detail?.service) {
+          setValue('services', [customEvent.detail.service]);
+        }
+      }
+    };
     window.addEventListener('open-contact-form', handleOpen);
     return () => window.removeEventListener('open-contact-form', handleOpen);
-  }, []);
+  }, [setValue]);
 
   const toggleForm = () => {
     setIsOpen(!isOpen);
@@ -266,6 +279,82 @@ export const ContactForm = () => {
                     {errors.email.message}
                   </p>
                 )}
+              </div>
+
+              <div className="space-y-1.5">
+                <label
+                  htmlFor="services"
+                  className="block text-sm font-medium text-elysion-forest tracking-wide"
+                >
+                  Services (Optional)
+                </label>
+                <Controller
+                  name="services"
+                  control={control}
+                  render={({ field }) => (
+                    <Select
+                      {...field}
+                      isMulti
+                      instanceId="services-select"
+                      inputId="services"
+                      options={Object.values(servicesData).map((s) => ({
+                        value: s.name,
+                        label: s.name,
+                      }))}
+                      value={
+                        field.value
+                          ? field.value.map((val) => ({
+                              value: val,
+                              label: val,
+                            }))
+                          : []
+                      }
+                      onChange={(selectedOptions) => {
+                        field.onChange(
+                          selectedOptions
+                            ? selectedOptions.map((opt) => opt.value)
+                            : [],
+                        );
+                      }}
+                      placeholder="Select services you are interested in..."
+                      classNames={{
+                        control: (state) =>
+                          `!min-h-[50px] !bg-elysion-sand/30 !border-elysion-sand !rounded-xl
+                          !shadow-none hover:!border-elysion-olive transition-all ${
+                            state.isFocused
+                              ? '!border-elysion-olive !ring-2 !ring-elysion-olive'
+                              : ''
+                          }`,
+                        menu: () =>
+                          `!bg-elysion-cream !border !border-elysion-sand !rounded-xl
+                          !shadow-xl !overflow-hidden !mt-1 !z-50`,
+                        menuList: () => '!p-1',
+                        option: (state) =>
+                          `!cursor-pointer !rounded-lg !py-2.5 !px-3 !mb-1 transition-colors ${
+                            state.isSelected
+                              ? '!bg-elysion-forest !text-white'
+                              : state.isFocused
+                                ? '!bg-elysion-sand/50 !text-elysion-forest'
+                                : '!text-elysion-forest hover:!bg-elysion-sand/30'
+                          }`,
+                        multiValue: () =>
+                          '!bg-elysion-olive/20 !rounded-lg !m-1',
+                        multiValueLabel: () =>
+                          '!text-elysion-forest !py-1 !px-2 !text-sm !font-medium',
+                        multiValueRemove: () =>
+                          '!rounded-r-lg hover:!bg-elysion-rust hover:!text-white !cursor-pointer transition-colors',
+                        placeholder: () => '!text-elysion-ink/40',
+                        input: () => '!text-elysion-forest',
+                        valueContainer: () => '!py-1 !px-3',
+                        indicatorSeparator: () => '!bg-elysion-sand/50',
+                        dropdownIndicator: () =>
+                          '!text-elysion-forest/60 hover:!text-elysion-forest !p-2 !cursor-pointer',
+                        clearIndicator: () =>
+                          '!text-elysion-forest/60 hover:!text-elysion-rust !p-2 !cursor-pointer',
+                      }}
+                    />
+                  )}
+                />
               </div>
 
               <div className="space-y-1.5">

@@ -210,7 +210,11 @@ export function ServicePageServicesSection({
             </div>
             <button
               onClick={() =>
-                window.dispatchEvent(new Event('open-contact-form'))
+                window.dispatchEvent(
+                  new CustomEvent('open-contact-form', {
+                    detail: { service: services[resolvedServiceId].name },
+                  }),
+                )
               }
               className={`
                 mt-8 items-center rounded-full bg-elysion-forest px-6 py-3 text-sm font-semibold
