@@ -1,6 +1,7 @@
 // Node modules
 import type { Metadata } from 'next';
 import { Playfair_Display, Work_Sans } from 'next/font/google';
+import { GoogleTagManager } from '@next/third-parties/google';
 
 // Components
 import './globals.css';
@@ -30,6 +31,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <GoogleTagManager gtmId="GTM-KMQRPMK2" />
       <body
         className={`${displayFont.variable} ${bodyFont.variable} antialiased`}
       >
