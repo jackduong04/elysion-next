@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://elysion.co.nz/sitemap.xml

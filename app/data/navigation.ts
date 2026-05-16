@@ -9,12 +9,12 @@ export const navigationConfig: NavItem[] = [
       {
         id: 'carpentry',
         label: 'Carpentry',
-        href: '/pages/landscaping/carpentry',
+        href: '/landscaping/carpentry',
       },
       {
         id: 'foundation',
         label: 'Foundation',
-        href: '/pages/landscaping/foundation',
+        href: '/landscaping/foundation',
       },
     ],
   },
@@ -25,16 +25,16 @@ export const navigationConfig: NavItem[] = [
       {
         id: 'soft-scaping',
         label: 'Soft-scaping',
-        href: '/pages/gardening/soft-scaping',
+        href: '/gardening/soft-scaping',
       },
       {
         id: 'maintenance',
         label: 'Maintenance',
-        href: '/pages/gardening/maintenance',
+        href: '/gardening/maintenance',
       },
     ],
   },
-  { id: 'commercial', label: 'Commercial', href: '/pages/commercial' },
-  { id: 'design', label: 'Design', href: '/pages/design' },
-  { id: 'about', label: 'About', href: '/pages/about' },
+  { id: 'commercial', label: 'Commercial', href: '/commercial' },
+  { id: 'design', label: 'Design', href: '/design' },
+  { id: 'about', label: 'About', href: '/about' },
 ];

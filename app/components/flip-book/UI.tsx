@@ -41,14 +41,14 @@ export const UI = () => {
       justify-between p-10 pb-5 lg:pb-10 select-none text-elysion-cream
     `}
     >
-      <h1
+      <h2
         className={`
         text-2xl md:text-4xl font-extrabold uppercase tracking-[0.3em]
         text-elysion-gold text-shadow-lg/30 text-center
       `}
       >
         Project Proposal
-      </h1>
+      </h2>
 
       <div className="flex flex-col gap-5 items-center">
         <div className="flex gap-5 md:gap-10 pointer-events-auto items-center">

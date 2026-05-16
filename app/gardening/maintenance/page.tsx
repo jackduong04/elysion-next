@@ -1,11 +1,11 @@
 // Data
-import { maintenanceContent } from '../../../data/pages-content/gardening-children/maintenance';
+import { maintenanceContent } from '../../data/pages-content/gardening-children/maintenance';
 
 // Components
 import {
   HeroSection,
   ServicePageServicesSection,
-} from '../../../components/sections';
+} from '../../components/sections';
 
 export default function GardeningMaintenancePage() {
   const { hero, servicesSection } = maintenanceContent;

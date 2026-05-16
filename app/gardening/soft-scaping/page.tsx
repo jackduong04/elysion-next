@@ -1,5 +1,5 @@
 // Data
-import { commercialContent } from '../../data/pages-content/commercial/commercial';
+import { softscapingContent } from '../../data/pages-content/gardening-children/soft-scaping';
 
 // Components
 import {
@@ -8,8 +8,8 @@ import {
   HighlightsSection,
 } from '../../components/sections';
 
-export default function DesignPage() {
-  const { hero, servicesSection, highlightsSection } = commercialContent;
+export default function GardeningMaintenancePage() {
+  const { hero, servicesSection, highlightsSection } = softscapingContent;
 
   return (
     <main className="bg-elysion-cream text-elysion-ink">

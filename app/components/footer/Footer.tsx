@@ -189,13 +189,13 @@ export const Footer = () => {
           <p>© {currentYear} Elysion Landscaping Ltd. All rights reserved.</p>
           <div className="flex gap-8">
             <Link
-              href="/pages/terms/privacy"
+              href="/terms/privacy"
               className="hover:text-elysion-cream transition-colors"
             >
               Privacy Policy
             </Link>
             <Link
-              href="/pages/terms/tos"
+              href="/terms/tos"
               className="hover:text-elysion-cream transition-colors"
             >
               Terms of Service

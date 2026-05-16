@@ -172,9 +172,9 @@ export function ServicePageServicesSection({
             <p className="text-base font-medium uppercase tracking-[0.3em] text-elysion-olive">
               {eyebrow}
             </p>
-            <h1 className="mt-4 text-3xl font-semibold text-elysion-forest sm:text-4xl">
+            <h2 className="mt-4 text-3xl font-semibold text-elysion-forest sm:text-4xl">
               {title}
-            </h1>
+            </h2>
           </div>
           <p className="max-w-xl text-base leading-relaxed text-elysion-forest opacity-80">
             {description}

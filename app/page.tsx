@@ -36,9 +36,9 @@ export default function Home() {
               <p className="text-base uppercase tracking-[0.3em] text-elysion-olive">
                 {gallerySection.eyebrow}
               </p>
-              <h1 className="mt-3 text-3xl font-semibold text-elysion-forest sm:text-4xl">
+              <h2 className="mt-3 text-3xl font-semibold text-elysion-forest sm:text-4xl">
                 {gallerySection.title}
-              </h1>
+              </h2>
             </div>
             <p className="max-w-xl text-base leading-relaxed text-elysion-forest/80">
               {gallerySection.description}

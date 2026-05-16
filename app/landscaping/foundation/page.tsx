@@ -1,5 +1,5 @@
 // Data
-import { foundationContent } from '../../../data/pages-content/landscaping-children/foundation';
+import { foundationContent } from '../../data/pages-content/landscaping-children/foundation';
 
 // Components
 import {
@@ -7,7 +7,7 @@ import {
   ServicePageServicesSection,
   HighlightsSection,
   ProcessSection,
-} from '../../../components/sections';
+} from '../../components/sections';
 
 export default function GardeningMaintenancePage() {
   const { hero, servicesSection, highlightsSection, processSection } =

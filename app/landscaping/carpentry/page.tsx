@@ -1,15 +1,17 @@
 // Data
-import { softscapingContent } from '../../../data/pages-content/gardening-children/soft-scaping';
+import { carpentryContent } from '../../data/pages-content/landscaping-children/carpentry';
 
 // Components
 import {
   HeroSection,
   ServicePageServicesSection,
   HighlightsSection,
-} from '../../../components/sections';
+  ProcessSection,
+} from '../../components/sections';
 
 export default function GardeningMaintenancePage() {
-  const { hero, servicesSection, highlightsSection } = softscapingContent;
+  const { hero, servicesSection, highlightsSection, processSection } =
+    carpentryContent;
 
   return (
     <main className="bg-elysion-cream text-elysion-ink">
@@ -19,6 +21,7 @@ export default function GardeningMaintenancePage() {
         sectionId="services"
       />
       <HighlightsSection content={highlightsSection} sectionId="highlights" />
+      <ProcessSection content={processSection} sectionId="process" />
     </main>
   );
 }
