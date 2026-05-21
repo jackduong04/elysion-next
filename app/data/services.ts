@@ -29,12 +29,12 @@ export type Category = {
   };
 };
 
-const CARPENTRY_HREF = '/pages/landscaping/carpentry#services';
-const FOUNDATION_HREF = '/pages/landscaping/foundation#services';
-const MAINTENANCE_HREF = '/pages/gardening/maintenance#services';
-const SOFTSCAPING_HREF = '/pages/gardening/soft-scaping#services';
-const DESIGN_HREF = '/pages/design#services';
-const COMMERCIAL_HREF = '/pages/commercial#services';
+const CARPENTRY_HREF = '/landscaping/carpentry#services';
+const FOUNDATION_HREF = '/landscaping/foundation#services';
+const MAINTENANCE_HREF = '/gardening/maintenance#services';
+const SOFTSCAPING_HREF = '/gardening/soft-scaping#services';
+const DESIGN_HREF = '/design#services';
+const COMMERCIAL_HREF = '/commercial#services';
 
 export const categories: Record<string, Category> = {
   landscaping: {
