@@ -43,7 +43,7 @@ export function LpFinalCta({ content, lp }: LpFinalCtaProps) {
               focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-elysion-gold
             `}
           >
-            Call 020 4068 0173
+            Call +64 20 4068 0173
           </a>
         </div>
       </div>
