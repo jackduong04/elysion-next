@@ -116,7 +116,7 @@ export function LpQuoteForm({ lp, pageLabel }: LpQuoteFormProps) {
                   }
                   className="font-semibold underline decoration-elysion-olive underline-offset-2"
                 >
-                  +64 20 4068 0173
+                  020 4068 0173
                 </a>
                 .
               </p>
@@ -182,7 +182,7 @@ export function LpQuoteForm({ lp, pageLabel }: LpQuoteFormProps) {
 
               {submitStatus === 'error' && (
                 <p className="rounded-xl border border-elysion-rust bg-elysion-rust/10 p-3 text-center text-sm font-medium text-elysion-rust">
-                  Something went wrong. Please try again or call us on +64 20 4068 0173.
+                  Something went wrong. Please try again or call us on 020 4068 0173.
                 </p>
               )}
 

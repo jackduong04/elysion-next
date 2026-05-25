@@ -29,7 +29,7 @@ export function LpHeader({ lp }: LpHeaderProps) {
           onClick={() => pushDataLayer('phone_click', { lp, location: 'header' })}
           className="text-sm font-semibold uppercase tracking-widest text-elysion-forest transition hover:text-elysion-olive"
         >
-          +64 20 4068 0173
+          020 4068 0173
         </a>
       </div>
     </header>
