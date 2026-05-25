@@ -12,7 +12,7 @@ type ProcessSectionProps = {
   sectionId?: string;
 };
 
-const repo = process.env.NEXT_PUBLIC_BASE_PATH;
+const repo = process.env.NEXT_PUBLIC_BASE_PATH || '';
 
 export function ProcessSection({
   content,

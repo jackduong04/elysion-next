@@ -90,7 +90,7 @@ interface PageProps {
   [key: string]: unknown;
 }
 
-const repo = process.env.NEXT_PUBLIC_BASE_PATH;
+const repo = process.env.NEXT_PUBLIC_BASE_PATH || '';
 
 const Page = ({
   number,

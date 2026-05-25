@@ -6,7 +6,7 @@ import Image from 'next/image';
 import { navigationConfig } from '../../data/navigation';
 
 export const Footer = () => {
-  const repo = process.env.NEXT_PUBLIC_BASE_PATH;
+  const repo = process.env.NEXT_PUBLIC_BASE_PATH || '';
 
   const currentYear = new Date().getFullYear();
 

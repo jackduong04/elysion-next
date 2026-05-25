@@ -25,7 +25,7 @@ type ImageGalleryProps = {
   initialIndex?: number;
 };
 
-const repo = process.env.NEXT_PUBLIC_BASE_PATH;
+const repo = process.env.NEXT_PUBLIC_BASE_PATH || '';
 
 const DEFAULT_INTERVAL = 3000;
 

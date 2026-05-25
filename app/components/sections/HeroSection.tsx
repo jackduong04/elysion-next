@@ -6,7 +6,7 @@ type HeroSectionProps = {
   sectionId?: string;
 };
 
-const repo = process.env.NEXT_PUBLIC_BASE_PATH;
+const repo = process.env.NEXT_PUBLIC_BASE_PATH || '';
 
 export function HeroSection({ content, sectionId = 'hero' }: HeroSectionProps) {
   const { eyebrow, title, subtitle, cta, background } = content;

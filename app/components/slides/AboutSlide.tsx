@@ -11,7 +11,7 @@ interface AboutSlideProps {
   index: number;
 }
 
-const repo = process.env.NEXT_PUBLIC_BASE_PATH;
+const repo = process.env.NEXT_PUBLIC_BASE_PATH || '';
 
 export const AboutSlide = ({ content, index }: AboutSlideProps) => {
   const isEven = index % 2 === 0;

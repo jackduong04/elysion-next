@@ -31,7 +31,7 @@ function idResolver({ buttons, defaultId }: idResolverProps) {
   return initialId;
 }
 
-const repo = process.env.NEXT_PUBLIC_BASE_PATH;
+const repo = process.env.NEXT_PUBLIC_BASE_PATH || '';
 
 export function HomepageServicesSection({
   content,
