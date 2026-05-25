@@ -125,9 +125,9 @@ export const deckingContent: LpContent = {
     ],
   },
   pricing: {
-    eyebrow: 'Pricing',
-    line: 'Most decks start from $[X]/sqm depending on materials',
-    note: 'Final pricing depends on materials, size, and site. [CONFIRM WITH JACK]',
+    eyebrow: 'Transparent pricing',
+    line: 'Clear, honest quotes for every deck',
+    note: "Costs depend on materials, size, and site, so we quote each deck individually. Get a free quote for a clear, itemised price — no obligation.",
   },
   faq: {
     eyebrow: 'FAQ',
@@ -136,7 +136,7 @@ export const deckingContent: LpContent = {
       {
         question: 'How long does a deck take?',
         answer:
-          "Most residential decks take one to three weeks of on-site work once materials are ready. Larger or elevated decks needing engineering take longer — we'll give you a clear timeline with your quote. [CONFIRM WITH JACK]",
+          "It depends on the deck's size, materials, and whether consent or engineering is needed. We'll give you a clear timeline with your quote and keep you updated through the build.",
       },
       {
         question: 'Do I need permits or consent?',
@@ -151,7 +151,7 @@ export const deckingContent: LpContent = {
       {
         question: 'What warranty do you offer?',
         answer:
-          "Our workmanship is guaranteed, and materials carry their manufacturer warranties. We'll confirm the exact terms in writing with your quote. [CONFIRM WITH JACK]",
+          "Our workmanship is guaranteed, and materials carry their manufacturer warranties. We'll confirm the exact terms in writing with your quote.",
       },
     ],
   },

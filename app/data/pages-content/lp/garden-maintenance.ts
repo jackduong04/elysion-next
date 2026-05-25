@@ -135,9 +135,9 @@ export const gardenMaintenanceContent: LpContent = {
     ],
   },
   pricing: {
-    eyebrow: 'Pricing',
-    line: 'Most regular maintenance starts from $[X]/visit',
-    note: 'Final pricing depends on garden size and frequency. [CONFIRM WITH JACK]',
+    eyebrow: 'Transparent pricing',
+    line: 'Fair, upfront pricing with no surprises',
+    note: "Every garden is different, so we price each job on its own. Get a free quote and we'll give you a clear number to work with — no obligation.",
   },
   faq: {
     eyebrow: 'FAQ',
@@ -146,7 +146,7 @@ export const gardenMaintenanceContent: LpContent = {
       {
         question: 'How much is a one-off tidy-up?',
         answer:
-          'It depends on the size and condition of the garden. Send us a few details for a quick, no-obligation quote — most one-off tidy-ups are priced after a short look at the space. [CONFIRM WITH JACK]',
+          'It depends on the size and condition of the garden. Send us a few details for a quick, no-obligation quote — most one-off tidy-ups are priced after a short look at the space.',
       },
       {
         question: 'Do you do recurring maintenance contracts?',
