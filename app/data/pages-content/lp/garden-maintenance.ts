@@ -13,8 +13,8 @@ export const gardenMaintenanceContent: LpContent = {
     title: 'Reliable garden maintenance across Silverdale and the North Shore',
     subtitle:
       'Lawn mowing, hedge trimming, and seasonal tidy-ups — handled on time, every time, by a local Auckland team.',
-    background: '/images/home-pg/hedge-in-sky.webp',
-    backgroundAlt: 'A neatly trimmed hedge against a clear sky.',
+    background: '/images/maintenance-pg/hedge-trim01.webp',
+    backgroundAlt: 'A freshly trimmed tall hedge along a garden border.',
   },
   features: {
     eyebrow: 'What we cover',
@@ -92,9 +92,9 @@ export const gardenMaintenanceContent: LpContent = {
     ],
     images: [
       {
-        src: '/images/maintenance-pg/hedge-trim01.webp',
-        alt: 'Freshly trimmed hedge along a garden path.',
-        caption: 'Hedge trimming',
+        src: '/images/maintenance-pg/dairy-flat01-wide.webp',
+        alt: 'Manicured topiary and planted beds at a Dairy Flat home.',
+        caption: 'Topiary & beds',
       },
       {
         src: '/images/maintenance-pg/dairy-flat02.webp',

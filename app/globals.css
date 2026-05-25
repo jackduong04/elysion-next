@@ -45,4 +45,22 @@
       rgba(246, 241, 231, 0.15)
     );
   }
+
+  /* Stronger scrim for landing-page heroes: left-anchored dark gradient keeps
+     the left-aligned headline/eyebrow legible over bright skies, plus a
+     bottom-up darkening that grounds the CTAs and covers mobile crops. */
+  .lp-hero-overlay {
+    background:
+      linear-gradient(
+        105deg,
+        rgba(17, 48, 23, 0.86) 0%,
+        rgba(28, 33, 25, 0.58) 48%,
+        rgba(28, 33, 25, 0.28) 100%
+      ),
+      linear-gradient(
+        to top,
+        rgba(17, 48, 23, 0.55) 0%,
+        rgba(17, 48, 23, 0) 42%
+      );
+  }
 }
