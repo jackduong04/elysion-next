@@ -22,7 +22,7 @@ export function LpHero({ content, lp }: LpHeroProps) {
         sizes="100vw"
         className="object-cover object-center"
       />
-      <div className="absolute inset-0 lp-hero-overlay" aria-hidden="true" />
+      <div className="absolute inset-0 hero-overlay" aria-hidden="true" />
 
       <div className="relative z-10 mx-auto w-full max-w-6xl px-6 py-20">
         <p className="text-sm font-semibold uppercase tracking-[0.35em] text-elysion-gold">
