@@ -46,21 +46,28 @@
     );
   }
 
-  /* Stronger scrim for landing-page heroes: left-anchored dark gradient keeps
-     the left-aligned headline/eyebrow legible over bright skies, plus a
-     bottom-up darkening that grounds the CTAs and covers mobile crops. */
+  /* Strong scrim for landing-page heroes so white copy stays legible over any
+     photo (incl. bright, uniform foliage). Three stacked layers:
+       1. an even base darkening across the whole image (guarantees contrast),
+       2. a left-anchored boost for the left-aligned headline/eyebrow,
+       3. a bottom-up darkening that grounds the CTAs and covers mobile crops. */
   .lp-hero-overlay {
     background:
       linear-gradient(
-        105deg,
-        rgba(17, 48, 23, 0.86) 0%,
-        rgba(28, 33, 25, 0.58) 48%,
-        rgba(28, 33, 25, 0.28) 100%
+        0deg,
+        rgba(17, 48, 23, 0.55),
+        rgba(17, 48, 23, 0.55)
+      ),
+      linear-gradient(
+        100deg,
+        rgba(11, 33, 16, 0.8) 0%,
+        rgba(11, 33, 16, 0.35) 60%,
+        rgba(11, 33, 16, 0) 100%
       ),
       linear-gradient(
         to top,
-        rgba(17, 48, 23, 0.55) 0%,
-        rgba(17, 48, 23, 0) 42%
+        rgba(11, 33, 16, 0.6) 0%,
+        rgba(11, 33, 16, 0) 45%
       );
   }
 }
