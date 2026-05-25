@@ -9,8 +9,8 @@ import { Footer } from './Footer';
 export const ConditionalFooter = () => {
   const pathname = usePathname();
 
-  // Do not show footer on the About page
-  if (pathname === '/about/') {
+  // No footer on the About page or on conversion landing pages
+  if (pathname === '/about/' || pathname.startsWith('/lp/')) {
     return null;
   }
 

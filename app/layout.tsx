@@ -5,8 +5,8 @@ import { GoogleTagManager } from '@next/third-parties/google';
 
 // Components
 import './globals.css';
-import { NavBar } from './components/navbar/NavBar';
-import { ContactForm } from './components/forms/ContactForm';
+import { ConditionalNavBar } from './components/navbar/ConditionalNavBar';
+import { ConditionalContactForm } from './components/forms/ConditionalContactForm';
 import { ConditionalFooter } from './components/footer/ConditionalFooter';
 
 const displayFont = Playfair_Display({
@@ -81,10 +81,10 @@ export default function RootLayout({
       <body
         className={`${displayFont.variable} ${bodyFont.variable} antialiased`}
       >
-        <NavBar />
+        <ConditionalNavBar />
         {children}
         <ConditionalFooter />
-        <ContactForm />
+        <ConditionalContactForm />
       </body>
     </html>
   );
