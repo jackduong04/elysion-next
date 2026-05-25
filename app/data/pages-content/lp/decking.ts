@@ -94,6 +94,8 @@ export const deckingContent: LpContent = {
         caption: 'Silverdale',
       },
       {
+        // [CONFIRM IMAGE] Reuses the hero background (kumeu01-wide). Swap for a
+        // distinct deck photo before launch — repo currently has no other.
         src: '/images/carpentry-pg/kumeu01-wide.webp',
         alt: 'Wide timber deck integrated into a landscaped garden.',
         caption: 'Kumeu',
