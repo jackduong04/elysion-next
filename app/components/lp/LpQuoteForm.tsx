@@ -159,7 +159,7 @@ export function LpQuoteForm({ lp, pageLabel }: LpQuoteFormProps) {
                   {...register('suburb')}
                   type="text"
                   id="lp-suburb"
-                  placeholder="Silverdale"
+                  placeholder="e.g. Albany, Browns Bay, Silverdale"
                   className={inputClass(Boolean(errors.suburb))}
                 />
                 {errors.suburb && (
