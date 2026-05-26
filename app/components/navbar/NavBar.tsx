@@ -12,7 +12,7 @@ import { navigationConfig } from '../../data/navigation';
 import type { NavItem } from './types';
 
 export function NavBar() {
-  const repo = process.env.NEXT_PUBLIC_BASE_PATH;
+  const repo = process.env.NEXT_PUBLIC_BASE_PATH || '';
 
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [openDropdown, setOpenDropdown] = useState<string | null>(null);
