@@ -78,8 +78,6 @@ export function LpQuoteForm({ lp, pageLabel }: LpQuoteFormProps) {
         setSubmitStatus('success');
         reset();
         pushDataLayer('form_submit', { lp });
-        // TODO: Google Ads conversion — conversion ID/label supplied later.
-        // window.gtag?.('event', 'conversion', { send_to: 'AW-XXXXXXXXX/XXXXXXXX' });
       } else {
         setSubmitStatus('error');
       }
